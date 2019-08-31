@@ -1,8 +1,8 @@
 ---
 name: História de Usuário
-about: Coloque a descrição da história aqui.
-title: "[ISSUE] USXX"
-labels: ''
+about: Template para histórias de usuário.
+title: USXX - Nome da US
+labels: devops
 assignees: ''
 
 ---
@@ -24,7 +24,7 @@ Eu, como *ator*, desejo realizar *tarefa* para *resolver problema*
 --->
 
 ## Comportamento esperado
-<!-- -
+<!---
 Como esperamos essa nova feature se comportar no projeto.
 --->
 
