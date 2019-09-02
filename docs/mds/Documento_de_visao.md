@@ -2,8 +2,12 @@
 
 Data|Versão|Descrição|Autor
 -|-|-|-
-31/08|1.0|Adição do template do Documento| João Lucas|
-01/09|1.1|Adição dos subitens 1.1, 1.2, 1.3, 1.5| Marcelo Victor|
+31/08|1.0.0|Adição do template do Documento| João Lucas|
+01/09|1.1.0|Adição dos subitens 1.1, 1.2, 1.3, 1.5| Marcelo Victor|
+01/09|1.2.0|Adição dos subitens 2.1, 2.2, 2.3| Sérgio Cipriano|
+01/09|1.3.0|Adição dos subitens 3.0, 3.1, 3.2, 3.3| Rhuan Carlos|
+01/09|1.4.0|Adição dos subitens 3.4, 3.5, 3.6| Igor Batista|
+01/09|1.5.0|Adição do item 4| Thiago Lopes|
 
 
 # Sumário
@@ -79,39 +83,109 @@ ___
 
 ##### 2.1 <a name="2_1">Oportunidade de Negócio</a>
 
+O projeto pode ser facilmente utilizado em livros e atividades escolares.
+
+Sua facilidade se deve ao fato de estar disponível para qualquer dispositivo, bastando ter acesso a internet. Além disso, essa aplicação possibilita que o ensino passe a ser uma atividade mais interativa e dinâmica, podendo assim, melhorar o engajamento dos estudantes e auxiliar na explicação do professor.
+
 ##### 2.2 <a name="2_2">Descrição do problema</a>
 
+|**O problema de**|Ensino pouco interativo|
+|:---|:---|
+|**afeta**|Professores e estudantes|
+|**cujo impacto é**|o auxílio na transmissão de informação|
+|**uma boa solução seria**|<p align = "justify">um sistema que exiba gifs ao ler um marcador (*augmented reality maker*)</p>|
+
 ##### 2.3 <a name="2_3">Instrução de Posição do Produto</a>
+
+|**Para** |Professores e estudantes|
+|:---|:---|
+|**Que** |necessitam de melhora do ensino|
+|**O ArBC**|é uma aplicação para dinamizar a educação|
+|**Que**|<p align = "justify">faz a leitura de marcadores com a camêra e exibe um gif</p>|
+|**Diferente de**|um ensino estático|
+|**Nosso produto**|<p align = "justify">é uma solução para chegar a um ensino mais dinâmico e interativo</p>|
 
 
 ### 3. <a name="3">Descrições da parte interessada e dos Usuários</a>
 
+Nome|Descrição|Responsabilidade
+--|--|--
+| Equipe de Desenvolvimento | Estudantes da disciplina Métodos de Desenvolvimento de *Software* da Universidade de Brasília Campus Gama | Desenvolvimento, documentação, implementação e testes do *Software* solicitado. |
+| Equipe de Gestão de Processo | Estudantes da disciplina de Engenharia de Produto de *Software* da Universidade de Brasília Campus Gama | Gerir o desenvolvimento do produto, identificar erros e *bugs* e instruir caminhos e soluções para um bom desempenho. |
+| Professor e Professora | Professor da disciplina de Métodos de Desenvolvimento de *Software* e a professora da disciplina de Engenharia de Produto de *Software* ambos da Universidade de Brasília Campus Gama | Avaliar e orientar os estudantes de ambas as disciplinas respectivamente. |
+
 
 ##### 3.1 <a name="3_1">Resumo dos Usuários</a>
 
+Nome|Descrição
+-|-
+| Criança | <p align = "justify">Crianças durante processo de alfabetização</p> |
+| Educador | <p align = "justify">Profissionais da área de educação no geral.</p>|
 
 ##### 3.2 <a name="3_2">Ambiente do Usuário</a>
 
+<p align = "justify">A aplicação será utilizada em celulares pelo navegador <i>web</i> (<i>Browser</i>), utilizando a câmera e que atendam aos requisitos mínimos.</p>
 
 ##### 3.3 <a name="3_3">Perfis dos Envolvidos</a>
 
 ###### 3.3.1 <a name="3_3_1">Equipe de Desenvolvimento</a>
 
+Representante|<p align = "justify">Igor Batista, João Paulino, Marcelo Victor, Rhuan Carlos, Sérgio Cipriano, Thiago Lopes.</p>
+-|-
+**Descrição**|Desenvolvedores.
+**Tipo**|<p align = "justify">Estudantes da Universidade de Brasília, cursando a disciplina de Métodos de Desenvolvimento de Software.</p>
+**Responsabilidade**|<p align = "justify">Desenvolvimento, Testes, Documentação e Implementação do *software*.</p>
+**Critérios de Sucesso**|<p align = "justify">Finalizar o desenvolvimento e realizar a entrega do *software* dentro dos prazos</p>
+**Envolvimento**|Alto.
+**Problemas/Comentários**|<p align = "justify">Alguns integrantes da equipe são inexperientes nas linguagens de programação utilizadas no desenvolvimento, no padrão arquitetural e nas metodologias de desenvolvimento.</p>
+
 ###### 3.3.2 <a name="3_3_2">Equipe de Gestão de Projeto</a>
+
+Representante|<p align = "justify">Eduardo Lima, Luciano dos Santos, João Lucas</p>
+-|-
+**Descrição**|Gerenciamento de projeto.
+**Tipo**|<p align = "justify">Estudantes da disciplina de  Engenharia de Produto de Software da Universidade de Brasília.</p>
+**Responsabilidade**|<p align = "justify">Gerir e dar suporte à equipe de desenvolvimento, garantindo o melhor processo para o desenvolvimento do produto.</p>
+**Critérios de Sucesso**|<p align = "justify">Manter a equipe focada no projeto, manter o grupo ativo nos princípios ágeis, gerência dos riscos associados ao projeto e finalizar o desenvolvimento do projeto.</p>
+**Envolvimento**|Alto.
+**Problemas/Comentários**|<p align = "justify">Entender dentre as disponíveis tecnologias qual é a adequada para a necessidade do projeto</p>
 
 ###### 3.3.3 <a name="3_3_3">Clientes</a>
 
 ##### 3.4 <a name="3_4">Perfis dos Usuários</a>
 
 ###### 3.4.1 <a name="3_5"> Crianças </a>
+Representante|Crianças
+:-:|:-:
+|**Descrição**|Crianças em processo de alfabetização.
+|**Tipo**|Estudantes em alfabetização.
+|**Responsabilidade**| Utilizar o aparelho para o propósito
+|**Critérios de Sucesso**| Aprendizado e diversão.
+|**Envolvimento**|Alto.
+|**Problemas/Comentários**| -
 
 ###### 3.4.2 <a name="3_5">Educadores</a>
+Representante|Educadores
+:-:|:-:
+|**Descrição**|Pessoas responsáveis e/ou interessadas na alfabetização de crianças.
+|**Tipo**| Qualquer pessoa interessada.
+|**Responsabilidade**| Auxiliar no uso da aplicação.
+|**Critérios de Sucesso**| Ajuda bem sucedida no aprendizado da criança.
+|**Envolvimento**|Alto.
+|**Problemas/Comentários**| -
 
 ##### 3.5 <a name="3_5">Principais Necessidades dos Usuários ou dos Envolvidos</a>
 
+Necessidade|Prioridade|Interesse|Solução Atual|Solução Proposta
+:-:|:-:|:-:|:-:|:-:
+|Auxiliar na alfabetização de crianças.|Alta|Tornar a alfabetização das crianças mais fácil e dinâmica.|Imaginação e gravuras dos objetos representados pelas palavras.|Aplicação que, por meio de um aparelho celular, fará a leitura de uma palavra e reproduzirá uma imagem correspondente.|
+
 ##### 3.6 <a name="3_6">Alternativas e Concorrência</a>
+<p align = "justify">Atualmente existem alguns projetos educacionais com uso de tablets e smatphones para proporcionar um aprendizado mais divertido, dinâmico e diferenciado. Mas esses já não geram um impacto nas crianças, por se tratarem de tecnologias já familiares.</p>
 
 ### 4. <a name="4">Visão Geral do Produto</a>
+<div style="text-align: justify"> A aplicação, a partir da câmera do utilizador, identificará cada letra individualmente, e quando reconhecer uma palavra, mostrará imagens em realidade aumentada acima das letras reconhecidas, na tela do usuário.
+</div>
 
 ### 5. <a name="5">Recursos do Produto</a>
 
