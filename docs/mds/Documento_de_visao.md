@@ -8,6 +8,11 @@ Data|Versão|Descrição|Autor
 01/09|1.3.0|Adição dos subitens 3.0, 3.1, 3.2, 3.3| Rhuan Carlos|
 01/09|1.4.0|Adição dos subitens 3.4, 3.5, 3.6| Igor Batista|
 01/09|1.5.0|Adição do item 4| Thiago Lopes|
+02/09|1.6.0|Adição do subitem 6.3 e item 5| Marcelo Victor|
+02/09|1.6.1|Refatoração do item 5| Igor Batista|
+02/09|1.7.0|Adição do subitem 6.1, 6.4| João Paulino|
+02/09|1.8.0|Adição do subitem 6.2| Thiago Lopes|
+02/09|1.9.0|Revisão e correções de ortografia| Rhuan Carlos e Igor Batista|
 
 
 # Sumário
@@ -63,11 +68,13 @@ ___
 
 ##### 1.4 <a name="1_4">  Referências:</a>
 
-IBM Knowledge Center - Documento de Visão: A estrutura de tópicos do documento de visão. Disponível em: https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_3.0.1/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.htm. Acesso em: 31 ago. 2019;
+<p align="left">IBM Knowledge Center - Documento de Visão: A estrutura de tópicos do documento de visão. Disponível em: https://www.ibm.com/support/knowledgecenter/pt-br/SSWMEQ_3.0.1/com.ibm.rational.rrm.help.doc/topics/r_vision_doc.htm. Acesso em: 31 ago. 2019;</p>
+
+<p align="left">DJORKAEFF, Alexandre; BEZERRA, Davi; DE LYRA, Guilherme; BRANDÃO, Guilherme; REIS, João. Reabilitação Motora: Documento de Visão. Disponível em: https://github.com/jlucassr/2018.1-Reabilitacao-Motora/blob/mds_docs/docs/wiki/Documento-de-Visão.md. Acesso em: 1 set. 2019.</p>
 
 
 ##### 1.5 <a name="1_5">Visão geral</a>
-  <p align="justify"> &emsp;&emsp; Este documento é dividido em 7 tópicos descrevendo os detalhes das características do software proposto.
+<p align="justify"> &emsp;&emsp; Este documento é dividido em 7 tópicos descrevendo os detalhes das características do software proposto.
 Sendo dividido em:</p>
 
 * **Introdução:** no qual é introduzido os detalhes gerais sobre a visão do projeto;
@@ -83,9 +90,7 @@ ___
 
 ##### 2.1 <a name="2_1">Oportunidade de Negócio</a>
 
-O projeto pode ser facilmente utilizado em livros e atividades escolares.
-
-Sua facilidade se deve ao fato de estar disponível para qualquer dispositivo, bastando ter acesso a internet. Além disso, essa aplicação possibilita que o ensino passe a ser uma atividade mais interativa e dinâmica, podendo assim, melhorar o engajamento dos estudantes e auxiliar na explicação do professor.
+<p align="justify">&emsp;&emsp; O projeto pode ser facilmente utilizado em livros e atividades escolares. Sua facilidade se deve ao fato de estar disponível para qualquer dispositivo, bastando ter acesso a internet. Além disso, essa aplicação possibilita que o ensino passe a ser uma atividade mais interativa e dinâmica, podendo assim, melhorar o engajamento dos estudantes e auxiliar na explicação do professor.</p>
 
 ##### 2.2 <a name="2_2">Descrição do problema</a>
 
@@ -93,7 +98,7 @@ Sua facilidade se deve ao fato de estar disponível para qualquer dispositivo, b
 |:---|:---|
 |**afeta**|Professores e estudantes|
 |**cujo impacto é**|o auxílio na transmissão de informação|
-|**uma boa solução seria**|<p align = "justify">um sistema que exiba gifs ao ler um marcador (*augmented reality maker*)</p>|
+|uma boa solução seria|<p align = "justify">um sistema que exiba <i>gifs</i> ao ler um marcador (*augmented reality marker*)</p>|
 
 ##### 2.3 <a name="2_3">Instrução de Posição do Produto</a>
 
@@ -101,7 +106,7 @@ Sua facilidade se deve ao fato de estar disponível para qualquer dispositivo, b
 |:---|:---|
 |**Que** |necessitam de melhora do ensino|
 |**O ArBC**|é uma aplicação para dinamizar a educação|
-|**Que**|<p align = "justify">faz a leitura de marcadores com a camêra e exibe um gif</p>|
+|**Que**|<p align = "justify">faz a leitura de marcadores com a câmera e exibe um <i>gif</i></p>|
 |**Diferente de**|um ensino estático|
 |**Nosso produto**|<p align = "justify">é uma solução para chegar a um ensino mais dinâmico e interativo</p>|
 
@@ -181,22 +186,35 @@ Necessidade|Prioridade|Interesse|Solução Atual|Solução Proposta
 |Auxiliar na alfabetização de crianças.|Alta|Tornar a alfabetização das crianças mais fácil e dinâmica.|Imaginação e gravuras dos objetos representados pelas palavras.|Aplicação que, por meio de um aparelho celular, fará a leitura de uma palavra e reproduzirá uma imagem correspondente.|
 
 ##### 3.6 <a name="3_6">Alternativas e Concorrência</a>
-<p align = "justify">Atualmente existem alguns projetos educacionais com uso de tablets e smatphones para proporcionar um aprendizado mais divertido, dinâmico e diferenciado. Mas esses já não geram um impacto nas crianças, por se tratarem de tecnologias já familiares.</p>
+
+<p align = "justify"> &emsp;&emsp; Atualmente existem alguns projetos educacionais com uso de <i>tablets</i> e <i>smartphones</i> para proporcionar um aprendizado mais divertido, dinâmico e diferenciado. Mas esses já não geram um impacto nas crianças, por se tratarem de tecnologias já familiares.</p>
 
 ### 4. <a name="4">Visão Geral do Produto</a>
-<div style="text-align: justify"> A aplicação, a partir da câmera do utilizador, identificará cada letra individualmente, e quando reconhecer uma palavra, mostrará imagens em realidade aumentada acima das letras reconhecidas, na tela do usuário.
+<div style="text-align: justify"> &emsp;&emsp; A aplicação, a partir da câmera do utilizador, identificará cada letra individualmente, e quando reconhecer uma palavra, mostrará imagens em realidade aumentada acima das letras reconhecidas, na tela do usuário.
 </div>
 
 ### 5. <a name="5">Recursos do Produto</a>
+O sistema dispõem das seguintes funcionalidades:<br />
+
+* <p align = "justify">Possibilitar a interação entre indivíduos em alfabetização e tecnologia, a partir da visualização de imagens em realidade aumentada, proporcionando uma forma mais lúdica de aprendizado.</p>
+* <p align = "justify">Propiciar, ao educador, uma forma mais dinâmica e interativa para alfabetização de crianças.</p>
+* <p align = "justify">Facilitar, para a criança, o aprendizado com uso de uma tecnologia emergente.</p>
+
 
 ### 6. <a name="6">Restrições</a>
 
 ##### 6.1 <a name="6_1">Restrições de Design</a>
 
+<p align = "justify"> &emsp;&emsp; O design será simples, baseando-se em exibir a imagem capturada pela câmera e processada pela aplicação.</p>
+
 ##### 6.2 <a name="6_2">Restrições de Implementação</a>
 
+<p align="justify"> &emsp;&emsp; O sistema será desenvolvido utilizando a linguagem JavaScript e o Vue.js, que é um framework progressivo para a construção de interfaces de usuário.</p>
 
 ##### 6.3 <a name="6_3">Restrições de Segurança</a>
 
+<p align="justify"> &emsp;&emsp; Pelo fato do software não ter um banco de dados com informações pessoais não apresentará riscos aos usuários e nem aos educadores que usufruirão do produto em questão, logo o programa em si não apresenta grandes restrições de segurança.</p>
 
 ##### 6.4 <a name="6_4">Restrições de Uso</a>
+
+<p align = "justify"> &emsp;&emsp; Para o uso do sistema é requisitado que o usuário, um educador, com aptidão de manuseio de um computador(<i>smartfone ou tablet</i>) com  acesso a internet e câmera capacitada a detectar as letras que serão usadas para formar as palavras expostas no processo pedagógico.</p>
