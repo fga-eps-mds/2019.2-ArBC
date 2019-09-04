@@ -25,14 +25,14 @@
 
 ![](https://i.ibb.co/XFgZTR1/passo3.png)
 
-- Selecione a _Pipeline_ correspondente para _Issue_ clicando na engrenagem.
+- Selecione a _Pipeline_ correspondente do _Issue_ clicando na engrenagem.
 - Pipelines disponíveis: ***Backlog, To Do, Doing, Test, Review, Stand By*** e ***Done***.
 
 #### 4º Passo
 
 ![](https://i.ibb.co/qy5fTCk/passo4.png)
 
-- São os responsáveis de fechar a _Issue_.
+- Os responsáveis de fechar a _Issue_.
 - Deve assinalar conforme o conhecimento do membro.
 - Este campo poderá e deverá ser marcado caso a _Issue_ seja iniciada no meio da _sprint_
 
