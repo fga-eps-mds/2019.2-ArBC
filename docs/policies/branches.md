@@ -10,12 +10,13 @@ TagSeExistir-NomeDaBranch
 NomeDaBranch
 ```
 
-* Os nomes das branches não devem ter espaços e Todos os espaços em branco devem ser substituídos por **"_"**:
+* Os nomes das branches não devem ter espaços em branco, devem ser juntos e separados por **"_"**;
+
 ```
-Numero_da_issue-NomeDaBranch
+Numero_da_issue-Nome_Da_Branch
 ```
 
 ### Exemplo prático:
 ```
-Issue_12-DocumentoDeArquitetura
+Issue_12-Documento_De_Arquitetura
 ```
