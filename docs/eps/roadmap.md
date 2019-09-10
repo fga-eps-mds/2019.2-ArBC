@@ -3,6 +3,7 @@
 |Data|Versão|Alteração|Autor|
 |:-:|:-:|:-:|:-:|
 | 07/09/2019 |   1.0.0  | Criação do documento e elaboração das sprints 0 e 1 | João Lucas|
+| 10/09/2019 |   1.0.1  | Planejamento da sprint 2 | Eduardo Lima |
 
 # Release 1
 
@@ -23,6 +24,13 @@
 
 
 ### Sprint 2
+
+* Treinamentos [**Javascript**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/14) e [**Python**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/24)
+* [**Documento de Arquitetura**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/5)
+* [**Conexão com a câmera**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/21)
+* [**Criação do Banco de Dados**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/22)
+* **Roadmap de Projeto**
+* [**Termo de Abertura de Projeto**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/7)
 
 
 ### Sprint 3
