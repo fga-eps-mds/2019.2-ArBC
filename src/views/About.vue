@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <img alt="Yoda" src="../assets/arara.svg"/>
+    <h1>ArBC</h1>
   </div>
 </template>
