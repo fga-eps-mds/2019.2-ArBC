@@ -6,6 +6,8 @@ ENV ArBC_FRONTEND=noninteractive
 
 WORKDIR /usr/app
 
+RUN npm install -g @vue/cli
+
 COPY package*.json ./
 
 RUN npm install
