@@ -6,6 +6,7 @@ cache:
 
 stages:
   - test
+  - lint
   - release
 
 # Stage I
@@ -17,6 +18,7 @@ test:
   script:
    - npm install
    - npm run test:unit
+   - npm run lint
    #- ./node_modules/.bin/codecov --token="$CODECOV_TOKEN"
 
 # Stage II
