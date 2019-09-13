@@ -1,0 +1,55 @@
+image: node:carbon-alpine
+
+cache:
+  paths:
+  - node_modules/
+
+stages:
+  - test
+  - release
+
+# Stage I
+# Testing Phase:
+# This is where the main code is tested.
+# Other options like code coverage, etc are also written in this phase
+test:
+  stage: test
+  script:
+   - npm install
+   - npm run test:unit
+   #- ./node_modules/.bin/codecov --token="$CODECOV_TOKEN"
+
+# Stage II
+# Release Phase
+# In this phase, we package our code using docker
+.release:
+  stage: release
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    # Build our image using docker
+    - docker build . -t registry.gitlab.com/lucianosz7/20192-arbc_arbc_app:$DOCKERTAG
+
+    # Configure container registry to push using docker
+    - docker login -u "$DOCKERLOGIN" -p "$DOCKERPASSWORD" registry.gitlab.com
+
+    # Push the image using docker
+    - docker push registry.gitlab.com/lucianosz7/20192-arbc_arbc_app:$DOCKERTAG
+
+    # The tag, only master indicates that whenever code is pushed to master branch,
+    # only then run the pipeline
+
+release_production:
+  extends: .release
+  environment: production
+  only:
+    - tags
+  except:
+    - ^(?!master).+@/
+
+release_development:
+  extends: .release
+  environment: development
+  only: 
+    - master
