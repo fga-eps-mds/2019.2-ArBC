@@ -1,17 +1,17 @@
-## 1. Objetivo da _Sprint 1_
+## 1. Objetivo da _Sprint 2_
 
 <p align="justify">Esta <i>Sprint</i> tem como objetivo:</p>
 
-- Estudo do Tema
-- Estudo das Tecnologias
-- Documento de Visão
-- Definição da Licença
-- Criação do Backlog de Produto
-- Documento de Arquitetura
+- Treinamentos Javascript e Python
+- Continuar Documento de Arquitetura
+- Conexão com a câmera
+- Criação do Banco de Dados
+- Roadmap de Projeto
+- Termo de Abertura de Projeto
 
 ## 2. Papéis
 
-Os papéis dos EPS serão mantidos até a _Release 1_, porém nessa sprint foi definido que o DevOps também fará papel do Arquiteto: </p>
+Os papéis dos EPS serão mantidos até a _Release 1_, porém nessa sprint, assim como a passada, foi definido que o DevOps também fará papel do Arquiteto: </p>
 
 | <img src=" https://i.ibb.co/4gqXmYg/eduardolima.png" width="200" height="200"/>
 |:--:|
@@ -54,22 +54,28 @@ Os papéis dos EPS serão mantidos até a _Release 1_, porém nessa sprint foi d
 
 ## 3. Tamanho da _Sprint_
 
-| Data de Início | 01/09/2019 |
+| Data de Início | 08/09/2019 |
 |:--|:--:|
-| **Data de Término** | **07/09/2019** |
+| **Data de Término** | **14/09/2019** |
 | **Duração** | **7 dias** |
 
 
 ## 4. Pareamento
 
-> Não haverá pareamento na Sprint
+Os pareamentos ficaram assim:
+
+|Issues| Duplas |
+|:--|:--:|
+| [Criação da Logo](https://github.com/fga-eps-mds/2019.2-ArBC/issues/16) | João Henrique e Thiago |
+| [Banco de Dados](https://github.com/fga-eps-mds/2019.2-ArBC/issues/22) | Rhuan e Marcelo |
+| [Conexão com a câmera](https://github.com/fga-eps-mds/2019.2-ArBC/issues/21) | Sérgio e Igor |
 
 
 ## 5. Sprint Backlog
 
-A Milestone da _Sprint_ 1 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/2)
-
+A Milestone da _Sprint_ 2 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/3)
 
 ## 6. Débitos Acumulados
 
-> Não houve débitos acumulados da Sprint passada.
+- Documento de Arquitetura
+- Refatoração do Backlog de Produto

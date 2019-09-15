@@ -67,8 +67,6 @@ Após o treinamento de Práticas _Agile_, foram definidos os seguintes papéis p
 
 A Milestone da _Sprint_ 0 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/1)
 
--------
-
 ## 6. Débitos Acumulados
 
 > Devido ao fato de ser a primeiro Sprint do projeto, não exitem débitos técnicos adicionados
