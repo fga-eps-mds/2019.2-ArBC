@@ -6,6 +6,7 @@ cache:
 
 stages:
   - test
+  - build
   - lint
   - release
 
@@ -20,6 +21,22 @@ test:
    - npm run test:unit
    - npm run lint
    #- ./node_modules/.bin/codecov --token="$CODECOV_TOKEN"
+
+build:
+  stage: build
+  script:
+    - npm install @vue/cli
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      #build folder
+      - dist/
+  only:
+    - tags
+  except:
+    - ^(?!master).+@/
+    
 
 # Stage II
 # Release Phase
@@ -42,16 +59,3 @@ test:
     # The tag, only master indicates that whenever code is pushed to master branch,
     # only then run the pipeline
 
-release_production:
-  extends: .release
-  environment: production
-  only:
-    - tags
-  except:
-    - ^(?!master).+@/
-
-release_development:
-  extends: .release
-  environment: development
-  only: 
-    - master
