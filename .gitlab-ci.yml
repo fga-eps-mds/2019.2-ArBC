@@ -32,10 +32,6 @@ build:
     paths:
       #build folder
       - dist/
-  only:
-    - tags
-  except:
-    - ^(?!master).+@/
     
 
 # Stage II
