@@ -22,6 +22,10 @@ test:
    - npm run lint
    #- ./node_modules/.bin/codecov --token="$CODECOV_TOKEN"
 
+
+# Stage II
+# Build Phase:
+# This is where the main code is tested.
 build:
   stage: build
   script:
@@ -34,24 +38,4 @@ build:
       - dist/
     
 
-# Stage II
-# Release Phase
-# In this phase, we package our code using docker
-.release:
-  stage: release
-  image: docker:latest
-  services:
-    - docker:dind
-  script:
-    # Build our image using docker
-    - docker build . -t registry.gitlab.com/lucianosz7/20192-arbc_arbc_app:$DOCKERTAG
-
-    # Configure container registry to push using docker
-    - docker login -u "$DOCKERLOGIN" -p "$DOCKERPASSWORD" registry.gitlab.com
-
-    # Push the image using docker
-    - docker push registry.gitlab.com/lucianosz7/20192-arbc_arbc_app:$DOCKERTAG
-
-    # The tag, only master indicates that whenever code is pushed to master branch,
-    # only then run the pipeline
 
