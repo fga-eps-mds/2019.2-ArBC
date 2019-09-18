@@ -41,7 +41,7 @@ import Component from 'vue-class-component'
 @Component({})
 export default class Camera extends Vue {
   message: string  = '';
-  mediaStream: object = {};
+  mediaStream: any;
   cameraOpened: Boolean = false;
   mediaConstraints: object = {
     video: {
@@ -66,7 +66,7 @@ export default class Camera extends Vue {
       .then(this.handleSucessOnUserMedia)
       .catch(this.handleErrorOnUserMedia)
   }
-  handleSucessOnUserMedia(mediaStream: object) {
+  handleSucessOnUserMedia(mediaStream: any) {
     this.mediaStream = mediaStream;
 
     let video = this.$refs.video;
@@ -83,7 +83,7 @@ export default class Camera extends Vue {
 
     this.cameraOpened = true;
   }
-  handleErrorOnUserMedia(error: object) {
+  handleErrorOnUserMedia(error: any) {
     switch (error.name) {
       case 'NotAllowedError':
         this.message = 'A permissão para uso da câmera não foi concebida.';
@@ -107,9 +107,9 @@ export default class Camera extends Vue {
     }
   }
   closeCamera() {
-    this.mediaStream.getTracks().forEach(track => track.stop());
+    this.mediaStream.getTracks().forEach((track:any) => track.stop());
 
-    this.$router.go();
+    this.$router.go(0);
   }
 }
 </script>
