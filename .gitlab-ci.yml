@@ -1,0 +1,41 @@
+image: node:carbon-alpine
+
+cache:
+  paths:
+  - node_modules/
+
+stages:
+  - test
+  - build
+  - lint
+  - release
+
+# Stage I
+# Testing Phase:
+# This is where the main code is tested.
+# Other options like code coverage, etc are also written in this phase
+test:
+  stage: test
+  script:
+   - npm install
+   - npm run test:unit
+   - npm run lint
+   #- ./node_modules/.bin/codecov --token="$CODECOV_TOKEN"
+
+
+# Stage II
+# Build Phase:
+# This is where the main code is tested.
+build:
+  stage: build
+  script:
+    - npm install @vue/cli
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      #build folder
+      - dist/
+    
+
+
