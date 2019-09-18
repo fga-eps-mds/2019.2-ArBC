@@ -35,27 +35,26 @@
 </style>
 
 <script lang="ts">
-import Vue from 'vue'
-import Component from 'vue-class-component'
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
 @Component({})
 export default class Camera extends Vue {
-  message: string  = '';
-  mediaStream: any;
-  cameraOpened: Boolean = false;
-  mediaConstraints: object = {
+  public $refs!: {
+    video: HTMLFormElement,
+  };
+  private message: string  = '';
+  private mediaStream: any;
+  private cameraOpened: boolean = false;
+  private mediaConstraints: object = {
     video: {
       facingMode: 'environment',
-    }
+    },
   };
-  $refs!: {
-    video: HTMLFormElement
-  }
-  
-  destroyed() {
+  public destroyed() {
     this.message = '';
   }
-  handleMediaDevicesUndefined() {
+  public handleMediaDevicesUndefined() {
     const getUserMedia = navigator.mediaDevices.getUserMedia || navigator.getUserMedia;
 
     if (!getUserMedia) {
@@ -64,14 +63,14 @@ export default class Camera extends Vue {
 
     getUserMedia(this.mediaConstraints)
       .then(this.handleSucessOnUserMedia)
-      .catch(this.handleErrorOnUserMedia)
+      .catch(this.handleErrorOnUserMedia);
   }
-  handleSucessOnUserMedia(mediaStream: any) {
+  public handleSucessOnUserMedia(mediaStream: any) {
     this.mediaStream = mediaStream;
 
-    let video = this.$refs.video;
+    const video = this.$refs.video;
 
-    if ("srcObject" in video) {
+    if ('srcObject' in video) {
       video.srcObject = mediaStream;
     } else {
       video.src = window.URL.createObjectURL(mediaStream);
@@ -79,11 +78,11 @@ export default class Camera extends Vue {
 
     video.onloadedmetadata = () => {
       video.play();
-    }
+    };
 
     this.cameraOpened = true;
   }
-  handleErrorOnUserMedia(error: any) {
+  public handleErrorOnUserMedia(error: any) {
     switch (error.name) {
       case 'NotAllowedError':
         this.message = 'A permissão para uso da câmera não foi concebida.';
@@ -97,17 +96,17 @@ export default class Camera extends Vue {
         this.message = 'Ocorreu algum erro desconhecido... Tente novamente.';
     }
   }
-  openCamera() {
+  public openCamera() {
     if ('mediaDevices' in navigator) {
       navigator.mediaDevices.getUserMedia(this.mediaConstraints)
-        .then(mediaStream => this.handleSucessOnUserMedia(mediaStream))
-        .catch(error => this.handleErrorOnUserMedia(error))
+        .then((mediaStream) => this.handleSucessOnUserMedia(mediaStream))
+        .catch((error) => this.handleErrorOnUserMedia(error));
     } else {
       this.handleMediaDevicesUndefined();
     }
   }
-  closeCamera() {
-    this.mediaStream.getTracks().forEach((track:any) => track.stop());
+  public closeCamera() {
+    this.mediaStream.getTracks().forEach((track: any) => track.stop());
 
     this.$router.go(0);
   }
