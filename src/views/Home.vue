@@ -1,17 +1,21 @@
 <template>
   <div>
     <h1>ArBC</h1>
-    <camera />
+    <Camera />
   </div>
 </template>
 
 <script lang="ts">
+import Vue from 'vue'
+import Component from 'vue-class-component'
 import Camera from '../components/Camera.vue';
 
-export default {
-  name: 'Home',
+@Component({
   components: {
-    Camera,
-  },
-};
+    Camera
+  }
+})
+
+export default class Home extends Vue {
+}
 </script>

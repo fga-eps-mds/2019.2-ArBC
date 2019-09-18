@@ -14,7 +14,7 @@
       FECHAR CÂMERA
     </button>
 
-    <h4 v-if="message">{{ message }}</h4>
+    <h4 v-if="message!=''">{{ message }}</h4>
 
     <video ref="video" class="video" />
   </div>
@@ -35,80 +35,81 @@
 </style>
 
 <script lang="ts">
-export default {
-  name: 'Camera',
-  data() {
-    return {
-      message: null,
-      mediaStream: null,
-      cameraOpened: false,
-      mediaConstraints: {
-        video: {
-          facingMode: 'environment',
-        },
-      },
-    };
-  },
+import Vue from 'vue'
+import Component from 'vue-class-component'
+
+@Component({})
+export default class Camera extends Vue {
+  message: string  = '';
+  mediaStream: object = {};
+  cameraOpened: Boolean = false;
+  mediaConstraints: object = {
+    video: {
+      facingMode: 'environment',
+    }
+  };
+  $refs!: {
+    video: HTMLFormElement
+  }
+  
   destroyed() {
-    this.message = null;
-  },
-  methods: {
-    handleMediaDevicesUndefined() {
-      const getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+    this.message = '';
+  }
+  handleMediaDevicesUndefined() {
+    const getUserMedia = navigator.mediaDevices.getUserMedia || navigator.getUserMedia;
 
-      if (!getUserMedia) {
-        this.message = 'Não é possível acesar a câmera através desse navegador...';
-      }
+    if (!getUserMedia) {
+      this.message = 'Não é possível acesar a câmera através desse navegador...';
+    }
 
-      getUserMedia(this.mediaConstraints)
-        .then(this.handleSucessOnUserMedia)
-        .catch(this.handleErrorOnUserMedia)
-    },
-    handleSucessOnUserMedia(mediaStream) {
-      this.mediaStream = mediaStream;
+    getUserMedia(this.mediaConstraints)
+      .then(this.handleSucessOnUserMedia)
+      .catch(this.handleErrorOnUserMedia)
+  }
+  handleSucessOnUserMedia(mediaStream: object) {
+    this.mediaStream = mediaStream;
 
-      let video = this.$refs.video;
+    let video = this.$refs.video;
 
-      if ("srcObject" in video) {
-        video.srcObject = mediaStream;
-      } else {
-        video.src = window.URL.createObjectURL(mediaStream);
-      }
+    if ("srcObject" in video) {
+      video.srcObject = mediaStream;
+    } else {
+      video.src = window.URL.createObjectURL(mediaStream);
+    }
 
-      video.onloadedmetadata = () => {
-        video.play();
-      }
+    video.onloadedmetadata = () => {
+      video.play();
+    }
 
-      this.cameraOpened = true;
-    },
-    handleErrorOnUserMedia(error) {
-      switch (error.name) {
-        case 'NotAllowedError':
-          this.message = 'A permissão para uso da câmera não foi concebida.';
+    this.cameraOpened = true;
+  }
+  handleErrorOnUserMedia(error: object) {
+    switch (error.name) {
+      case 'NotAllowedError':
+        this.message = 'A permissão para uso da câmera não foi concebida.';
 
-          break;
-        case 'NotReadableError':
-          this.message = 'Houve algum erro no aparelho...';
+        break;
+      case 'NotReadableError':
+        this.message = 'Houve algum erro no aparelho...';
 
-          break;
-        default:
-          this.message = 'Ocorreu algum erro desconhecido... Tente novamente.';
-      }
-    },
-    openCamera() {
-      if ('mediaDevices' in navigator) {
-        navigator.mediaDevices.getUserMedia(this.mediaConstraints)
-          .then(mediaStream => this.handleSucessOnUserMedia(mediaStream))
-          .catch(error => this.handleErrorOnUserMedia(error))
-      } else {
-        this.handleMediaDevicesUndefined();
-      }
-    },
-    closeCamera() {
-      this.mediaStream.getTracks().forEach(track => track.stop());
+        break;
+      default:
+        this.message = 'Ocorreu algum erro desconhecido... Tente novamente.';
+    }
+  }
+  openCamera() {
+    if ('mediaDevices' in navigator) {
+      navigator.mediaDevices.getUserMedia(this.mediaConstraints)
+        .then(mediaStream => this.handleSucessOnUserMedia(mediaStream))
+        .catch(error => this.handleErrorOnUserMedia(error))
+    } else {
+      this.handleMediaDevicesUndefined();
+    }
+  }
+  closeCamera() {
+    this.mediaStream.getTracks().forEach(track => track.stop());
 
-      this.$router.go();
-    },
-  },
-};
+    this.$router.go();
+  }
+}
 </script>
