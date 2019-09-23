@@ -56,7 +56,7 @@ deploy_staging:
     - docker push registry.gitlab.com/lucianosz7/20192-arbc_arbc_app:$DOCKERTAG
     
 release_development:
-  extends: .release
+  extends: .deploy_staging
   environment: development
   only:
     - master
