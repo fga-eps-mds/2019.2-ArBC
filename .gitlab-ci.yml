@@ -43,7 +43,7 @@ build:
 # Stage III
 # Deployment Phase:
 # This is where the main code is deployed
-deploy_staging:
+.deploy_staging:
   stage: deploy
   image: docker:latest
   services:
