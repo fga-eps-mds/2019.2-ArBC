@@ -2,7 +2,7 @@ version: '3'
 
 services:
   arbc_app:
-    container_name: ArBCDockerize
+    container_name: ArBC-APP
     build: .
     #command: npm install
     ports:

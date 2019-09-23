@@ -7,8 +7,6 @@ cache:
 stages:
   - test
   - build
-  - lint
-  - release
 
 # Stage I
 # Testing Phase:
@@ -17,6 +15,7 @@ stages:
 test:
   stage: test
   script:
+   - rm -rf package-lock.json
    - npm install
    - npm run test:unit
    - npm run lint
@@ -25,10 +24,11 @@ test:
 
 # Stage II
 # Build Phase:
-# This is where the main code is tested.
+# This is where the main code is built.
 build:
   stage: build
   script:
+    - rm -rf package-lock.json
     - npm install @vue/cli
     - npm install
     - npm run build
@@ -36,6 +36,6 @@ build:
     paths:
       #build folder
       - dist/
-    
+
 
 

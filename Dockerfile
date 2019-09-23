@@ -1,7 +1,5 @@
 FROM node:carbon-alpine
 
-LABEL name="ArBC"
-
 ENV ArBC_FRONTEND=noninteractive
 
 WORKDIR /usr/app
