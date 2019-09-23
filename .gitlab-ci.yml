@@ -9,6 +9,7 @@ stages:
   - build
   - lint
   - release
+  - deploy
 
 # Stage I
 # Testing Phase:
@@ -38,6 +39,26 @@ build:
     paths:
       #build folder
       - dist/
+
+# Stage III
+# Deployment Phase:
+# This is where the main code is deployed
+deploy_staging:
+  stage: deploy
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - docker build . -t registry.gitlab.com/lucianosz7/20192-arbc_arbc_app:$DOCKERTAG
+
+    - docker login "$DOCKERLOGIN" -p "$DOCKERPASSWORD" registry.gitlab.com
+
+    - docker push registry.gitlab.com/lucianosz7/20192-arbc_arbc_app:$DOCKERTAG
     
+release_development:
+  extends: .release
+  environment: development
+  only:
+    - master
 
 
