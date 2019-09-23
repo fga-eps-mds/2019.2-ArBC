@@ -43,7 +43,7 @@ build:
 # Stage III
 # Deployment Phase:
 # This is where the main code is deployed
-.deploy_staging:
+deploy_staging:
   stage: deploy
   image: docker:latest
   services:
@@ -55,10 +55,11 @@ build:
 
     - docker push registry.gitlab.com/lucianosz7/20192-arbc_arbc_app:$DOCKERTAG
     
-release_development:
-  extends: .deploy_staging
-  environment: development
-  only:
-    - master
+#release_development:
+ # extends: .deploy_staging
+  #environment:
+   # name: development
+  #only:
+   # - master
 
 
