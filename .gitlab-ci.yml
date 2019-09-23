@@ -30,6 +30,7 @@ test:
 build:
   stage: build
   script:
+    - rm -rf package-lock.json
     - npm install @vue/cli
     - npm install
     - npm run build
