@@ -3,16 +3,29 @@
 |    Data    | Versão |                             Alteração                             |                    Autor                    |
 |:----------:|:------:|:-----------------------------------------------------------------:|:-------------------------------------------:|
 |23/09| 1.0.0| Criação do Documento e adição dos itens 7.2, 7.3, 8, 9 e 10 |João Lucas|
+|24/09| 1.0.1| Adição de itens 1, 2, 3 e 4 | Eduardo Lima |
 
 
 ## 1. Descrição do Projeto
+ArBC é uma aplicação web baseada em javascript e python voltada ao público infantil ainda em processo de alfabetização, utilizando tecnologias de realidade aumentada para facilitar e tornar essa tarefa mais engajadora para as crianças. 
 
 ## 2. Objetivos do Projeto
+O projeto tem como objetivo facilitar a associação de palavras a objetos de forma visual e engajante para crianças em processo de alfabetização. As crianças, com auxílio de um educador que tenha conhecimento dos requisitos da aplicação, poderão interagir com um conjunto de letras para formar palavras e assim visualizá-las por forma de GIFs com a câmera de um aparelho.
 
 ## 3. Justificativa do Projeto
+A alfabetização, por vezes, pode se tornar tediante para as crianças devido aos recursos comumente utilizados (papel, desenhos no quadro, etc). Numa era em que as crianças estão cada vez mais ligadas à tecnologia, nosso projeto tem como objetivo tornar este processo um pouco mais interativo e mais visual por meio da tecnologia de realidade aumentada.
 
 ## 4. Requisitos de alto nível
 
+São os requisitos de alto nível para o projeto:
+
+|                 Nome                 |           Descrição          |
+|:------------------------------------:|:-------------------------:|
+| Configurar API | Configurar API dentro das frameworks escolhidas para a aplicação (Vue.js e Python Django).|
+| Câmera | Obter permissão para utilização da câmera do aparelho.  |
+| Banco de Dados | Conectar Banco de Dados com Front-End para mais fácil implementação de novas palavras ao dicionário de palavras. |
+| Reconhecimento de Palavras | Reconhecer conjunto de símbolos (patterns) como uma palavra, e mostrar uma correspondente no dicionário. |
+  
 ## 5. Riscos
 
 ## 6. Resumo do Custo estimado
