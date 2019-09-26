@@ -5,6 +5,7 @@
 |23/09| 1.0.0| Criação do Documento e adição dos itens 7.2, 7.3, 8, 9 e 10 |João Lucas|
 |24/09| 1.1.0| Adição de itens 1, 2, 3 e 4 | Eduardo Lima |
 |25/09| 1.2.0| Adição dos itens 5, 6 e 7| João Lucas |
+|26/09 | 1.2.1 | Atualização do item 7.1 | Eduardo Lima |
 
 
 ## 1. Descrição do Projeto
@@ -89,7 +90,7 @@
 ## 7. Lista das partes interessadas
 ### 7.1 Usuários
 
-* Profissionais da área da educação que desejam educar seus alunos com tecnologia.
+<p align="justify"> Profissionais da área da educação que desejam complementar seu ensino de alfabetização utilizando da tecnologia deste projeto. </p>
 
 
 ### 7.2 Equipe de Engenharia de Produto de <i>Software</i>
