@@ -18,7 +18,7 @@ Data|Versão|Descrição|Autor
   - 1.3 [Definições, acrônimos e abreviações](#1_3)
   - 1.4 [Referências](#1_4)
   - 1.5 [Visão Geral](#1_5)
-2. [Visão Geral do Produto](#2)
+2. [Visão Geral do Protótipo do Produto](#2)
 3. [Funcionalidades do Produto](#3)
 4. [Imagens do Protótipo de Baixa Fidelidade](#4)
 
@@ -31,6 +31,7 @@ ___
 <p align="justify"> &emsp;&emsp; O presente protótipo tem o objetivo de explanar através de imagens e palavras a iteração simples de um usuário com a aplicação.</p>
 
 ##### 1.2 <a name="1_2">Escopo</a>
+
 <p align="justify"> &emsp;&emsp; A superfície de apresentação deste protótipo é referente, principalmente a área de interação do usuário com o software em questão. Destarte será abordado o front-end da aplicação com exemplos de respostas esperadas para o reconhecimento de uma letra ou palavra.</p>
 
 ##### 1.3 <a name=1_3>Definições, acrônimos e abreviações</a>
@@ -46,12 +47,11 @@ https://startupsorocaba.com/startup-sorocaba-o-que-sao-prototipos-de-baixa-e-alt
 
 ##### 1.5 <a name="1_5">Visão geral</a>
 
-<p align="justify"> &emsp;&emsp; </p>
-
 * **Introdução:** no qual é introduzido os detalhes gerais sobre a visão do projeto;
-* **Visão Geral** do Protótipo do Produto: esta seção fornece uma visualização de alto nível das capacidades do produto e da sua interface;
+* **Visão Geral do Protótipo do Produto:** esta seção fornece uma visualização de alto nível das capacidades do produto e da sua interface;
 * **Funcionalidades:** descrevendo como a interface irá funcionar;
-* **Imagens do Protótipo** de Baixa Fidelidade: representação inicial e com baixa fidelidade de como será o modelo final;
+* **Imagens do Protótipo de Baixa Fidelidade:** representação inicial e com baixa fidelidade de como será o modelo final;
+
 ### 2. <a name="2">Visão Geral do Protótipo do Produto</a>
 
 <div style="text-align: justify"> &emsp;&emsp; 
@@ -60,12 +60,12 @@ em realidade aumentada, uma imagem que representa o objeto em questão ou a letr
  </div>
 
 ### 3. <a name="3">Funcionalidades do Produto</a>
+
 O sistema dispõem dos seguintes recursos:<br />
 <ul>
   <li>Reconhecimento e ilustração de letra ao posicionar a câmera sobre um marcador desta.</li>
   <li>Reconhecimento e ilustração de palavra ao posicionar a câmera sobre os marcadores das letras que a representam.</li>
 </ul>
-<p align = "justify"></p>
 
 ### 4. <a name="4">Imagens do Protótipo de Baixa Fidelidade</a>
 <img src="../imagens/low_fidelity_prototype/Component 1.png" />
