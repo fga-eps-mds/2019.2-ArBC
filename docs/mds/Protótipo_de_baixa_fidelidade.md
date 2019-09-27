@@ -51,7 +51,10 @@ ___
 
 ### 3. <a name="3">Funcionalidades do Produto</a>
 O sistema dispõem dos seguintes recursos:<br />
-
-* <p align = "justify"></p>
+<p align = "justify"></p>
 
 ### 4. <a name="4">Imagens do Protótipo de Baixa Fidelidade</a>
+<img src="../imagens/low_fidelity_prototype/Component 1.png" />
+<img src="../imagens/low_fidelity_prototype/Component 2.png" />
+<img src="../imagens/low_fidelity_prototype/Component 3.png" />
+<img src="../imagens/low_fidelity_prototype/Component 4.png" />
