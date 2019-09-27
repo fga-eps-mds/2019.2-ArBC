@@ -51,6 +51,10 @@ ___
 
 ### 3. <a name="3">Funcionalidades do Produto</a>
 O sistema dispõem dos seguintes recursos:<br />
+<ul>
+  <li>Reconhecimento e ilustração de letra ao posicionar a câmera sobre um marcador desta.</li>
+  <li>Reconhecimento e ilustração de palavra ao posicionar a câmera sobre os marcadores das letras que a representam.</li>
+</ul>
 <p align = "justify"></p>
 
 ### 4. <a name="4">Imagens do Protótipo de Baixa Fidelidade</a>
