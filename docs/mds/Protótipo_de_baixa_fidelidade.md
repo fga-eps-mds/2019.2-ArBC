@@ -4,6 +4,9 @@ Data|Versão|Descrição|Autor
 -|-|-|-
 27/09|1.0.0|Adição do template do Documento| Sérgio Cipriano|
 27/09|1.1.0|Adição do subitem 1.3| Sérgio Cipriano|
+27/09|1.1.1|Adição do subitem 1.1 e 1.2| João Henrique Paulino|
+27/09|1.2.0|Adição do item 3| João Henrique Paulino|
+27/09|1.3.0|Adição do item 4| João Henrique Paulino|
 
 # Sumário
 
@@ -23,11 +26,10 @@ ___
 
 ##### 1.1 <a name ="1_1">Propósito</a>
 
-<p align="justify"> &emsp;&emsp; </p>
+<p align="justify"> &emsp;&emsp; O presente protótipo tem o objetivo de explanar através de imagens e palavras a iteração simples de um usuário com a aplicação.</p>
 
 ##### 1.2 <a name="1_2">Escopo</a>
-
-<p align="justify"> &emsp;&emsp; </p>
+<p align="justify"> &emsp;&emsp; A superfície de apresentação deste protótipo é referente, principalmente a área de interação do usuário com o software em questão. Destarte será abordado o front-end da aplicação com exemplos de respostas esperadas para o reconhecimento de uma letra ou palavra.</p>
 
 ##### 1.3 <a name=1_3>Definições, acrônimos e abreviações</a>
 
