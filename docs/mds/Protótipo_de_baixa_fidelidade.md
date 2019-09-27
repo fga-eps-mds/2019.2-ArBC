@@ -8,6 +8,7 @@ Data|Versão|Descrição|Autor
 27/09|1.1.2|Adição dos subitens 1.4 e 1.5| João Henrique Paulino|
 27/09|1.2.0|Adição do item 3| João Henrique Paulino|
 27/09|1.3.0|Adição do item 4| João Henrique Paulino|
+27/09|1.4.0|Adição do item 2| Rhuan Carlos e Igor Batista|
 
 # Sumário
 
@@ -53,7 +54,10 @@ https://startupsorocaba.com/startup-sorocaba-o-que-sao-prototipos-de-baixa-e-alt
 * **Imagens do Protótipo** de Baixa Fidelidade: representação inicial e com baixa fidelidade de como será o modelo final;
 ### 2. <a name="2">Visão Geral do Protótipo do Produto</a>
 
-<div style="text-align: justify"> &emsp;&emsp; </div>
+<div style="text-align: justify"> &emsp;&emsp; 
+O produto como um todo é capaz de, com uma câmera funcional de um aparelho móvel, ler uma palavra ou uma letra e exibir,
+em realidade aumentada, uma imagem que representa o objeto em questão ou a letra, caso seja lido uma só letra apenas. 
+ </div>
 
 ### 3. <a name="3">Funcionalidades do Produto</a>
 O sistema dispõem dos seguintes recursos:<br />
