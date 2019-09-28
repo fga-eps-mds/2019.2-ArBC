@@ -7,6 +7,9 @@ Data|Versão|Descrição|Autor
 07/09|1.1.1|Melhorias no item 4.1 | Sérgio Cipriano|
 07/09|1.2.0|Adição do item 1, 3, 5, 6 e 7| Igor Batista|
 07/09|1.3.0|Adição do item 2| Rhuan Carlos|
+28/09|1.4.0|Correções links| Sérgio Cipriano|
+28/09|1.5.0|Adição do item 2.4| Sérgio Cipriano, Rhuan Carlos, Marcelo Victor|
+
 
 
 # Sumário
@@ -18,6 +21,10 @@ Data|Versão|Descrição|Autor
   - 1.4 [Referências](#1_4)
   - 1.5 [Visão Geral](#1_5)
  2. [Representação da Arquitetura](#2)
+  - 2.1 [Front-end](#2_1)
+  - 2.2 [Back-end](#2_2)
+  - 2.3 [Diagrama de relações](#2_3)
+  - 2.4 [Diagrama de pacotes](#2_4)
  3. [Metas e Restrições de Arquitetura](#3)
   - 3.1 [Metas](#3_1)
   - 3.2 [Restrições](#3_2)
@@ -106,6 +113,10 @@ Sendo dividido em:</p>
 ### 2.3 <a name="2_3">Diagrama de Relações</a>
 
 ![Diagrama_Relações](https://user-images.githubusercontent.com/36544528/64480031-a41a5700-d196-11e9-83b3-990695451603.jpeg)
+
+### 2.4 <a name="2_4">Diagrama de Pacotes</a>
+
+![Diagrama_de_Pacotes](Diagrama_de_Pacotes.pdf)
 
 <p align = "justify"></p>
 
