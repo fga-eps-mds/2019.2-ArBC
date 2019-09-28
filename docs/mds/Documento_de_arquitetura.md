@@ -85,7 +85,7 @@ Sendo dividido em:</p>
 
 <p align = "justify">A arquitetura adotada para o front-end é o padrão <i>Vuex</i> que é um <i>state management
  pattern</i>, que consiste em <i>State</i>, <i>View</i> e <i>Actions</i> cada uma com suas respectivas funções:</p>
-  
+
  Camada|Função
  -|-
  |*State*| A fonte dos dados locais da aplicação.
@@ -116,7 +116,7 @@ Sendo dividido em:</p>
 
 ### 2.4 <a name="2_4">Diagrama de Pacotes</a>
 
-![Diagrama_de_Pacotes](Diagrama_de_Pacotes.pdf)
+![Diagrama_de_Pacotes](../imagens/documento_de_arquitetura/Diagrama_de_Pacotes.jpeg)
 
 <p align = "justify"></p>
 
