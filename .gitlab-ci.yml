@@ -61,11 +61,11 @@ release_production:
   only:
     - tags
   except:
-   - ^(?!master).+@/
+   - ^(?!Feature/#continuous_deployment).+@/
 
 release_development:
   extends: .release
   environment: development
   only: 
-    - master
+    - Feature/#continuous_deployment
 
