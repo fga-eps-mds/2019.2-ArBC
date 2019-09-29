@@ -112,7 +112,7 @@ Sendo dividido em:</p>
 
 ### 2.3 <a name="2_3">Diagrama de Relações</a>
 
-![Diagrama_Relações](https://user-images.githubusercontent.com/36544528/64480031-a41a5700-d196-11e9-83b3-990695451603.jpeg)
+![Diagrama_Relações](../imagens/documento_de_arquitetura/Diagrama_Relações.jpeg)
 
 ### 2.4 <a name="2_4">Diagrama de Pacotes</a>
 
