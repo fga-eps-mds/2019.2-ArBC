@@ -1,11 +1,19 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<a-scene embedded arjs='debugUIEnabled: false; trackingMethod: best;'>
+  <a-marker 
+    v-for="letter in alphabet"
+    :key="letter"
+    type='pattern'
+    :url="'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop/src/assets/patterns/pattern-' + letter + '.patt'">
+      <a-image
+        geometry="primitive: plane;"
+        position="0 0 0" rotation="-90 0 0"
+        :src="'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop/AR_markers/marker_images/marker-' + letter + '.png'"
+      >
+      </a-image>
+  </a-marker>
+  <a-entity camera></a-entity>
+</a-scene>
 </template>
 
 <style lang="less">
@@ -27,3 +35,25 @@
   }
 }
 </style>
+<script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
+@Component({})
+export default class App extends Vue {
+  private alphabet: string[] = [];
+    public mounted() {
+      this.alphabet = this.alphabetArray();
+    }
+  public alphabetArray() {
+    const a = 'A';
+    const z = 'Z';
+    const letters = [];
+    const j = z.charCodeAt(0);
+    let i = a.charCodeAt(0);
+    for (; i <= j; ++i) {
+      letters.push(String.fromCharCode(i));
+    }
+    return letters;
+  }
+}
+</script>
