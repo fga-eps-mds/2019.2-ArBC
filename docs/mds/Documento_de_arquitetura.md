@@ -9,6 +9,7 @@ Data|Versão|Descrição|Autor
 07/09|1.3.0|Adição do item 2| Rhuan Carlos|
 28/09|1.4.0|Correções links| Sérgio Cipriano|
 28/09|1.5.0|Adição do item 2.4| Sérgio Cipriano, Rhuan Carlos, Marcelo Victor|
+30/09|1.4.0|Correção link #7 e #6| Sérgio Cipriano|
 
 
 
@@ -33,8 +34,8 @@ Data|Versão|Descrição|Autor
   - 4.2 [Atores de Casos de Uso](#4_2)
   - 4.3 [Descrições de Casos de Uso](#4_3)
  5. [Visão Lógica](#5)
- 6. [Tamanho e Desempenho](#7)
- 7. [Qualidade](#8)
+ 6. [Tamanho e Desempenho](#6)
+ 7. [Qualidade](#7)
 
 Documento de Arquitetura de Software
 ------------------------------------
