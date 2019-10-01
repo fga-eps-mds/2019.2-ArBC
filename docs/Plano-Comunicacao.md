@@ -17,7 +17,7 @@ Data|Versão|Descrição|Autor
 <p align = "justify"> &emsp;&emsp; Para uso do projeto, o aplicativo servirá para comunicações entre os membros da equipe, como reuniões, dúvidas, horários, entregas, discussões e etc. </p>
 
 
-<p align = "center"> &emsp;&emsp; <img src="https://imagepng.org/wp-content/uploads/2017/11/telegram-icone-icon.png" width="200" height="200"/> </p>
+<p align = "center"> &emsp;&emsp; <img src="https://fga-eps-mds.github.io/2019.1-Aix/assets/img/telegram-logo.png" width="200" height="200"/> </p>
 
 #### GitHub
 
