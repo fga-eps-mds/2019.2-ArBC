@@ -7,8 +7,7 @@ cache:
 stages:
   - test
   - build
-  - lint
-  - release
+  - deploy
 
 # Stage I
 # Testing Phase:
@@ -17,6 +16,7 @@ stages:
 test:
   stage: test
   script:
+   - rm -rf package-lock.json
    - npm install
    - npm run test:unit
    - npm run lint
@@ -25,17 +25,47 @@ test:
 
 # Stage II
 # Build Phase:
-# This is where the main code is tested.
+# This is where the main code is built.
 build:
   stage: build
   script:
+    - rm -rf package-lock.json
     - npm install @vue/cli
     - npm install
     - npm run build
+  environment:
+    name: build
+    url: https://build.arbc.com
   artifacts:
     paths:
       #build folder
       - dist/
-    
+      
 
+# Stage III
+# Release Phase
+# At this stage our application is deployed
+.release:
+  stage: deploy
+  script:
+    - rm -rf package-lock.json
+    - npm install
+    - npm i -g netlify-cli
+    - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
+  dependencies:
+    - build
+    
+release_production:
+  extends: .release
+  environment: production
+  only:
+    - tags
+  except:
+   - ^(?!master).+@/
+
+release_development:
+  extends: .release
+  environment: development
+  only: 
+    - master
 
