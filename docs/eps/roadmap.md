@@ -6,6 +6,7 @@
 | 10/09/2019 |   1.1.0  | Planejamento da sprint 2 | Eduardo Lima |
 | 17/09/2019 | 1.2.0 | Planejamento da sprint 3| João Lucas
 | 27/09/2019| 2.0.0 | Planejamento das demais Sprints| João Lucas
+|30/09/2019| 2.0.1 | Correção de algumas sprints | João Lucas |
 
 # Release 1
 
@@ -29,19 +30,21 @@
 
 * Treinamentos [**Javascript**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/14) e [**Python**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/24)
 * [**Documento de Arquitetura**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/5)
-* [**Conexão com a câmera**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/21)
-* [**Criação do Banco de Dados**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/22)
+* [**FT01 - Conexão com a câmera**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/21)
 * **Roadmap de Projeto**
 * [**Criação da Logo**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/16)
 
 
 ### Sprint 3
-* [**Termo de Abertura de Projeto**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/7)
+
 * [**Estrutura Analítica do Projeto**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/37)
-* [**Banco de Dados**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/22)
-* []
+* [**FT02 - Banco de Dados**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/22)
+* [**Roadmap de Scrum Master**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/31)
+* [**Plano de Comunicação**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/55)
 
 ### Sprint 4
-
-
-### Release 01
+* [**Termo de Abertura de Projeto**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/7)
+* [**Protótipo de Alta Fidelidade**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/23)
+* **Roadmap de Papéis**
+* [**Plano de Gerenciamento de Custos**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/44)
+* [**Documento de Riscos**](https://github.com/fga-eps-mds/2019.2-ArBC/issues/56)
