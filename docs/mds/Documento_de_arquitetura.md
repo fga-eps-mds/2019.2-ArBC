@@ -11,6 +11,7 @@ Data|Versão|Descrição|Autor
 28/09|1.4.0|Adição do item 2.4| Sérgio Cipriano, Rhuan Carlos, Marcelo Victor|
 30/09|1.4.1|Correção link #7 e #6| Sérgio Cipriano|
 01/10|1.4.2|Correção das tabelas nos subtópicos 1.3, 2.1, 2.2, 4.2 e 4.3|
+02/10|1.5.0|Atualizando subtópico 1.1|
 
 
 
@@ -45,7 +46,7 @@ Documento de Arquitetura de Software
 
 ### 1.1 <a name="1_1">Finalidade</a>
 
- <p align = "justify"> &emsp;&emsp; Este documento tem por objetivo estabelecer um posicionamento sobre a aplicação, suas características e seu desenvolvimento em questão. Também expondo as suas funcionalidades e definindo seus requisitos em termos de necessidade para usuários finais.</p>
+ <p align = "justify"> &emsp;&emsp; Este documento tem como finalidade fornecer uma visão geral da arquitetura do ArBC, utilizando-se de diversas visões arquiteturais - tais como a visão lógica e de caso de uso - a fim de facilitar o entendimento dos processos e funcionamento de todo o sistema. Tem também como objetivo transmitir as decisões arquiteturais significativas tomadas em relação ao mesmo.</p>
 
 ### 1.2 <a name="1_2">Escopo</a>
 
