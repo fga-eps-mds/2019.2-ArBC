@@ -33,9 +33,6 @@ build:
     - npm install @vue/cli
     - npm install
     - npm run build
-  environment:
-    name: build
-    url: https://build.arbc.com
   artifacts:
     paths:
       #build folder
@@ -62,7 +59,7 @@ release_production:
   only:
     - tags
   except:
-   - ^(?!Bug/#Fixing_continuous_deploy).+@/
+   - ^(?!master).+@/
 
 release_development:
   extends: .release
@@ -70,5 +67,5 @@ release_development:
     name: git development
     url: https://arbc-lab.netlify.com
   only: 
-    - Bug/#Fixing_continuous_deploy
+    - master
 
