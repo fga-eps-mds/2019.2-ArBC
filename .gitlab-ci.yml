@@ -49,6 +49,7 @@ build:
   stage: deploy
   script:
     - rm -rf package-lock.json
+
     - npm install
     - npm i -g netlify-cli
     - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
@@ -61,11 +62,11 @@ release_production:
   only:
     - tags
   except:
-   - ^(?!master).+@/
+   - ^(?!Bug/#Fixing_continuous_deploy).+@/
 
 release_development:
   extends: .release
   environment: development
   only: 
-    - master
+    - Bug/#Fixing_continuous_deploy
 
