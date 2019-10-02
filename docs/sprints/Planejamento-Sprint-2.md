@@ -3,7 +3,7 @@
 <p align="justify">Esta <i>Sprint</i> tem como objetivo:</p>
 
 - Treinamentos Javascript e Python
-- Continuar Documento de Arquitetura
+- Documento de Arquitetura
 - FT01 - Conexão com a câmera
 - Roadmap de Projeto
 - Criação da Logo
