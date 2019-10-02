@@ -64,7 +64,7 @@ release_production:
 release_development:
   extends: .release
   environment: 
-    name: git development
+    name: development
     url: https://arbc-lab.netlify.com
   only: 
     - master
