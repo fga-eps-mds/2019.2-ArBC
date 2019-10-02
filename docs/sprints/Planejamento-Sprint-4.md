@@ -2,11 +2,12 @@
 
 <p align="justify">Esta <i>Sprint</i> tem como objetivo:</p>
 
-Termo de Abertura de Projeto
-Protótipo de Alta Fidelidade
-Roadmap de Papéis
-Plano de Gerenciamento de Custos
-Documento de Riscos
+- Termo de Abertura de Projeto
+- Protótipo de Alta Fidelidade
+- Roadmap de Papéis
+- Plano de Gerenciamento de Custos
+- Documento de Riscos
+- Testes no Banco de Dados
 
 ## 2. Papéis
 
@@ -53,9 +54,9 @@ Os papéis dos EPS serão mantidos até a _Release 1_, porém nessa sprint, assi
 
 ## 3. Tamanho da _Sprint_
 
-| Data de Início | 15/09/2019 |
+| Data de Início | 22/09/2019 |
 |:--|:--:|
-| **Data de Término** | **21/09/2019** |
+| **Data de Término** | **28/09/2019** |
 | **Duração** | **7 dias** |
 
 
@@ -65,16 +66,15 @@ Os pareamentos ficaram assim:
 
 |Issues| Duplas |
 |:--|:--:|
-| [Patterns](https://github.com/fga-eps-mds/2019.2-ArBC/issues/39) | Rhuan e Sérgio|
-| [FT02 - Banco de Dados](https://github.com/fga-eps-mds/2019.2-ArBC-API/issues/1) | João Henrique e Marcelo |
-| [Leitura da Letra](https://github.com/fga-eps-mds/2019.2-ArBC/issues/9) | Igor e Thiago |
+| [Protótipo de Alta Fidelidade](https://github.com/fga-eps-mds/2019.2-ArBC/issues/23) | Todo MDS|
+| [Configurar Testes](https://github.com/fga-eps-mds/2019.2-ArBC-API/issues/4) | João Henrique, Marcelo, Rhuan, Sérgio |
+| [Correções das Patterns](https://github.com/fga-eps-mds/2019.2-ArBC/issues/48) | Igor e Thiago |
 
 
 ## 5. Sprint Backlog
 
-A Milestone da _Sprint_ 3 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/4)
+A Milestone da _Sprint_ 4 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/5)
 
 ## 6. Débitos Acumulados
 
-- Criação da Logo
-- Banco de Dados
+- Leitura da Letra
