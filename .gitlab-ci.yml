@@ -66,7 +66,9 @@ release_production:
 
 release_development:
   extends: .release
-  environment: development
+  environment: 
+    name: git development
+    url: https://arbc-lab.netlify.com
   only: 
     - Bug/#Fixing_continuous_deploy
 
