@@ -13,6 +13,7 @@ Data|Versão|Descrição|Autor
 02/09|1.7.0|Adição do subitem 6.1, 6.4| João Paulino|
 02/09|1.8.0|Adição do subitem 6.2| Thiago Lopes|
 02/09|1.9.0|Revisão e correções de ortografia| Rhuan Carlos e Igor Batista|
+01/10|1.9.1|Revisão e correção das tabelas| Marcelo Victor|
 
 
 # Sumário
@@ -95,26 +96,26 @@ ___
 ##### 2.2 <a name="2_2">Descrição do problema</a>
 
 |**O problema de**|Ensino pouco interativo|
-|:---|:---|
-|**afeta**|Professores e estudantes|
-|**cujo impacto é**|o auxílio na transmissão de informação|
-|uma boa solução seria|<p align = "justify">um sistema que exiba <i>gifs</i> ao ler um marcador (*augmented reality marker*)</p>|
+|:---:|:---:|
+|**afeta**|Professores e estudantes.|
+|**cujo impacto é**|o auxílio na transmissão de informação.|
+|**uma boa solução seria**|um sistema que exiba <i>gifs</i> ao ler um marcador (*augmented reality marker*).|
 
 ##### 2.3 <a name="2_3">Instrução de Posição do Produto</a>
 
 |**Para** |Professores e estudantes|
-|:---|:---|
-|**Que** |necessitam de melhora do ensino|
-|**O ArBC**|é uma aplicação para dinamizar a educação|
-|**Que**|<p align = "justify">faz a leitura de marcadores com a câmera e exibe um <i>gif</i></p>|
-|**Diferente de**|um ensino estático|
-|**Nosso produto**|<p align = "justify">é uma solução para chegar a um ensino mais dinâmico e interativo</p>|
+|:---:|:---:|
+|**Que** |necessitam de melhora do ensino.|
+|**O ArBC**|é uma aplicação para dinamizar a educação.|
+|**Que**|faz a leitura de marcadores com a câmera e exibe um <i>gif</i>.|
+|**Diferente de**|um ensino estático.|
+|**Nosso produto**|é uma solução para chegar a um ensino mais dinâmico e interativo.|
 
 
 ### 3. <a name="3">Descrições da parte interessada e dos Usuários</a>
 
 Nome|Descrição|Responsabilidade
---|--|--
+|:--:|:--:|:--:|
 | Equipe de Desenvolvimento | Estudantes da disciplina Métodos de Desenvolvimento de *Software* da Universidade de Brasília Campus Gama | Desenvolvimento, documentação, implementação e testes do *Software* solicitado. |
 | Equipe de Gestão de Processo | Estudantes da disciplina de Engenharia de Produto de *Software* da Universidade de Brasília Campus Gama | Gerir o desenvolvimento do produto, identificar erros e *bugs* e instruir caminhos e soluções para um bom desempenho. |
 | Professor e Professora | Professor da disciplina de Métodos de Desenvolvimento de *Software* e a professora da disciplina de Engenharia de Produto de *Software* ambos da Universidade de Brasília Campus Gama | Avaliar e orientar os estudantes de ambas as disciplinas respectivamente. |
@@ -123,9 +124,9 @@ Nome|Descrição|Responsabilidade
 ##### 3.1 <a name="3_1">Resumo dos Usuários</a>
 
 Nome|Descrição
--|-
-| Criança | <p align = "justify">Crianças durante processo de alfabetização</p> |
-| Educador | <p align = "justify">Profissionais da área de educação no geral.</p>|
+|:-:|:-:|
+| Criança | <p align = "justify">Crianças durante processo de alfabetização.</p> |
+| Educador | <p align = "justify">Profissionais da área de educação no geral.</p> |
 
 ##### 3.2 <a name="3_2">Ambiente do Usuário</a>
 
@@ -136,24 +137,24 @@ Nome|Descrição
 ###### 3.3.1 <a name="3_3_1">Equipe de Desenvolvimento</a>
 
 Representante|<p align = "justify">Igor Batista, João Paulino, Marcelo Victor, Rhuan Carlos, Sérgio Cipriano, Thiago Lopes.</p>
--|-
-**Descrição**|Desenvolvedores.
-**Tipo**|<p align = "justify">Estudantes da Universidade de Brasília, cursando a disciplina de Métodos de Desenvolvimento de Software.</p>
-**Responsabilidade**|<p align = "justify">Desenvolvimento, Testes, Documentação e Implementação do *software*.</p>
-**Critérios de Sucesso**|<p align = "justify">Finalizar o desenvolvimento e realizar a entrega do *software* dentro dos prazos</p>
-**Envolvimento**|Alto.
-**Problemas/Comentários**|<p align = "justify">Alguns integrantes da equipe são inexperientes nas linguagens de programação utilizadas no desenvolvimento, no padrão arquitetural e nas metodologias de desenvolvimento.</p>
+|:-:|:-:|
+|**Descrição**|Desenvolvedores.|
+|**Tipo**|Estudantes da Universidade de Brasília, cursando a disciplina de Métodos de Desenvolvimento de Software.|
+|**Responsabilidade**|Desenvolvimento, Testes, Documentação e Implementação do *software*.|
+|**Critérios de Sucesso**|Finalizar o desenvolvimento e realizar a entrega do *software* dentro dos prazos.|
+|**Envolvimento**|Alto.|
+|**Problemas/Comentários**|Alguns integrantes da equipe são inexperientes nas linguagens de programação utilizadas no desenvolvimento, no padrão arquitetural e nas metodologias de desenvolvimento.|
 
 ###### 3.3.2 <a name="3_3_2">Equipe de Gestão de Projeto</a>
 
-Representante|<p align = "justify">Eduardo Lima, Luciano dos Santos, João Lucas</p>
--|-
-**Descrição**|Gerenciamento de projeto.
-**Tipo**|<p align = "justify">Estudantes da disciplina de  Engenharia de Produto de Software da Universidade de Brasília.</p>
-**Responsabilidade**|<p align = "justify">Gerir e dar suporte à equipe de desenvolvimento, garantindo o melhor processo para o desenvolvimento do produto.</p>
-**Critérios de Sucesso**|<p align = "justify">Manter a equipe focada no projeto, manter o grupo ativo nos princípios ágeis, gerência dos riscos associados ao projeto e finalizar o desenvolvimento do projeto.</p>
-**Envolvimento**|Alto.
-**Problemas/Comentários**|<p align = "justify">Entender dentre as disponíveis tecnologias qual é a adequada para a necessidade do projeto</p>
+Representante|<p align = "justify">Eduardo Lima, Luciano dos Santos, João Lucas.</p>
+|:-:|:-:|
+|**Descrição**|Gerenciamento de projeto.|
+|**Tipo**|Estudantes da disciplina de  Engenharia de Produto de Software da Universidade de Brasília.|
+|**Responsabilidade**|Gerir e dar suporte à equipe de desenvolvimento, garantindo o melhor processo para o desenvolvimento do produto.|
+|**Critérios de Sucesso**|Manter a equipe focada no projeto, manter o grupo ativo nos princípios ágeis, gerência dos riscos associados ao projeto e finalizar o desenvolvimento do projeto.|
+|**Envolvimento**|Alto.|
+|**Problemas/Comentários**|Entender dentre as disponíveis tecnologias qual é a adequada para a necessidade do projeto.|
 
 ###### 3.3.3 <a name="3_3_3">Clientes</a>
 
@@ -161,28 +162,28 @@ Representante|<p align = "justify">Eduardo Lima, Luciano dos Santos, João Lucas
 
 ###### 3.4.1 <a name="3_5"> Crianças </a>
 Representante|Crianças
-:-:|:-:
-|**Descrição**|Crianças em processo de alfabetização.
-|**Tipo**|Estudantes em alfabetização.
-|**Responsabilidade**| Utilizar o aparelho para o propósito
-|**Critérios de Sucesso**| Aprendizado e diversão.
-|**Envolvimento**|Alto.
-|**Problemas/Comentários**| -
+|:-:|:-:|
+|**Descrição**|Crianças em processo de alfabetização.|
+|**Tipo**|Estudantes em alfabetização.|
+|**Responsabilidade**| Utilizar o aparelho para o propósito.|
+|**Critérios de Sucesso**| Aprendizado e diversão.|
+|**Envolvimento**|Alto.|
+|**Problemas/Comentários**| - |
 
 ###### 3.4.2 <a name="3_5">Educadores</a>
 Representante|Educadores
-:-:|:-:
-|**Descrição**|Pessoas responsáveis e/ou interessadas na alfabetização de crianças.
-|**Tipo**| Qualquer pessoa interessada.
-|**Responsabilidade**| Auxiliar no uso da aplicação.
-|**Critérios de Sucesso**| Ajuda bem sucedida no aprendizado da criança.
-|**Envolvimento**|Alto.
-|**Problemas/Comentários**| -
+|:-:|:-:|
+|**Descrição**|Pessoas responsáveis e/ou interessadas na alfabetização de crianças.|
+|**Tipo**| Qualquer pessoa interessada.|
+|**Responsabilidade**| Auxiliar no uso da aplicação.|
+|**Critérios de Sucesso**| Ajuda bem sucedida no aprendizado da criança.|
+|**Envolvimento**|Alto.|
+|**Problemas/Comentários**| - |
 
 ##### 3.5 <a name="3_5">Principais Necessidades dos Usuários ou dos Envolvidos</a>
 
 Necessidade|Prioridade|Interesse|Solução Atual|Solução Proposta
-:-:|:-:|:-:|:-:|:-:
+|:-:|:-:|:-:|:-:|:-:|
 |Auxiliar na alfabetização de crianças.|Alta|Tornar a alfabetização das crianças mais fácil e dinâmica.|Imaginação e gravuras dos objetos representados pelas palavras.|Aplicação que, por meio de um aparelho celular, fará a leitura de uma palavra e reproduzirá uma imagem correspondente.|
 
 ##### 3.6 <a name="3_6">Alternativas e Concorrência</a>
