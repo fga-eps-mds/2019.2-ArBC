@@ -7,10 +7,10 @@ const CONFIG = {
   baseURL: API_URL,
   headers: {
     Accept: 'application/json',
-  }
+  },
 };
 
 export default {
   get: (path: string) => axios.get(path, CONFIG)
-    .then((response: any) => response.data)
+    .then((response: any) => response.data),
 };
