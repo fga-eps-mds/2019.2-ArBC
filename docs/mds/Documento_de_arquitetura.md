@@ -10,8 +10,9 @@ Data|Versão|Descrição|Autor
 28/09|1.3.1|Correções links| Sérgio Cipriano|
 28/09|1.4.0|Adição do item 2.4| Sérgio Cipriano, Rhuan Carlos, Marcelo Victor|
 30/09|1.4.1|Correção link #7 e #6| Sérgio Cipriano|
-01/10|1.4.2|Correção das tabelas nos subtópicos 1.3, 2.1, 2.2, 4.2 e 4.3|
-02/10|1.5.0|Atualizando subtópico 1.1|
+01/10|1.4.2|Correção das tabelas nos subtópicos 1.3, 2.1, 2.2, 4.2 e 4.3| Sérgio Cipriano, Rhuan Carlos, Marcelo Victor, Igor Batista, João Henrique, Thiago Lopes|
+02/10|1.5.0|Atualizando subtópico 1.1, 1.2 | Rhuan Carlos|
+02/10|1.5.1|Refatoramento da visão geral | Marcelo Victor|
 
 
 
@@ -78,12 +79,13 @@ Abreviação|Significado
 <p align="justify"> &emsp;&emsp; Este documento é dividido em 7 tópicos descrevendo os detalhes das características do software proposto.
 Sendo dividido em:</p>
 
-* Introdução: no qual é introduzido os detalhes gerais sobre a visão do projeto;
-* Posicionamento: descrevendo o problema e a oportunidade de negócio;
-* Perfis dos Envolvidos e dos Usuários: esta seção descreve o perfil das partes interessadas no projeto;
-* Visão Geral do Produto: Esta seção fornece uma visualização de alto nível das capacidades do produto, interfaces para outros aplicativos e configurações dos sistemas;
-* Recursos do Produto: breve descrição dos recursos do produto;
-* Restrições: as restrições de *design*, restrições externas, como requisitos operacionais ou regulamentares.
+* Introdução: Fornece uma visão geral do documento inteiro;
+* Representação da arquitetura: Descreve qual é a arquitetura de software do sistema atual e como ela é representada;
+* Metas e restrições da arquitetura: Descreve os requisitos e objetivos do software que têm algum impacto sobre a arquitetura;
+* Visão de caso de uso: Descreve as partes significativas do ponto de vista da arquitetura do modelo de casos de uso;
+* Visão Lógica: Descreve as partes significativas do ponto de vista da arquitetura do modelo de design;
+* Tamanho e Desempenho: descreve as principais características de dimensionamento do software que têm um impacto na arquitetura, bem como as restrições do desempenho desejado;
+* Qualidade: descreve como a arquitetura do software contribui para todos os recursos (exceto a funcionalidade) do sistema.
 
 ## 2. <a name="2">Representação da Arquitetura</a>
 
