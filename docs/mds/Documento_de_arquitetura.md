@@ -50,7 +50,10 @@ Documento de Arquitetura de Software
 
 ### 1.2 <a name="1_2">Escopo</a>
 
-<p align="justify"> &emsp;&emsp; Este projeto tem como finalidade auxiliar na alfabetização de crianças, esse auxílio será feito através do incentivo causado por meios visuais advindos da tecnologia ,proporcionando um ambiente interativo em um momento tão importante na vida de uma criança.</p>
+<p align="justify"> &emsp;&emsp; Atráves desse documento, é possível obter um melhor entendimento da arquitetura do
+ projeto permitir ao leitor a compreensão do funcionamento do sistema, como também as abordagens utilizadas para o
+ seu desenvolvimento
+</p>
 
 ### 1.3 <a name="1_3">Definições, Acrônimos e Abreviações</a>
 
