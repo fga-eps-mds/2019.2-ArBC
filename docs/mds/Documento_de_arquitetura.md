@@ -7,9 +7,10 @@ Data|Versão|Descrição|Autor
 07/09|1.1.1|Melhorias no item 4.1 | Sérgio Cipriano|
 07/09|1.2.0|Adição do item 1, 3, 5, 6 e 7| Igor Batista|
 07/09|1.3.0|Adição do item 2| Rhuan Carlos|
-28/09|1.4.0|Correções links| Sérgio Cipriano|
-28/09|1.5.0|Adição do item 2.4| Sérgio Cipriano, Rhuan Carlos, Marcelo Victor|
-30/09|1.4.0|Correção link #7 e #6| Sérgio Cipriano|
+28/09|1.3.1|Correções links| Sérgio Cipriano|
+28/09|1.4.0|Adição do item 2.4| Sérgio Cipriano, Rhuan Carlos, Marcelo Victor|
+30/09|1.4.1|Correção link #7 e #6| Sérgio Cipriano|
+01/10|1.4.2|Correção das tabelas nos subtópicos 1.3, 2.1, 2.2, 4.2 e 4.3|
 
 
 
@@ -53,10 +54,10 @@ Documento de Arquitetura de Software
 ### 1.3 <a name="1_3">Definições, Acrônimos e Abreviações</a>
 
 Abreviação|Significado
--|-
-|**MDS**| Métodos de Desenvolvimento de Software
-|**EPS**| Engenharia de Produto de Software
-|**PWA**| *Progressive Web App*
+|:-:|:-:|
+|**MDS**| Métodos de Desenvolvimento de Software|
+|**EPS**| Engenharia de Produto de Software|
+|**PWA**| *Progressive Web App*|
 
 ### 1.4 <a name="1_4">Referências</a>
 
@@ -88,7 +89,7 @@ Sendo dividido em:</p>
  pattern</i>, que consiste em <i>State</i>, <i>View</i> e <i>Actions</i> cada uma com suas respectivas funções:</p>
 
  Camada|Função
- -|-
+|:-:|:-:|
  |*State*| A fonte dos dados locais da aplicação.
  |*Mutations*| Um mapa do estado atual.
  |*Actions*| As diferentes maneiras de mutar o estado em reação ao usuário.
@@ -106,7 +107,7 @@ Sendo dividido em:</p>
 </p>
 
  Camada|Função
- -|-
+ |:-:|:-:|
  |*Model*| A camada que interage com o bando de dados.
  |*View*| A camada que interage com o *template* e com a *model*.
  |*Template*| A camada de renderização da página.
@@ -145,13 +146,13 @@ Sendo dividido em:</p>
 ### 4.2 <a name="4_2">Atores de Casos de Uso</a>
 
 |**Ator**|**Descrição**
-:-:|:-:
+|:-:|:-:|
 |**Usuário**|O usuário ao utilizar o software poderá ao apontar o seu aparelho, smartphone ou tablet, para algum tipo de letra ou palavra com significado dentro do idioma PT-BR, e este irá captar a informação e mostrar ao usuário o respectivo GIF correspondente a informação enviada pela câmera.
 
 ### 4.3 <a name="4_3">Descrições de Casos de Uso</a>
 
 | Caso de uso | Descrição |
-:-:|:-:
+|:-:|:-:|
 | UC01 - Visualizar letra | Mostrar GIF respectivo à letra. |
 | UC02 - Visualizar Palavra | Mostrar GIF respectivo à palavra. |
 
