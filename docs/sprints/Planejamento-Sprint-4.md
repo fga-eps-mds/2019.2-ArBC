@@ -1,12 +1,13 @@
-## 1. Objetivo da _Sprint 2_
+## 1. Objetivo da _Sprint 4_
 
 <p align="justify">Esta <i>Sprint</i> tem como objetivo:</p>
 
-- Treinamentos Javascript e Python
-- Documento de Arquitetura
-- FT01 - Conexão com a câmera
-- Roadmap de Projeto
-- Criação da Logo
+- Termo de Abertura de Projeto
+- Protótipo de Alta Fidelidade
+- Roadmap de Papéis
+- Plano de Gerenciamento de Custos
+- Documento de Riscos
+- Testes no Banco de Dados
 
 ## 2. Papéis
 
@@ -53,9 +54,9 @@ Os papéis dos EPS serão mantidos até a _Release 1_, porém nessa sprint, assi
 
 ## 3. Tamanho da _Sprint_
 
-| Data de Início | 08/09/2019 |
+| Data de Início | 22/09/2019 |
 |:--|:--:|
-| **Data de Término** | **14/09/2019** |
+| **Data de Término** | **28/09/2019** |
 | **Duração** | **7 dias** |
 
 
@@ -65,16 +66,15 @@ Os pareamentos ficaram assim:
 
 |Issues| Duplas |
 |:--|:--:|
-| [Criação da Logo](https://github.com/fga-eps-mds/2019.2-ArBC/issues/16) | João Henrique e Thiago |
-| [Banco de Dados](https://github.com/fga-eps-mds/2019.2-ArBC/issues/22) | Rhuan e Marcelo |
-| [Conexão com a câmera](https://github.com/fga-eps-mds/2019.2-ArBC/issues/21) | Sérgio e Igor |
+| [Protótipo de Alta Fidelidade](https://github.com/fga-eps-mds/2019.2-ArBC/issues/23) | Todo MDS|
+| [Configurar Testes](https://github.com/fga-eps-mds/2019.2-ArBC-API/issues/4) | João Henrique, Marcelo, Rhuan, Sérgio |
+| [Correções das Patterns](https://github.com/fga-eps-mds/2019.2-ArBC/issues/48) | Igor e Thiago |
 
 
 ## 5. Sprint Backlog
 
-A Milestone da _Sprint_ 2 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/3)
+A Milestone da _Sprint_ 4 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/5)
 
 ## 6. Débitos Acumulados
 
-- Documento de Arquitetura
-- Refatoração do Backlog de Produto
+- Leitura da Letra

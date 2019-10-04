@@ -1,12 +1,13 @@
-## 1. Objetivo da _Sprint 2_
+## 1. Objetivo da _Sprint 3_
 
 <p align="justify">Esta <i>Sprint</i> tem como objetivo:</p>
 
-- Treinamentos Javascript e Python
-- Documento de Arquitetura
-- FT01 - Conexão com a câmera
-- Roadmap de Projeto
-- Criação da Logo
+- Estrutura Analítica do Projeto
+- FT02 - Banco de Dados
+- Roadmap de Scrum Master
+- Plano de Comunicação
+- Criação das Patterns
+- Leitura da Letra
 
 ## 2. Papéis
 
@@ -53,9 +54,9 @@ Os papéis dos EPS serão mantidos até a _Release 1_, porém nessa sprint, assi
 
 ## 3. Tamanho da _Sprint_
 
-| Data de Início | 08/09/2019 |
+| Data de Início | 15/09/2019 |
 |:--|:--:|
-| **Data de Término** | **14/09/2019** |
+| **Data de Término** | **21/09/2019** |
 | **Duração** | **7 dias** |
 
 
@@ -65,16 +66,16 @@ Os pareamentos ficaram assim:
 
 |Issues| Duplas |
 |:--|:--:|
-| [Criação da Logo](https://github.com/fga-eps-mds/2019.2-ArBC/issues/16) | João Henrique e Thiago |
-| [Banco de Dados](https://github.com/fga-eps-mds/2019.2-ArBC/issues/22) | Rhuan e Marcelo |
-| [Conexão com a câmera](https://github.com/fga-eps-mds/2019.2-ArBC/issues/21) | Sérgio e Igor |
+| [Patterns](https://github.com/fga-eps-mds/2019.2-ArBC/issues/39) | Rhuan e Sérgio|
+| [FT02 - Banco de Dados](https://github.com/fga-eps-mds/2019.2-ArBC-API/issues/1) | João Henrique e Marcelo |
+| [Leitura da Letra](https://github.com/fga-eps-mds/2019.2-ArBC/issues/9) | Igor e Thiago |
 
 
 ## 5. Sprint Backlog
 
-A Milestone da _Sprint_ 2 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/3)
+A Milestone da _Sprint_ 3 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/4)
 
 ## 6. Débitos Acumulados
 
-- Documento de Arquitetura
-- Refatoração do Backlog de Produto
+- Criação da Logo
+- Banco de Dados
