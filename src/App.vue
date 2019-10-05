@@ -1,4 +1,4 @@
-<template>
+'<template>
   <a-scene embedded arjs='debugUIEnabled: false; trackingMethod: best;'>
     <a-marker
       v-for="letter in alphabet"
@@ -40,14 +40,19 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import { Action } from 'vuex-class';
+const namespace: string = 'letter';
 
 @Component({})
 export default class App extends Vue {
   private alphabet: string[] = [];
   private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
+  @Action('get', { namespace }) get: any;
 
   public mounted() {
     this.alphabet = this.alphabetArray();
+
+    this.get().then((response: any) => console.log(response));
   }
   public alphabetArray() {
     const a = 'A';
