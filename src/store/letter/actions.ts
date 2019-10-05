@@ -4,7 +4,7 @@ import { RootState } from '../types';
 import API from '../../services/api';
 
 export const actions: ActionTree<LetterState, RootState> = {
-  getLetter({ commit }): any {
+  getLetters({ commit }): any {
     const url = '/Letter';
 
     return API.get(url)
