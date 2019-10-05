@@ -1,3 +1,3 @@
 export interface LetterState {
-  letters: string[];
+  letters: any;
 }

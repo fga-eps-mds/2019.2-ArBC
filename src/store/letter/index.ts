@@ -6,7 +6,7 @@ import { LetterState } from './types';
 import { RootState } from '../types';
 
 export const state: LetterState = {
-  letters: [],
+  letters: {},
 };
 
 const namespaced: boolean = true;
