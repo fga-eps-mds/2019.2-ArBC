@@ -1,0 +1,31 @@
+site_name: ArBC
+repo_name: '2019.2-ArBC'
+repo_url: 'https://github.com/fga-eps-mds/2019.2-ArBC'
+
+theme:
+  name: 'material'
+  language: 'pt'
+  logo: 'imagens/logo.png'
+  favicon: 'imagens/Icone.png'
+  palette:
+    primary: 'light blue'
+    accent: 'amber'
+
+nav:
+  - Início: index.md
+  - Projeto:
+    - Documento de Arquitetura: mds/Documento_de_arquitetura.md
+    - Documento de Visão: mds/Documento_de_visao.md
+    - EAP: EAP.md
+  - Contribuição:
+    - Código de Conduta: CODE_OF_CONDUCT.md
+  - Políticas:
+    - Branch: policies/branches.md
+    - Commit: policies/commits.md
+    - Issue: policies/issues.md
+    - Pull Request: policies/pull_requests.md
+  - Sprints:
+    - Planejamentos:
+      - Sprint 0: sprints/Planejamento-Sprint-0.md
+      - Sprint 1: sprints/Planejamento-Sprint-1.md
+      - Sprint 2: sprints/Planejamento-Sprint-2.md
