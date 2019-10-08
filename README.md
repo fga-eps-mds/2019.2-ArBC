@@ -5,9 +5,9 @@
  A aplicação possui um front-end baseado no Vue.js (com a biblioteca [Vuex](https://vuex.vuejs.org/)) e [back-end](https://github.com/fga-eps-mds/2019.2-ArBC-API/) baseado em Django.
  
 ## Principais funcionalidades
- - Reconhecimento de letras através de patterns de RA.
- - Reconhecimento de palavras utilizando estas mesmas letras.
- - Visualização de imagens em cima da pattern ou palavra reconhecida em tempo real.
+ -Reconhecimento de letras através de patterns de RA.
+ -Reconhecimento de palavras utilizando estas mesmas letras.
+ -Visualização de imagens em cima da pattern ou palavra reconhecida em tempo real.
  
 ## Clonar repositório 
 ```
