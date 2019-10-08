@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9597bd729fa34472aa1a10de74557942)](https://www.codacy.com/manual/lucianosz7/2019.2-ArBC?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fga-eps-mds/2019.2-ArBC&amp;utm_campaign=Badge_Grade)
+
 ![](https://jlucassr.github.io/ArBC-Pages/imagens/logo.jpg)
 
 ## Sobre
