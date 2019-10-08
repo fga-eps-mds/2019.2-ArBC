@@ -54,3 +54,6 @@ npm run test:e2e
 ```
 npm run test:unit
 ```
+
+## Licença
+ArBC é distribuído sob a licença GPL v3.0. Consulte nosso arquivo [LICENSE](https://github.com/fga-eps-mds/2019.2-ArBC/blob/da5b0706c50af1bbc65694b5e0bf8d5d97d0e03b/LICENSE) para saber mais.
