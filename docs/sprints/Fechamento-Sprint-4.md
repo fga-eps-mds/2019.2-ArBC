@@ -1,6 +1,6 @@
 ## 1. Relato da _Sprint_
 
-<p align="justify">&emsp;&emsp; A Semana Universitária ajudou muito a equipe, conseguimos trabalhar melhor e com tempo, lógico que não tivemos 100% de esforço porque os membros tiveram descanso, palestras, estágio e outras disciplinas que também estiveram que se preocupar na semana. a Release é semana que vem, esperamos arranjar nela.
+<p align="justify">&emsp;&emsp; A Semana Universitária ajudou muito a equipe, conseguimos trabalhar melhor e com tempo, lógico que não tivemos 100% de esforço porque os membros tiveram descanso, palestras, estágio e outras disciplinas que também estiveram que se preocupar na semana. a Release é semana que vem, esperamos que tudo der certo.
 </p>
 
 
@@ -15,7 +15,6 @@
 | ID | Issue | Status |
 |:--:| ------- | :----: |
 | Issue | [Roadmap Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/30) | Aberta |
-| Issue | [Plano de Gerenciamento de Custos](https://github.com/fga-eps-mds/2019.2-arbc/issues/44) | Aberta |
 | Issue | [Riscos do Projeto](https://github.com/fga-eps-mds/2019.2-arbc/issues/56)| Fechada |
 | Issue | [Roadmap DevOps](https://github.com/fga-eps-mds/2019.2-arbc/issues/29) | Fechada |
 | Issue | [TAP](https://github.com/fga-eps-mds/2019.2-arbc/issues/7) | Fechada |
