@@ -1,39 +1,56 @@
-# 2019.2-arbc
+![](https://jlucassr.github.io/ArBC-Pages/imagens/logo.jpg)
 
-## Project setup
+## Sobre
+ O ArBC é uma aplicação web baseada nas APIs de RA (Realidade Aumentada) [AR.js](https://github.com/jeromeetienne/AR.js/) e [A-Frame](https://aframe.io/), que tem como objetivo tornar o processo de alfabetização mais interativo e engajante por meio desta tecnologia.
+ A aplicação possui um front-end baseado no Vue.js (com a biblioteca [Vuex](https://vuex.vuejs.org/)) e [back-end](https://github.com/fga-eps-mds/2019.2-ArBC-API/) baseado em Django.
+ 
+## Principais funcionalidades
+ - Reconhecimento de letras através de patterns de RA.
+ - Reconhecimento de palavras utilizando estas mesmas letras.
+ - Visualização de imagens em cima da pattern ou palavra reconhecida em tempo real.
+ 
+## Clonar repositório 
+```
+git clone https://github.com/fga-eps-mds/2019.2-ArBC/
+```
+
+## Rodar ambiente docker
+```
+sudo docker-compose build
+sudo docker-compose up
+``` 
+
+## Como instalar
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compilar e roda para desenvolvimento
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compilar e roda build
 ```
 npm run build
 ```
 
-### Run your tests
+### Rodar testes
 ```
 npm run test
 ```
 
-### Lints and fixes files
+### Lint e consertar arquivos
 ```
 npm run lint
 ```
 
-### Run your end-to-end tests
+### Rodar testes end-2-end
 ```
 npm run test:e2e
 ```
 
-### Run your unit tests
+### Rodar testes unitários
 ```
 npm run test:unit
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
