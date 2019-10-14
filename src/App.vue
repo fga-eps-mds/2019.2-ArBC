@@ -16,25 +16,25 @@
     </a-marker>
     <a-marker
       type='pattern'
-      url="https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/easter-eggs/src/assets/patterns/pattern-Joenio.patt"
+      url="https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop/src/assets/patterns/pattern-Joenio.patt"
     >
       <a-entity
         geometry="primitive: plane;"
         position="0 0 0"
         rotation="-90 0 0"
-        material="shader:gif; src:url(https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/easter-eggs/src/assets/easter_eggs/Joenio.gif);"
+        material="shader:gif; src:url(https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop/src/assets/easter_eggs/Joenio.gif);"
       >
       </a-entity>
     </a-marker>  
   <a-marker
       type='pattern'
-      url="https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/easter-eggs/src/assets/patterns/pattern-Carla.patt"
+      url="https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop/src/assets/patterns/pattern-Carla.patt"
     >
       <a-entity
         geometry="primitive: plane;"
         position="0 0 0"
         rotation="-90 0 0"
-        material="shader:gif;src:url(https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/easter-eggs/src/assets/easter_eggs/Carla.gif);"
+        material="shader:gif;src:url(https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop/src/assets/easter_eggs/Carla.gif);"
       >
       </a-entity>
     </a-marker> 
