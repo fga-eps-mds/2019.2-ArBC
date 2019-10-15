@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import store from './store/index';
+import LettersModule from '@/store/modules/letters';
+import {getModule} from 'vuex-module-decorators';
+import store from '@/store';
 
 Vue.use(Router);
 
@@ -12,7 +14,8 @@ export default new Router({
       path: '/',
       name: 'App',
       beforeEnter(to: any, from: any, next: any) {
-        store.dispatch('letter/getLetters')
+        const module = getModule(LettersModule, store);
+        module.fetchLetters()
           .then(() => next());
       },
     },

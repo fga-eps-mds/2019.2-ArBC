@@ -66,13 +66,14 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import { Getter } from 'vuex-class';
+import LettersModule from '@/store/modules/letters';
+import {getModule} from 'vuex-module-decorators';
 
 @Component({})
 export default class App extends Vue {
+  private lettersModule = getModule(LettersModule, this.$store);
   private alphabet: string[] = [];
   private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
-  @Getter('letters', { namespace: 'letter' }) letters: any;
 
   public mounted() {
     this.alphabet = this.alphabetArray();
@@ -99,9 +100,12 @@ export default class App extends Vue {
     return url;
   }
   public gifURL(letter: string) {
-    const url = new URL(`http://localhost:8000/media/letter/${letter}.gif`);
+    // TODO: resolve async problems
+    // this change after a time
+    // console.log(this.lettersModule.Letters);
+    const url = new URL('http://localhost:8000/media/letter/A.gif');
 
-    return `shader:gif; src:url(${url.href});`
+    return `shader:gif; src:url(${url.href});`;
   }
 }
 </script>
