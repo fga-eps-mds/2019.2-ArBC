@@ -10,6 +10,8 @@ COPY package*.json ./
 
 RUN npm install
 
+RUN ["chmod", "777", "node_modules"]
+
 COPY . .
 
 EXPOSE 8080
