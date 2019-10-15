@@ -13,8 +13,8 @@ export default class LettersModule extends VuexModule {
   }
 
   @Mutation
-  public setLetters(letters: any) {
-    letters.forEach((letter: Letter) => {
+  public async setLetters(letters: any) {
+    await letters.forEach((letter: Letter) => {
         this.letters[letter.name] = letter.image;
       },
     );
@@ -24,7 +24,7 @@ export default class LettersModule extends VuexModule {
   public async fetchLetters() {
     const url = '/Letter';
     const letters = await API.get(url);
-    this.context.commit('setLetters', letters);
+    await this.setLetters(letters);
   }
 }
 

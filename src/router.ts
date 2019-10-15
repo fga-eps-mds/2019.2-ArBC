@@ -11,15 +11,6 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'App',
-      beforeEnter(to: any, from: any, next: any) {
-        const module = getModule(LettersModule, store);
-        module.fetchLetters()
-          .then(() => next());
-      },
-    },
-    {
       path: '/about',
       name: 'about',
       // route level code-splitting
