@@ -15,6 +15,7 @@
       >
       </a-entity>
     </a-marker>
+
     <a-marker
       type='pattern'
       url="https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop/src/assets/patterns/pattern-Joenio.patt"
@@ -27,6 +28,7 @@
       >
       </a-entity>
     </a-marker>
+
     <a-marker
       type='pattern'
       url="https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop/src/assets/patterns/pattern-Carla.patt"
