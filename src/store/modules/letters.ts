@@ -1,6 +1,11 @@
-import {VuexModule, Module, Action, Mutation} from 'vuex-module-decorators';
-import {Letter} from '@/store/models';
 import API from '@/services/api';
+import { Letter } from '@/store/models';
+import {
+  Module,
+  Action,
+  Mutation,
+  VuexModule,
+} from 'vuex-module-decorators';
 
 @Module({
   name: 'letters',
@@ -21,7 +26,7 @@ export default class LettersModule extends VuexModule {
   }
 
   @Action
-  public async fetchLetters() {
+  public async getLetters() {
     const url = '/Letter';
     const letters = await API.get(url);
     await this.setLetters(letters);

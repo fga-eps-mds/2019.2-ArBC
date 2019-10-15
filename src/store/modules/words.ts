@@ -1,29 +1,32 @@
-import {VuexModule, Module, Action, Mutation} from 'vuex-module-decorators';
-import {Word} from '@/store/models';
 import API from '@/services/api';
+import {
+  Module,
+  Action,
+  Mutation,
+  VuexModule,
+} from 'vuex-module-decorators';
 
 @Module({
   name: 'words',
 })
 export default class WordsModule extends VuexModule {
-  private words: {[index: string]: any} = {};
+  private word: {[index: string]: any} = {};
 
-  public get Words() {
-    return this.words;
+  public get Word() {
+    return this.word;
   }
 
   @Mutation
-  public setWords(words: any) {
-    words.forEach((word: Word) => {
-        this.words[word.name] = word.image;
-      },
-    );
+  public setWords(word: any) {
+    this.word = word;
   }
 
   @Action
-  public async fetchWords() {
-    const url = '/Word';
-    const words = await API.get(url);
-    this.context.commit('setWords', words);
+  public async getWord(word: string) {
+    const url = `/Word/${word.toUpperCase()}`;
+
+    const requestedWord = await API.get(url);
+
+    this.context.commit('setWords', requestedWord);
   }
 }
