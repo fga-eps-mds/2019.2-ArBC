@@ -11,6 +11,8 @@ const CONFIG = {
 };
 
 export default {
-  get: (path: string) => axios.get(path, CONFIG)
-    .then((response: any) => response.data),
+  async get(path: string) {
+    const response = await axios.get(path, CONFIG);
+    return response.data.results;
+  },
 };
