@@ -61,23 +61,9 @@
     public async created() {
       await this.lettersModule.getLetters();
 
-      await this.wordsModule.getWord('bola');
+      this.alphabet = Object.keys(this.lettersModule.Letters);
 
       this.iscreated = true;
-
-      this.alphabet = this.alphabetArray();
-    }
-
-    public alphabetArray() {
-      const a = 'A';
-      const z = 'Z';
-      const letters = [];
-      const j = z.charCodeAt(0);
-      let i = a.charCodeAt(0);
-      for (; i <= j; ++i) {
-        letters.push(String.fromCharCode(i));
-      }
-      return letters;
     }
 
     public patternUrl(letter: string) {
