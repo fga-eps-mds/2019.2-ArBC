@@ -17,7 +17,7 @@ export default class WordsModule extends VuexModule {
   }
 
   @Mutation
-  public setWords(word: any) {
+  public setWord(word: any) {
     this.word = word;
   }
 
@@ -27,6 +27,6 @@ export default class WordsModule extends VuexModule {
 
     const requestedWord = await API.get(url);
 
-    this.context.commit('setWords', requestedWord);
+    this.setWord(requestedWord);
   }
 }

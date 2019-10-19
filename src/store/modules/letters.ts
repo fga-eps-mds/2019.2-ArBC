@@ -28,7 +28,9 @@ export default class LettersModule extends VuexModule {
   @Action
   public async getLetters() {
     const url = '/Letter';
+
     const letters = await API.get(url);
+
     await this.setLetters(letters);
   }
 }
