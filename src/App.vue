@@ -73,13 +73,11 @@
   import Vue from 'vue';
   import Component from 'vue-class-component';
   import LettersModule from '@/store/modules/letters';
-  import WordsModule from '@/store/modules/words';
   import { getModule } from 'vuex-module-decorators';
 
   @Component({})
   export default class App extends Vue {
     private lettersModule = getModule(LettersModule, this.$store);
-    private wordsModule = getModule(WordsModule, this.$store);
     private alphabet: string[] = [];
     private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
     private iscreated: boolean = false;
