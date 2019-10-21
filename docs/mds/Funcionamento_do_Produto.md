@@ -5,7 +5,8 @@ Data|Versão|Descrição|Autor
 21/10|1.0.0|Adição do Template do Documento| Sérgio Cipriano e Thiago Santos|
 21/10|1.0.1|Adição do Template de Especificações| Sérgio Cipriano e Thiago Santos|
 21/10|1.1.0|Adição do tópico 1| Sérgio Cipriano|
-21/10|1.1.1|Adição do tópico 4| Thiago Santos |
+21/10|1.1.1|Arrumando erros do tópico 1| Sérgio Cipriano|
+21/10|1.2.0|Adição do tópico 4| Thiago Santos |
 
 # Sumário
 
@@ -30,7 +31,7 @@ ___
 
 ### 1.1 <a name ="1_1">O que é o produto</a>
 
-<p align="justify"> &emsp;&emsp; O ArBC é uma aplicação web de realidade aumentada para auxiliar crianças na sua alfabetização. A ideia principal é de que quando a criança apontar o celular para uma palavra será apresentado um gif referente dessa palavra. As palavras serão representadas por marcadores, sendo cada letra um marcador. Segue abaixo um exemplo:  </p>
+<p align="justify"> &emsp;&emsp; O ArBC é uma aplicação web de realidade aumentada para auxiliar crianças na sua alfabetização. A ideia principal é de que quando a criança apontar o celular para uma palavra, será apresentado um gif dessa palavra. As palavras serão representadas por marcadores, sendo cada letra um marcador. Segue abaixo um exemplo:  </p>
 
 <ul>
   <img src="../imagens/funcionamento_do_produto/B_marker.jpg" alt="drawing" width="150"/>
@@ -41,14 +42,21 @@ ___
 
 ### 1.2 <a name="1_2">Como baixar e executar</a>
 
-Para baixar a aplicação no seu computador basta clonar o repositório:
+Para baixar a aplicação no seu computador basta clonar os repositórios:
 
 ```
 $ git clone https://github.com/fga-eps-mds/2019.2-ArBC/
 ```
 
-Executar o comando build e up, sendo que o build só precisa ser executado na primeira vez:
+```
+$ git clone https://github.com/fga-eps-mds/2019.2-ArBC-API/
+```
 
+Executar o comando build e up, sendo que o build só precisa ser executado na primeira vez. Primeiro executa na API:
+
+```
+$ sudo docker-compose -f local.yml build && sudo docker-compose -f local.yml up
+```
 
 ```
 $ sudo docker-compose build && sudo docker-compose up
