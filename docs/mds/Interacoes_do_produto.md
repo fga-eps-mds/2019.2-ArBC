@@ -4,26 +4,46 @@ Data|Versão|Descrição|Autor
 -|-|-|-
 21/09|1.0.0|Adição do template do Documento| Marcelo Victor e João Paulino |
 21/09|1.0.1|Ajuste no sumario do backend | Marcelo Victor e João Paulino |
+21/09|1.0.2|Adição de subitens no sumário | Marcelo Victor e João Paulino |
+21/09|1.0.3|Adição dos subitens 1.1.1, 1.1.2, 1.1.3 | Marcelo Victor e João Paulino |
+
 
 # Sumário
 
 1. [Introdução](#1)
   - 1.1 [Front-End](#1_1)
+  	- 1.1.1[Vue](#1_1_1)
+	- 1.1.2[aframe](#1_1_2) 
+	- 1.1.3[aframe-gif-shader](#1_1_3)
   - 1.2 [Back-End](#1_2)
-	-   1.2.1[Django](#1_2_1)
-	-	1.2.2 [Pillow](#1_2_2)
-	-	1.2.3 [Django-cors-headers](#1_2_3)
-	-	1.2.4 [Django-redis](#1_2_4)
-	-	1.2.5 [Djangorestframework](#1_2_5)
-	-	1.2.6 [Coreapi](#1_2_6)
-	-	1.2.7 [Werkzeug](#1_2_7)
-	-	1.2.8 [Psycopg2-binary](#1_2_8)
-	-	1.2.9 [Awesome-slugify](#1_2_9)
+	- 1.2.1[Django](#1_2_1)
+	- 1.2.2 [Pillow](#1_2_2)
+	- 1.2.3 [Django-cors-headers](#1_2_3)
+	- 1.2.4 [Django-redis](#1_2_4)
+	- 1.2.5 [Djangorestframework](#1_2_5)
+	- 1.2.6 [Coreapi](#1_2_6)
+	- 1.2.7 [Werkzeug](#1_2_7)
+	- 1.2.8 [Psycopg2-binary](#1_2_8)
+	- 1.2.9 [Awesome-slugify](#1_2_9)
 2. [Integração](#4)
   - 2.1 [Ferramentas](#2_1)
   - 2.2 [Relações](#2_2)
 ___
 ## 1. <a name="1">Introdução</a>
+
+### 1.1 <a name ="1_1">Front_End</a>
+
+#### 1.1.1 <a name ="1_1_1">Vue</a>
+
+<p align="justify"> &emsp;&emsp; O vue é uma estrutura progressiva para a construção de interfaces com o usuário. Ao contrário de outras estruturas monolíticas, o Vue é projetado desde o início para ser adotado de forma incremental. A biblioteca principal é focada apenas na camada de visualização e é fácil de entender e integrar com outras bibliotecas ou projetos existentes. Por outro lado, o Vue também é perfeitamente capaz de alimentar aplicativos sofisticados de página única quando usado em combinação com ferramentas modernas e bibliotecas de suporte. </p>
+
+#### 1.1.2 <a name ="1_1_2">Aframe</a>
+
+<p align="justify"> &emsp;&emsp; O aframe-ar.js, é uma biblioteca com o objetivo de permitir que o desenvolvedor aplique em seu projeto realidade aumentada de forma fácil e rápida através de tags, que viabilizam o uso da câmera do aparelho para o reconhecimento de marcadores ou até código de barras. </p>
+
+#### 1.1.3 <a name ="1_1_3">aframe-gif-shader</a>
+
+<p align="justify"> &emsp;&emsp; O aframe-gif-shader tem como função permitir que seja vizualizado Gifs quando apontado a câmera do dispositivo para um marcador </p>
 
 ### 1.2 <a name ="1_2">Back_End</a>
 
