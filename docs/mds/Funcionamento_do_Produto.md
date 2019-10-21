@@ -5,6 +5,7 @@ Data|Versão|Descrição|Autor
 21/10|1.0.0|Adição do Template do Documento| Sérgio Cipriano e Thiago Santos|
 21/10|1.0.1|Adição do Template de Especificações| Sérgio Cipriano e Thiago Santos|
 21/10|1.1.0|Adição do tópico 1| Sérgio Cipriano|
+21/10|1.1.1|Adição do tópico 4| Thiago Santos |
 
 # Sumário
 
