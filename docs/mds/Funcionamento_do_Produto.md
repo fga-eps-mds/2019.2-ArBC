@@ -29,11 +29,12 @@ ___
 
 <p align="justify"> &emsp;&emsp; O ArBC é uma aplicação web de realidade aumentada para auxiliar crianças na sua alfabetização. A ideia principal é de que quando a criança apontar o celular para uma palavra será apresentado um gif referente dessa palavra. As palavras serão representadas por marcadores, sendo cada letra um marcador. Segue abaixo um exemplo:  </p>
 
-<img src="../imagens/funcionamento_do_produto/B_marker.jpg" alt="drawing" width="200"/>
-<img src="../imagens/funcionamento_do_produto/O_marker.jpg" alt="drawing" width="200"/>
-<img src="../imagens/funcionamento_do_produto/L_marker.jpg" alt="drawing" width="200"/>
-<img src="../imagens/funcionamento_do_produto/A_marker.jpg" alt="drawing" width="200"/>
-
+<ul>
+  <img src="../imagens/funcionamento_do_produto/B_marker.jpg" alt="drawing" width="150"/>
+  <img src="../imagens/funcionamento_do_produto/O_marker.jpg" alt="drawing" width="150"/>
+  <img src="../imagens/funcionamento_do_produto/L_marker.jpg" alt="drawing" width="150"/>
+  <img src="../imagens/funcionamento_do_produto/A_marker.jpg" alt="drawing" width="150"/>
+</ul>
 
 ### 1.2 <a name="1_2">Como baixar e executar</a>
 
