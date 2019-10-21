@@ -7,6 +7,7 @@ Data|Versão|Descrição|Autor
 21/09|1.0.2|Adição de subitens no sumário | Marcelo Victor e João Paulino |
 21/09|1.0.3|Adição dos subitens 1.1.1, 1.1.2, 1.1.3 | Marcelo Victor e João Paulino |
 21/09|1.0.3|Adição dos subitens 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.7, 1.2.8, 1.2.9 | Marcelo Victor e João Paulino |
+21/09|1.0.3|Adição do subitem 1.1.4 | Marcelo Victor e João Paulino |
 
 
 # Sumário
@@ -14,8 +15,9 @@ Data|Versão|Descrição|Autor
 1. [Introdução](#1)
   - 1.1 [Front-End](#1_1)
   	- 1.1.1[Vue](#1_1_1)
-	- 1.1.2[aframe](#1_1_2) 
-	- 1.1.3[aframe-gif-shader](#1_1_3)
+	- 1.1.2[Aframe](#1_1_2) 
+	- 1.1.3[Aframe-gif-shader](#1_1_3)
+	- 1.1.4[Axios](#1_1_4)
   - 1.2 [Back-End](#1_2)
 	- 1.2.1[Django](#1_2_1)
 	- 1.2.2 [Pillow](#1_2_2)
@@ -42,9 +44,13 @@ ___
 
 <p align="justify"> &emsp;&emsp; O aframe-ar.js, é uma biblioteca com o objetivo de permitir que o desenvolvedor aplique em seu projeto realidade aumentada de forma fácil e rápida através de tags, que viabilizam o uso da câmera do aparelho para o reconhecimento de marcadores ou até código de barras. </p>
 
-#### 1.1.3 <a name ="1_1_3">aframe-gif-shader</a>
+#### 1.1.3 <a name ="1_1_3">Aframe-gif-shader</a>
 
 <p align="justify"> &emsp;&emsp; O aframe-gif-shader tem como função permitir que seja vizualizado Gifs quando apontado a câmera do dispositivo para um marcador </p>
+
+#### 1.1.4 <a name ="1_1_4">Axios</a>
+
+<p align="justify"> &emsp;&emsp; O axios tem como função consumir e exibir dados de uma API. Há várias maneiras de se fazer isso, mas a maneira mais popular é usando axios, um cliente HTTP baseado em Promises, que é um objeto usado para processamento assíncrono. </p>
 
 ### 1.2 <a name ="1_2">Back_End</a>
 
