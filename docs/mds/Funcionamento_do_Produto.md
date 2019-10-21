@@ -2,11 +2,13 @@
 
 Data|Versão|Descrição|Autor
 -|-|-|-
-21/10|1.0.0|Adição do Template do Documento| Sérgio Cipriano e Thiago Santos|
-21/10|1.0.1|Adição do Template de Especificações| Sérgio Cipriano e Thiago Santos|
-21/10|1.1.0|Adição do tópico 1| Sérgio Cipriano|
-21/10|1.1.1|Arrumando erros do tópico 1| Sérgio Cipriano|
+21/10|1.0.0|Adição do Template do Documento| Sérgio Cipriano e Thiago Santos |
+21/10|1.0.1|Adição do Template de Especificações| Sérgio Cipriano e Thiago Santos |
+21/10|1.1.0|Adição do tópico 1| Sérgio Cipriano |
+21/10|1.1.1|Arrumando erros do tópico 1| Sérgio Cipriano |
 21/10|1.2.0|Adição do tópico 4| Thiago Santos |
+21/10|1.3.0|Adição do tópico 2| Sérgio Cipriano |
+21/10|1.4.0|Adição do tópico 3| Sérgio Cipriano |
 
 # Sumário
 
@@ -64,17 +66,23 @@ $ sudo docker-compose build && sudo docker-compose up
 
 ## 2. <a name="2">Funcionalidades</a>
 
-<p align="justify"> &emsp;&emsp; ... insira aqui ... </p>
+* Visualizar gifs por meio de uma combinação de marcadores
 
 ## 3. <a name="3">ArBC em execução</a>
 
 ### 3.1 <a name ="3_1">Execução com letras</a>
 
-<p align="justify"> &emsp;&emsp; ... insira aqui ... </p>
+<ul>
+  <img src="../imagens/low_fidelity_prototype/Component 1.png" alt="drawing" width="200"/>
+  <img src="../imagens/low_fidelity_prototype/Component 2.png" alt="drawing" width="200"/>
+</ul>
 
 ### 3.2 <a name ="3_2">Execução com palavra</a>
 
-<p align="justify"> &emsp;&emsp; ... insira aqui ... </p>
+<ul>
+  <img src="../imagens/low_fidelity_prototype/Component 3.png" alt="drawing" width="300"/>
+  <img src="../imagens/low_fidelity_prototype/Component 4.png" alt="drawing" width="300"/>
+</ul>
 
 ## 4. <a name="4">Especificações técnicas</a>
 
