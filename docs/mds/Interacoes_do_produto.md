@@ -6,9 +6,9 @@ Data|Versão|Descrição|Autor
 21/09|1.0.1|Ajuste no sumario do backend | Marcelo Victor e João Paulino |
 21/09|1.0.2|Adição de subitens no sumário | Marcelo Victor e João Paulino |
 21/09|1.0.3|Adição dos subitens 1.1.1, 1.1.2, 1.1.3 | Marcelo Victor e João Paulino |
-21/09|1.0.3|Adição dos subitens 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.7, 1.2.8, 1.2.9 | Marcelo Victor e João Paulino |
-21/09|1.0.3|Adição do subitem 1.1.4 | Marcelo Victor e João Paulino |
-
+21/09|1.0.4|Adição dos subitens 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.7, 1.2.8, 1.2.9 | Marcelo Victor e João Paulino |
+21/09|1.0.5|Adição do subitem 1.1.4 | Marcelo Victor e João Paulino |
+21/09|1.0.6|Adição do subitem 2.2 | Marcelo Victor e João Paulino |
 
 # Sumário
 
@@ -98,4 +98,24 @@ ___
 #### 1.2.9 <a name ="1_2_9">Awesome-slugify</a>
 <p>&nbsp&nbsp&nbsp&nbsp
 	Biblioteca focada na parte de auxiliar na criação de uma URL que pode ser legível tanto para humanos quanto para mecanismos de busca, ou seja, torna as URLs mais "amigáveis".
+</p>
+
+## 2. <a name="2">Integração</a>
+
+## 2.1 <a name="2_1">Ferramentas</a>
+
+<p>&nbsp&nbsp&nbsp&nbsp
+	
+</p>
+
+## 2.2 <a name="2_2">Relações</a>
+
+<p>&nbsp&nbsp&nbsp&nbsp
+	A iteração ideal entre o front-end e o back-end , dar-se-á da seguinte forma:
+		1 - O front-end reconhecerá uma letra/palavra e o VUE fará uma requisição para o back-end através do Djangorestframework
+		2 - O back-end processará a requisição, enviada pelo front, procurando pelo texto enviado na base de dados (que esta integrada com o django pelo psycopg2-binary).
+		3 - Caso a base de dados encontre o texto, o mesmo retornará a imagem ( que estava armazenada na base de dados com auxilio do pillow).
+		4 - Sera montado um arquivo json (com auxilio do core-api) e retornado para o front-end
+		5 - O front-end irá renderizar a animacao com auxilio do ar.js na tela.
+
 </p>
