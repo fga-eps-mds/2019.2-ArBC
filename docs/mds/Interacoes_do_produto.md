@@ -6,6 +6,7 @@ Data|Versão|Descrição|Autor
 21/09|1.0.1|Ajuste no sumario do backend | Marcelo Victor e João Paulino |
 21/09|1.0.2|Adição de subitens no sumário | Marcelo Victor e João Paulino |
 21/09|1.0.3|Adição dos subitens 1.1.1, 1.1.2, 1.1.3 | Marcelo Victor e João Paulino |
+21/09|1.0.3|Adição dos subitens 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.7, 1.2.8, 1.2.9 | Marcelo Victor e João Paulino |
 
 
 # Sumário
@@ -49,45 +50,46 @@ ___
 
 #### 1.2.1 <a name ="1_2_1">Django</a>
 <p>&nbsp&nbsp&nbsp&nbsp
-	Django
+	Será usado como o principal agente encapsulador das seguintes sub bibliotecas.
 </p>
 
 #### 1.2.2 <a name ="1_2_2">Pillow</a>
 <p>&nbsp&nbsp&nbsp&nbsp
-	pillowww
+	Python Imaging Library é uma biblioteca da linguagem de programação Python que adiciona suporte à abertura e gravação de muitos formatos de imagem diferentes. Basicamente o propósito desta biblioteca é auxiliar no armazenamento de ilustrações no banco de dados.
 </p>
 
 #### 1.2.3 <a name ="1_2_3">Django-cors-headers</a>
 <p>&nbsp&nbsp&nbsp&nbsp
-	cors headers
+	Esta biblioteca permite que o servidor django seja acessado em outros domínios.
 </p>
 
 #### 1.2.4 <a name ="1_2_4">Django-redis</a>
 <p>&nbsp&nbsp&nbsp&nbsp
-	django redis.
+	Biblioteca focada na otimização com relação as requisições de dados da aplicação, ou seja a mesma funciona como um cache entre o servidor e algum cliente qualquer.
 </p>
 
 #### 1.2.5 <a name ="1_2_5">Djangorestframework</a>
 <p>&nbsp&nbsp&nbsp&nbsp
-	django rest framework
+	É uma ferramenta para construir Web APIs , dado que o front fara requisições http para o servidor django.
 </p>
 
 #### 1.2.6 <a name ="1_2_6">Coreapi</a>
 <p>&nbsp&nbsp&nbsp&nbsp
-	coreapi
+	Core API é uma biblioteca focada em facilitar a criação de DOMs (Document Object Model) para os objetos criados na aplicação , dado que estes serão enviados para o front-end.
 </p>
 
 #### 1.2.7 <a name ="1_2_7">Werkzeug</a>
 <p>&nbsp&nbsp&nbsp&nbsp
-	Werkzeug
+	Werkzeug é uma biblioteca que contém utilitários para WSGI(Web Server Gateway Interface).
+	WSGI é um padrão Python descrito na PEP 3333 
 </p>
 
 #### 1.2.8 <a name ="1_2_8">Psycopg2-binary</a>
 <p>&nbsp&nbsp&nbsp&nbsp
-	Psycopg2-binary
+	É uma biblioteca, em sua maior parte escrita em C , para encapsular a comunicação do PostgreSQL com a aplicação em questão.
 </p>
 
 #### 1.2.9 <a name ="1_2_9">Awesome-slugify</a>
 <p>&nbsp&nbsp&nbsp&nbsp
-	Awesome-slugify
+	Biblioteca focada na parte de auxiliar na criação de uma URL que pode ser legível tanto para humanos quanto para mecanismos de busca, ou seja, torna as URLs mais "amigáveis".
 </p>
