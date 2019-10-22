@@ -10,6 +10,7 @@ Data|Versão|Descrição|Autor
 21/09|1.0.5|Adição do subitem 1.1.4 | Marcelo Victor e João Paulino |
 21/09|1.0.6|Adição do subitem 2.2 | Marcelo Victor e João Paulino |
 22/09|1.0.7|Adição do subitem 2.1 | Marcelo Victor e João Paulino |
+22/09|1.0.8|Correções no item 2 | Marcelo Victor e João Paulino |
 
 
 # Sumário
@@ -30,9 +31,7 @@ Data|Versão|Descrição|Autor
 	- 1.2.7 [Werkzeug](#1_2_7)
 	- 1.2.8 [Psycopg2-binary](#1_2_8)
 	- 1.2.9 [Awesome-slugify](#1_2_9)
-2. [Integração](#4)
-  - 2.1 [Ferramentas](#2_1)
-  - 2.2 [Relações](#2_2)
+2. [Integração](#2)
 ___
 ## 1. <a name="1">Introdução</a>
 
@@ -103,20 +102,24 @@ ___
 </p>
 
 ## 2. <a name="2">Integração</a>
-
-## 2.1 <a name="2_1">Ferramentas</a>
-
-<p>&nbsp&nbsp&nbsp&nbsp
-	As ferramentas utilizadas no Front-End foi basicamente o axios ,que gerenciava a exibição dos dados da API ,enquanto no back-end foram utilizado bibliotecas como o Django-cors-headers que viabilizava o acesso em outros dominios ,o Django-redis que otimizava as requisições realizadas ,o Coreapi que por sua vez permite interações com a API ,sendo a partir destas bibliotecas que o programa consegue se comunicar de forma eficiente entre o back-end e o front-end.
-</p>
-
-## 2.2 <a name="2_2">Relações</a>
-
-<p>&nbsp&nbsp&nbsp&nbsp
-	A iteração ideal entre o front-end e o back-end , dar-se-á da seguinte forma:
-		1 - O front-end reconhecerá uma letra/palavra e o VUE fará uma requisição para o back-end através do Djangorestframework
-		2 - O back-end processará a requisição, enviada pelo front, procurando pelo texto enviado na base de dados (que esta integrada com o django pelo psycopg2-binary).
-		3 - Caso a base de dados encontre o texto, o mesmo retornará a imagem ( que estava armazenada na base de dados com auxilio do pillow).
-		4 - Sera montado um arquivo json (com auxilio do core-api) e retornado para o front-end
-		5 - O front-end irá renderizar a animacao com auxilio do ar.js na tela.
-</p>
+A iteração ideal entre o front-end e o back-end , dar-se-á da seguinte forma:
+	<ol>
+		<li>
+			O front-end irá detectar uma letra/palavra com o auxilio do AFrame e Ar.js , montará um texto referente aos símbolos detectados.
+		</li>
+		<li>
+		 O front-end com auxilio do Axis e Djangorestframework , solicitará através de uma requisição http uma ilustração referente ao texto detectado.
+		 </li>
+		<li>
+		 O back-end processará a requisição, enviada pelo front, procurando pelo texto enviado na base de dados (que esta integrada com o django pelo psycopg2-binary).
+		 </li>
+		<li>
+		 Caso a base de dados encontre o texto, o mesmo retornará a imagem ( que estava armazenada na base de dados com auxílio do pillow).
+		 </li>
+		<li>
+		 Será montado um arquivo json (com auxilio do core-api) e retornado para o front-end.
+		</li>
+		<li>
+		 O front-end receberá a animação e renderizará a mesma na tela do usuário com o AFrame.
+		</li>
+	</ol>
