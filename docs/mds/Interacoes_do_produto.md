@@ -9,6 +9,8 @@ Data|Versão|Descrição|Autor
 21/09|1.0.4|Adição dos subitens 1.2.1, 1.2.2, 1.2.3, 1.2.4, 1.2.5, 1.2.6, 1.2.7, 1.2.8, 1.2.9 | Marcelo Victor e João Paulino |
 21/09|1.0.5|Adição do subitem 1.1.4 | Marcelo Victor e João Paulino |
 21/09|1.0.6|Adição do subitem 2.2 | Marcelo Victor e João Paulino |
+22/09|1.0.7|Adição do subitem 2.1 | Marcelo Victor e João Paulino |
+
 
 # Sumário
 
@@ -105,7 +107,7 @@ ___
 ## 2.1 <a name="2_1">Ferramentas</a>
 
 <p>&nbsp&nbsp&nbsp&nbsp
-	
+	As ferramentas utilizadas no Front-End foi basicamente o axios ,que gerenciava a exibição dos dados da API ,enquanto no back-end foram utilizado bibliotecas como o Django-cors-headers que viabilizava o acesso em outros dominios ,o Django-redis que otimizava as requisições realizadas ,o Coreapi que por sua vez permite interações com a API ,sendo a partir destas bibliotecas que o programa consegue se comunicar de forma eficiente entre o back-end e o front-end.
 </p>
 
 ## 2.2 <a name="2_2">Relações</a>
@@ -117,5 +119,4 @@ ___
 		3 - Caso a base de dados encontre o texto, o mesmo retornará a imagem ( que estava armazenada na base de dados com auxilio do pillow).
 		4 - Sera montado um arquivo json (com auxilio do core-api) e retornado para o front-end
 		5 - O front-end irá renderizar a animacao com auxilio do ar.js na tela.
-
 </p>
