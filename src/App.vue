@@ -5,6 +5,8 @@
       :key="letter"
       type='pattern'
       :url="patternUrl(letter)"
+      @markerFound="markerFound($event)"
+      @markerLost="markerLost($event)"
     >
       <a-entity
         v-if="iscreated"
@@ -53,6 +55,8 @@
   export default class App extends Vue {
     private lettersModule = getModule(LettersModule, this.$store);
     private alphabet: string[] = [];
+    private markers = new Set();
+    private isReading: boolean = false;
     private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
     private iscreated: boolean = false;
 
@@ -72,6 +76,18 @@
       const url = new URL(this.lettersModule.Letters[letter]);
 
       return `shader:gif; src:url(${url.href});`;
+    }
+
+    public markerFound(event: any){
+      this.isReading = true;
+      this.markers.add(event.target);
+    }
+
+    public markerLost(event: any){
+      if(this.markers.size == 0){
+        this.isReading = false;
+      }
+      this.markers.delete(event.target);
     }
   }
 </script>
