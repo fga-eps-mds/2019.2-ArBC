@@ -51,14 +51,17 @@
   import LettersModule from '@/store/modules/letters';
   import { getModule } from 'vuex-module-decorators';
 
+  import MarkerStatsClass from './services/markersStats';
+
   @Component({})
   export default class App extends Vue {
-    private lettersModule = getModule(LettersModule, this.$store);
-    private alphabet: string[] = [];
     private markers = new Set();
+    private alphabet: string[] = [];
     private isReading: boolean = false;
-    private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
     private iscreated: boolean = false;
+    private lettersModule = getModule(LettersModule, this.$store);
+    private markersStats: MarkerStatsClass =  new MarkerStatsClass();
+    private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
 
     public async created() {
       await this.lettersModule.getLetters();
@@ -78,15 +81,16 @@
       return `shader:gif; src:url(${url.href});`;
     }
 
-    public markerFound(event: any){
+    public markerFound(event: any) {
       this.isReading = true;
       this.markers.add(event.target);
     }
 
-    public markerLost(event: any){
-      if(this.markers.size == 0){
+    public markerLost(event: any) {
+      if (this.markers.size === 0) {
         this.isReading = false;
       }
+
       this.markers.delete(event.target);
     }
   }
