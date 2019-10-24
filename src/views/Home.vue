@@ -1,8 +1,23 @@
 <template>
   <div class="home">
     <h1>ArBC</h1>
-      <md-button class="md-raised md-primary" href="https://jlucassr.github.io/ArBC-Pages/">Sobre</md-button>
-      <md-button class="md-raised md-accent" href="https://localhost:8080/camera">Camera</md-button>
+
+    <md-button
+      class="md-raised md-primary"
+      target="_blank"
+      href="https://jlucassr.github.io/ArBC-Pages/"
+    >
+      Sobre
+    </md-button>
+
+    <md-button
+      class="md-raised md-accent"
+      @click="$router.push('/camera')"
+      label="asdasd"
+    >
+      Camera
+    </md-button>
+
     <img alt="Arara" src="../assets/arara.svg"/>
   </div>
 </template>
@@ -14,7 +29,9 @@
 </style>
 
 <script>
-  export default {
-    name: 'RegularButtons'
-  }
+import Vue from 'vue';
+import Component from 'vue-class-component';
+
+@Component({})
+export default class Home extends Vue {}
 </script>
