@@ -1,5 +1,6 @@
 <template>
   <div>
+    <tool-bar/>
     <md-card>
       <md-card-header>
         <div class="md-title"><strong style="color: rgb(252, 80, 76)">Bem vindo ao ArBC</strong></div>
@@ -20,11 +21,12 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import Component from 'vue-class-component';
-
-@Component({})
-export default class App extends Vue {}
+import ToolBar from '@/components/ToolBar.vue';
+export default {
+  components: {
+    ToolBar,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
