@@ -1,35 +1,48 @@
 <template>
-  <div class="page-container">
+  <div class="page-container" align="center">
+
     <md-app md-mode="reveal">
-      <md-app-toolbar class="md-primary">
-        <span class="md-title">ArBC</span>
-        <md-button class="md-icon-button md-primary">
-          <md-icon >home</md-icon>
-        </md-button>
-        <md-button class="md-icon-button md-primary">
-          <md-icon :md-src="require('@/assets/i.svg')"></md-icon>
-        </md-button>
+      <md-app-toolbar class="md-accent">
+        
+        <div class="md-toolbar-section-start">
+          <span class="md-title">ArBC</span>
+          <md-button 
+            class="md-icon-button" 
+            href="./"
+          >
+            <md-icon>home</md-icon>
+          </md-button>
+          <md-button 
+            class="md-icon-button" 
+            href="./camera"
+          >
+            <md-icon :md-src="require('@/assets/camera.svg')"/>
+          </md-button>
+        </div>
+
+        <div class="md-toolbar-section-end">
+          <md-button 
+            class="md-icon-button" 
+            target="_blank"
+            href="https://jlucassr.github.io/ArBC-Pages/"
+          >
+            <md-icon :md-src="require('@/assets/about.svg')"/>
+          </md-button>
+        </div>
+
       </md-app-toolbar>
     </md-app>
+
     <router-view />
   </div>
 </template>
 
 <script>
-import Vue from "vue";
-import Component from "vue-class-component";
+import Vue from 'vue';
+import Component from 'vue-class-component';
 
 @Component({})
 export default class App extends Vue {}
-</script>
-
-<script>
-export default {
-  name: 'Reveal',
-  data: () => ({
-    menuVisible: false,
-  }),
-};
 </script>
 
 <style lang="scss" scoped>

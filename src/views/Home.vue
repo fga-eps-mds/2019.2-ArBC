@@ -1,30 +1,39 @@
 <template>
   <div class="home">
-    <h1>ArBC</h1>
 
-    <md-button
-      class="md-raised md-primary"
-      target="_blank"
-      href="https://jlucassr.github.io/ArBC-Pages/"
-    >
-      Sobre
-    </md-button>
+    <md-card>
+      <md-card-header>
+        <div class="md-title"><strong style="color: rgb(252, 80, 76)">Bem vindo ao ArBC</strong></div>
+      </md-card-header>
 
-    <md-button
-      class="md-raised md-accent"
-      @click="$router.push('/camera')"
-      label="asdasd"
-    >
-      Camera
-    </md-button>
+      <md-card-content>
+          <img alt="Arara" src="../assets/arara.svg"/>
+      </md-card-content>
 
-    <img alt="Arara" src="../assets/arara.svg"/>
+      <md-button
+        class="md-raised md-accent button-size"
+        href="./camera"
+      >
+        Abrir Câmera
+      </md-button>
+    </md-card>
+
   </div>
 </template>
 
 <style lang="scss" scoped>
   small {
     display: block;
+  }
+  .button-size {
+      width: 70%!important;
+      min-width: unset!important;
+  }
+  .md-card {
+    width: 90%;
+    margin: 4px;
+    display: inline-block;
+    vertical-align: top;
   }
 </style>
 
