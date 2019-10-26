@@ -4,7 +4,7 @@
       <md-app-toolbar class="md-primary">
         
         <div class="md-toolbar-section-start">
-          <span class="md-title" style="color: rgb(255, 255, 255)">ArBC</span>
+          <span class="md-title" style="color: rgb(0, 0, 0)">ArBC</span>
           <md-button 
             class="md-icon-button" 
             href="./"
@@ -33,10 +33,10 @@ export default class App extends Vue {}
 
 <script>
 export default {
-  name: "PaperContent",
-  mounted: function() {
-    this.$material.theming.theme = "mono"; 
-  }
+  name: 'PaperContent',
+  mounted() {
+  this.$material.theming.theme = 'mono';
+  },
 };
 </script>
 

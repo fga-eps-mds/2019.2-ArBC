@@ -42,7 +42,7 @@
           <md-button 
             class="md-icon-button md-primary md-fab" 
             target="_blank"
-            href="https://github.com/fga-eps-mds/2019.2-ArBC"
+            href="./camera"
           >
             <md-icon :md-src="require('@/assets/camera.svg')"/>
           </md-button>
