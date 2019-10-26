@@ -1,10 +1,10 @@
 <template>
   <div>
     <md-app md-mode="reveal">
-      <md-app-toolbar class="md-accent">
+      <md-app-toolbar class="md-primary">
         
         <div class="md-toolbar-section-start">
-          <span class="md-title">ArBC</span>
+          <span class="md-title" style="color: rgb(255, 255, 255)">ArBC</span>
           <md-button 
             class="md-icon-button" 
             href="./"
@@ -18,25 +18,6 @@
             <md-icon :md-src="require('@/assets/camera.svg')"/>
           </md-button>
         </div>
-
-        <div class="md-toolbar-section-end">
-          <md-button 
-            class="md-icon-button" 
-            target="_blank"
-            href="https://github.com/fga-eps-mds/2019.2-ArBC"
-          >
-            <md-icon :md-src="require('@/assets/github_icon.svg')"/>
-          </md-button>
-
-          <md-button 
-            class="md-icon-button" 
-            target="_blank"
-            href="https://jlucassr.github.io/ArBC-Pages/"
-          >
-            <md-icon :md-src="require('@/assets/about.svg')"/>
-          </md-button>
-        </div>
-
       </md-app-toolbar>
     </md-app>
   </div>
@@ -48,6 +29,15 @@ import Component from 'vue-class-component';
 
 @Component({})
 export default class App extends Vue {}
+</script>
+
+<script>
+export default {
+  name: "PaperContent",
+  mounted: function() {
+    this.$material.theming.theme = "mono"; 
+  }
+};
 </script>
 
 <style lang="scss" scoped>
