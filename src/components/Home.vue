@@ -11,7 +11,7 @@
         </md-card-header>
 
         <md-card-content>
-          Para ter acesso ao github do projeto clique no botâo verde abaixo.
+          Para ter acesso ao github do projeto clique no botâo abaixo.
           <br><br><br>
         </md-card-content>
 
@@ -34,7 +34,7 @@
         </md-card-header>
 
         <md-card-content>
-          Para ter acesso a nossa ferramenta de auxilio à alfabetização de crianças clique no botão verde abaixo.
+          Para ter acesso a nossa ferramenta de auxilio à alfabetização de crianças clique no botão abaixo.
           <br><br>
         </md-card-content>
 
@@ -57,7 +57,7 @@
         </md-card-header>
 
         <md-card-content>
-          Para ter acesso a wiki do projeto que contém diversas informações úteis sobre os participantes e o software clique no botão verde abaixo.
+          Para ter acesso a wiki do projeto, que contém diversas informações úteis sobre os participantes e o software, clique no botão abaixo.
         </md-card-content>
 
         <md-card-actions>
@@ -79,7 +79,7 @@
         </md-card-header>
 
         <md-card-content>
-            Para utilizar a aplicação é necessário os marcadores. Desse modo, disponibilizamos o download por meio do drive. Para baixar basta clicar no link abaixo.
+            Para utilizar a aplicação é necessário os marcadores. Desse modo, disponibilizamos o download por meio do drive. Para baixar basta clicar no botão abaixo.
         </md-card-content>
 
         <md-card-actions>
