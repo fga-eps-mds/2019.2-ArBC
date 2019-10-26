@@ -1,126 +1,58 @@
 <template>
   <div>
     <tool-bar/>
-    <img alt="Arara" src="../assets/ArBC_logo.png" width="640" height="410"/>
-    <div><br><br><br></div>
-    
-    <md-card md-with-hover>
-      <md-ripple>
-        <md-card-header>
-          <md-icon class="md-size-4x" :md-src="require('@/assets/github.svg')"/>
-        </md-card-header>
-
-        <md-card-content>
-          Para ter acesso ao github do projeto clique no botâo abaixo.
-          <br><br><br>
-        </md-card-content>
-
-        <md-card-actions>
-          <md-button 
-            class="md-icon-button md-fab" 
-            target="_blank"
-            href="https://github.com/fga-eps-mds/2019.2-ArBC"
-          >
-            <md-icon :md-src="require('@/assets/github.svg')"/>
-          </md-button>
-        </md-card-actions>
-      </md-ripple>
-    </md-card>
-
-    <md-card md-with-hover>
-      <md-ripple>
-        <md-card-header>
-          <md-icon class="md-size-4x">camera_alt</md-icon>
-        </md-card-header>
-
-        <md-card-content>
-          Para ter acesso a nossa ferramenta de auxilio à alfabetização de crianças clique no botão abaixo.
-          <br><br>
-        </md-card-content>
-
-        <md-card-actions>
-          <md-button 
-            class="md-icon-button md-fab" 
-            target="_blank"
-            href="./camera"
-          >
-            <md-icon >camera_alt</md-icon>
-          </md-button>
-        </md-card-actions>
-      </md-ripple>
-    </md-card>
-
-    <md-card md-with-hover>
-      <md-ripple>
-        <md-card-header>
-          <md-icon class="md-size-4x">help</md-icon>
-        </md-card-header>
-
-        <md-card-content>
-          Para ter acesso a wiki do projeto, que contém diversas informações úteis sobre os participantes e o software, clique no botão abaixo.
-        </md-card-content>
-
-        <md-card-actions>
-          <md-button 
-            class="md-icon-button md-fab" 
-            target="_blank"
-            href="https://jlucassr.github.io/ArBC-Pages/"
-          >
-            <md-icon >help</md-icon>
-          </md-button>
-        </md-card-actions>
-      </md-ripple>
-    </md-card>
-
-    <md-card md-with-hover>
-      <md-ripple>
-        <md-card-header>
-          <md-icon class="md-size-4x">backup</md-icon>
-        </md-card-header>
-
-        <md-card-content>
-            Para utilizar a aplicação é necessário os marcadores. Desse modo, disponibilizamos o download por meio do drive. Para baixar basta clicar no botão abaixo.
-        </md-card-content>
-
-        <md-card-actions>
-          <md-button 
-            class="md-icon-button md-fab" 
-            target="_blank"
-            href="https://drive.google.com/open?id=1Aa5jXFIh4385wKT36mFFP82zho7BmfBP"
-          >
-            <md-icon>backup</md-icon>
-          </md-button>
-        </md-card-actions>
-      </md-ripple>
-    </md-card>
-
+    <div>
+      <img alt="Arara" src="../assets/ArBC_logo.png" width="640" height="410"/>
+    </div>
+    <div>
+      <home-card :data="githubCardInfo" :localIcon="true"/>
+      <home-card :data="cameraCardInfo"/>
+      <home-card :data="wikiCardInfo"/>
+      <home-card :data="driveCardInfo"/>
+    </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
 import ToolBar from '@/components/ToolBar.vue';
-export default {
-  components: {
-    ToolBar,
-  },
-};
+import HomeCard from '@/components/HomeCard.vue';
+
+Vue.component('tool-bar', ToolBar);
+Vue.component('home-card', HomeCard);
+
+@Component({
+    components: { ToolBar,  HomeCard},
+})
+export default class Home extends Vue {
+  private githubCardInfo: object = {
+    icon: 'github',
+    content: 'Para ter acesso ao github, que contém todo o código do produto de forma fácil,\
+     além de muitas outras informações úteis clique no botão azul abaixo.',
+    link: 'https://github.com/fga-eps-mds/2019.2-ArBC',
+    target: '_blank',
+  };
+  private cameraCardInfo: object = {
+    icon: 'camera_alt',
+    content: 'Para ter acesso a câmera do projeto, sendo ela a ferramenta que tem como\
+     função o auxílio na alfabetização de crinças.Clique no botão azul abaixo.',
+    link: '/camera',
+    target: '',
+  };
+  private wikiCardInfo: object = {
+    icon: 'help',
+    content: 'Para ter acesso a wiki do projeto, que contém diversas informações úteis sobre os \
+    participantes e o software, clique no botão azul abaixo.',
+    link: 'https://jlucassr.github.io/ArBC-Pages/',
+    target: '_blank',
+  };
+  private driveCardInfo: object = {
+    icon: 'backup',
+    content: 'Para utilizar a aplicação é necessário os marcadores. Desse modo, \
+    disponibilizamos o download por meio do drive. Para baixar basta clicar no botão azul abaixo.',
+    link: 'https://drive.google.com/open?id=1Aa5jXFIh4385wKT36mFFP82zho7BmfBP',
+    target: '_blank',
+  };
+}
 </script>
-
-<style lang="scss" scoped>
-  small {
-    display: block;
-  }
-  .button-size {
-      width: 70%!important;
-      height: 100px!important;
-      min-width: unset!important;
-  }
-  .md-card {
-    width: 320px;
-    margin: 4px;
-    height: 300px;
-    display: inline-block;
-    vertical-align: top;
-  }
-</style>
-

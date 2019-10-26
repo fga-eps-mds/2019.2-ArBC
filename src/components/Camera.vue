@@ -12,8 +12,7 @@
         position="0 0 0"
         rotation="-90 0 0"
         :material="gifURL(letter)"
-      >
-      </a-entity>
+      />
     </a-marker>
 
     <a-entity camera></a-entity>
