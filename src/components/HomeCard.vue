@@ -3,8 +3,15 @@
     <md-card md-with-hover>
       <md-ripple>
         <md-card-header>
-          <md-icon v-if="!localIcon" class="md-size-4x">{{ data.icon }}</md-icon>
-          <md-icon v-else class="md-size-4x" :md-src="require(`@/assets/${data.icon}.svg`)"/>
+          <md-icon v-if="!localIcon" class="md-size-4x">
+            {{ data.icon }}
+          </md-icon>
+          
+          <md-icon
+            v-else
+            class="md-size-4x"
+            :md-src="require(`@/assets/${data.icon}.svg`)"
+          />
         </md-card-header>
 
         <md-card-content>
@@ -46,11 +53,11 @@ export default class HomeCard extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.box {
-width: 320px;
-margin: 4px;
-height: 300px;
-display: inline-block;
-vertical-align: top;
-}
+  .box {
+    width: 320px;
+    margin: 4px;
+    height: 300px;
+    display: inline-block;
+    vertical-align: top;
+  }
 </style>

@@ -1,14 +1,18 @@
 <template>
-  <home/>
+  <home />
 </template>
 
-<script>
+<script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
 import Home from '@/components/Home.vue';
 
+Vue.component('home', Home);
+
 @Component({
-  components: {Home},
+  components: {
+    Home,
+  },
 })
-export default class App extends Vue {}
+export default class HomeView extends Vue {}
 </script>
