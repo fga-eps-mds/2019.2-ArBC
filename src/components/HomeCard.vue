@@ -18,7 +18,7 @@
             :href="data.link"
           >
             <md-icon v-if="!localIcon">{{ data.icon }}</md-icon>
-            <md-icon v-else :md-src="require('@/assets/github.svg')"/>
+            <md-icon v-else :md-src="require(`@/assets/${data.icon}.svg`)"/>
           </md-button>
         </md-card-actions>
       </md-ripple>
