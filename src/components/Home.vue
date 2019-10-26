@@ -7,7 +7,7 @@
     <md-card md-with-hover>
       <md-ripple>
         <md-card-header>
-          <md-icon class="md-size-4x" :md-src="require('@/assets/github_icon.svg')"/>
+          <md-icon class="md-size-4x" :md-src="require('@/assets/github.svg')"/>
         </md-card-header>
 
         <md-card-content>
@@ -17,11 +17,11 @@
 
         <md-card-actions>
           <md-button 
-            class="md-icon-button md-primary md-fab" 
+            class="md-icon-button md-fab" 
             target="_blank"
             href="https://github.com/fga-eps-mds/2019.2-ArBC"
           >
-            <md-icon :md-src="require('@/assets/github_icon.svg')"/>
+            <md-icon :md-src="require('@/assets/github.svg')"/>
           </md-button>
         </md-card-actions>
       </md-ripple>
@@ -30,7 +30,7 @@
     <md-card md-with-hover>
       <md-ripple>
         <md-card-header>
-          <md-icon class="md-size-4x" :md-src="require('@/assets/camera.svg')"/>
+          <md-icon class="md-size-4x">camera_alt</md-icon>
         </md-card-header>
 
         <md-card-content>
@@ -40,11 +40,11 @@
 
         <md-card-actions>
           <md-button 
-            class="md-icon-button md-primary md-fab" 
+            class="md-icon-button md-fab" 
             target="_blank"
             href="./camera"
           >
-            <md-icon :md-src="require('@/assets/camera.svg')"/>
+            <md-icon >camera_alt</md-icon>
           </md-button>
         </md-card-actions>
       </md-ripple>
@@ -53,7 +53,7 @@
     <md-card md-with-hover>
       <md-ripple>
         <md-card-header>
-          <md-icon class="md-size-4x" :md-src="require('@/assets/about.svg')"/>
+          <md-icon class="md-size-4x">help</md-icon>
         </md-card-header>
 
         <md-card-content>
@@ -62,11 +62,33 @@
 
         <md-card-actions>
           <md-button 
-            class="md-icon-button md-primary md-fab" 
+            class="md-icon-button md-fab" 
             target="_blank"
             href="https://jlucassr.github.io/ArBC-Pages/"
           >
-            <md-icon :md-src="require('@/assets/about.svg')"/>
+            <md-icon >help</md-icon>
+          </md-button>
+        </md-card-actions>
+      </md-ripple>
+    </md-card>
+
+    <md-card md-with-hover>
+      <md-ripple>
+        <md-card-header>
+          <md-icon class="md-size-4x">backup</md-icon>
+        </md-card-header>
+
+        <md-card-content>
+            Para utilizar a aplicação é necessário os marcadores. Desse modo, disponibilizamos o download por meio do drive. Para baixar basta clicar no link abaixo.
+        </md-card-content>
+
+        <md-card-actions>
+          <md-button 
+            class="md-icon-button md-fab" 
+            target="_blank"
+            href="https://drive.google.com/open?id=1Aa5jXFIh4385wKT36mFFP82zho7BmfBP"
+          >
+            <md-icon>backup</md-icon>
           </md-button>
         </md-card-actions>
       </md-ripple>
