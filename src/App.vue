@@ -5,45 +5,21 @@
       :key="letter"
       type='pattern'
       :url="patternUrl(letter)"
-      @markerFound="markerFound($event)"
-      @markerLost="markerLost($event)"
+      @markerFound="markerFound($event,letter)"
+      @markerLost="markerLost($event, letter)"
     >
       <a-entity
         v-if="iscreated"
         geometry="primitive: plane;"
         position="0 0 0"
         rotation="-90 0 0"
-        :material="gifURL(letter)"
-      >
+        :material="gifURL(letter)">
       </a-entity>
     </a-marker>
 
     <a-entity camera></a-entity>
   </a-scene>
 </template>
-
-<style lang="less">
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
-
-  #nav {
-    padding: 30px;
-
-    a {
-      font-weight: bold;
-      color: #2c3e50;
-
-      &.router-link-exact-active {
-        color: #42b983;
-      }
-    }
-  }
-</style>
 
 <script lang="ts">
   import Vue from 'vue';
@@ -56,11 +32,12 @@
   @Component({})
   export default class App extends Vue {
     private markers = new Set();
+    private processHandler: any;
     private alphabet: string[] = [];
     private isReading: boolean = false;
     private iscreated: boolean = false;
     private lettersModule = getModule(LettersModule, this.$store);
-    private markersStats: MarkerStatsClass =  new MarkerStatsClass();
+    private markersStats: MarkerStatsClass = new MarkerStatsClass();
     private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
 
     public async created() {
@@ -69,6 +46,10 @@
       this.alphabet = Object.keys(this.lettersModule.Letters);
 
       this.iscreated = true;
+    }
+
+    public destroyed() {
+      clearInterval(this.processHandler);
     }
 
     public patternUrl(letter: string) {
@@ -81,17 +62,86 @@
       return `shader:gif; src:url(${url.href});`;
     }
 
-    public markerFound(event: any) {
-      this.isReading = true;
+    public markerFound(event: any, letter: string) {
+      event.target.key = letter;
+
       this.markers.add(event.target);
+
+      if (this.markers.size === 2) {
+        this.isReading = true;
+        this.processHandler = setInterval(this.processLetters, 16);
+      }
     }
 
-    public markerLost(event: any) {
-      if (this.markers.size === 0) {
-        this.isReading = false;
-      }
+    public markerLost(event: any, letter: string) {
+      event.target.key = letter;
 
       this.markers.delete(event.target);
+
+      if (this.markers.size === 1) {
+        clearInterval(this.processHandler);
+        this.isReading = false;
+      }
+    }
+
+    private orderLettersHorizontally(processedLetters: object[]) {
+      processedLetters.sort((a: any, b: any) => {
+        return (a.position.x >= b.position.x) ? 1 : -1;
+      });
+    }
+
+    private createMarkerFromItem(item: any) {
+      return {
+        key: item.key,
+        position: item.object3D.position,
+        quaternion: item.object3D.quaternion,
+        scale: item.object3D.scale,
+      };
+    }
+
+    private addPositions() {
+      let item: any;
+
+      for (item of this.markers.values()) {
+        this.markersStats.addPosition(item.object3D.position.y + 10);
+        /*
+        * This '+10' above is because negative positions of 'y' can give
+        * wrong standard deviation in the process
+        */
+      }
+    }
+
+    private setWord(processedLetters: object[]) {
+      let word = '';
+
+      processedLetters.forEach((letter: any) => {
+        word = word + `${letter.key}`;
+      });
+    }
+
+    private processLetters() {
+      let item: any;
+      this.markersStats.clearValues();
+      const processedLetters: object[] = [];
+      const correctionFactor = 0.06 * this.markers.size;
+
+      this.addPositions();
+
+      const deviation: number = this.markersStats.deviation * 1.3;
+
+      for (item of this.markers.values()) {
+        if (Math.abs(deviation) <= correctionFactor) {
+          processedLetters.push(this.createMarkerFromItem(item));
+        }
+      }
+
+      if (processedLetters.length === 0) {
+        return;
+      }
+
+      this.orderLettersHorizontally(processedLetters);
+
+      this.setWord(processedLetters);
     }
   }
 </script>

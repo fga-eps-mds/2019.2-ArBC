@@ -1,1 +1,1 @@
-declare module 'simple-statistics'
+declare module 'simple-statistics';
