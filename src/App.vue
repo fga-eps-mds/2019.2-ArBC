@@ -112,34 +112,40 @@
     }
 
     private setWord(processedLetters: object[]) {
-      let word = '';
+      if (processedLetters.length > 0) {
+        let word = '';
 
-      processedLetters.forEach((letter: any) => {
-        word = word + `${letter.key}`;
-      });
+        this.orderLettersHorizontally(processedLetters);
+
+        processedLetters.forEach((letter: any) => {
+          word = word + `${letter.key}`;
+        });
+      }
     }
 
-    private processLetters() {
+    private addProcessedLetters(params: any) {
       let item: any;
-      this.markersStats.clearValues();
-      const processedLetters: object[] = [];
+      const { deviation, processedLetters } = params;
       const correctionFactor = 0.06 * this.markers.size;
-
-      this.addPositions();
-
-      const deviation: number = this.markersStats.deviation * 1.3;
 
       for (item of this.markers.values()) {
         if (Math.abs(deviation) <= correctionFactor) {
           processedLetters.push(this.createMarkerFromItem(item));
         }
       }
+    }
 
-      if (processedLetters.length === 0) {
-        return;
-      }
+    private processLetters() {
+      let deviation: number;
+      const processedLetters: object[] = [];
 
-      this.orderLettersHorizontally(processedLetters);
+      this.markersStats.clearValues();
+
+      this.addPositions();
+
+      deviation = this.markersStats.deviation;
+
+      this.addProcessedLetters({ deviation, processedLetters });
 
       this.setWord(processedLetters);
     }
