@@ -16,6 +16,7 @@
     "node-sass": "^4.12.0",
     "register-service-worker": "^1.6.2",
     "sass-loader": "^8.0.0",
+    "simple-statistics": "^7.0.5",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-material": "^1.0.0-beta-11",

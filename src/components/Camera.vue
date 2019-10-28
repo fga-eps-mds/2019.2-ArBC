@@ -5,49 +5,149 @@
       :key="letter"
       type='pattern'
       :url="patternUrl(letter)"
+      @markerFound="markerFound($event,letter)"
+      @markerLost="markerLost($event, letter)"
     >
       <a-entity
         v-if="iscreated"
         geometry="primitive: plane;"
         position="0 0 0"
         rotation="-90 0 0"
-        :material="gifURL(letter)"
-      />
+        :material="gifURL(letter)">
+      </a-entity>
     </a-marker>
 
-    <a-entity camera />
+    <a-entity camera></a-entity>
   </a-scene>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import Component from 'vue-class-component';
-import { getModule } from 'vuex-module-decorators';
-import LettersModule from '@/store/modules/letters';
+  import Vue from 'vue';
+  import Component from 'vue-class-component';
+  import LettersModule from '@/store/modules/letters';
+  import { getModule } from 'vuex-module-decorators';
 
-@Component({})
-export default class Camera extends Vue {
-  private lettersModule = getModule(LettersModule, this.$store);
-  private alphabet: string[] = [];
-  private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
-  private iscreated: boolean = false;
+  import MarkerStatsClass from '../services/markersStats';
 
-  public async created() {
-    await this.lettersModule.getLetters();
+  @Component({})
+  export default class App extends Vue {
+    private markers = new Set();
+    private processHandler: any;
+    private alphabet: string[] = [];
+    private isReading: boolean = false;
+    private iscreated: boolean = false;
+    private lettersModule = getModule(LettersModule, this.$store);
+    private markersStats: MarkerStatsClass = new MarkerStatsClass();
+    private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
 
-    this.alphabet = Object.keys(this.lettersModule.Letters);
+    public async created() {
+      await this.lettersModule.getLetters();
 
-    this.iscreated = true;
+      this.alphabet = Object.keys(this.lettersModule.Letters);
+
+      this.iscreated = true;
+    }
+
+    public destroyed() {
+      clearInterval(this.processHandler);
+    }
+
+    public patternUrl(letter: string) {
+      return `${this.mediaBaseUrl}/src/assets/patterns/pattern-${letter}.patt`;
+    }
+
+    public gifURL(letter: string) {
+      const url = new URL(this.lettersModule.Letters[letter]);
+
+      return `shader:gif; src:url(${url.href});`;
+    }
+
+    public markerFound(event: any, letter: string) {
+      event.target.key = letter;
+
+      this.markers.add(event.target);
+
+      if (this.markers.size === 2) {
+        this.isReading = true;
+        this.processHandler = setInterval(this.processLetters, 16);
+      }
+    }
+
+    public markerLost(event: any, letter: string) {
+      event.target.key = letter;
+
+      this.markers.delete(event.target);
+
+      if (this.markers.size === 1) {
+        clearInterval(this.processHandler);
+        this.isReading = false;
+      }
+    }
+
+    private orderLettersHorizontally(processedLetters: object[]) {
+      processedLetters.sort((a: any, b: any) => {
+        return (a.position.x >= b.position.x) ? 1 : -1;
+      });
+    }
+
+    private createMarkerFromItem(item: any) {
+      return {
+        key: item.key,
+        position: item.object3D.position,
+        quaternion: item.object3D.quaternion,
+        scale: item.object3D.scale,
+      };
+    }
+
+    private addPositions() {
+      let item: any;
+
+      for (item of this.markers.values()) {
+        this.markersStats.addPosition(item.object3D.position.y + 10);
+        /*
+        * This '+10' above is because negative positions of 'y' can give
+        * wrong standard deviation in the process
+        */
+      }
+    }
+
+    private setWord(processedLetters: object[]) {
+      if (processedLetters.length > 0) {
+        let word = '';
+
+        this.orderLettersHorizontally(processedLetters);
+
+        processedLetters.forEach((letter: any) => {
+          word = word + `${letter.key}`;
+        });
+      }
+    }
+
+    private addProcessedLetters(params: any) {
+      let item: any;
+      const { deviation, processedLetters } = params;
+      const correctionFactor = 0.06 * this.markers.size;
+
+      for (item of this.markers.values()) {
+        if (Math.abs(deviation) <= correctionFactor) {
+          processedLetters.push(this.createMarkerFromItem(item));
+        }
+      }
+    }
+
+    private processLetters() {
+      let deviation: number;
+      const processedLetters: object[] = [];
+
+      this.markersStats.clearValues();
+
+      this.addPositions();
+
+      deviation = this.markersStats.deviation;
+
+      this.addProcessedLetters({ deviation, processedLetters });
+
+      this.setWord(processedLetters);
+    }
   }
-
-  public patternUrl(letter: string) {
-    return `${this.mediaBaseUrl}/src/assets/patterns/pattern-${letter}.patt`;
-  }
-
-  public gifURL(letter: string) {
-    const url = new URL(this.lettersModule.Letters[letter]);
-
-    return `shader:gif; src:url(${url.href});`;
-  }
-}
 </script>
