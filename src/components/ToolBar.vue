@@ -1,6 +1,5 @@
 <template>
-  <md-app md-mode="reveal">
-    <md-app-toolbar class="md-primary">   
+    <md-toolbar class="md-primary">   
       <div class="md-toolbar-section-start">
         <span class="md-title" style="color: rgb(255, 255, 255)">
           ArBC
@@ -15,14 +14,30 @@
 
         <md-button 
           class="md-icon-button" 
-          @click="$router.push('/camera')"
+          href="./camera"
         >
           <md-icon >camera_alt</md-icon>
         </md-button>  
       </div>
-    </md-app-toolbar>
-  </md-app>
+    </md-toolbar>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+import Component from 'vue-class-component';
+import 'vue-material/dist/vue-material.min.css';
+import {
+  MdIcon,
+  MdButton,
+  MdToolbar,
+} from 'vue-material/dist/components';
+
+Vue.use(MdIcon);
+Vue.use(MdButton);
+Vue.use(MdToolbar);
+
+export default class ToolBar extends Vue{}
+</script>
 
 <script>
 export default {

@@ -1,7 +1,5 @@
 <template>
-  <div class="page-container" align="center">
     <router-view/>
-  </div>
 </template>
 
 <script lang="ts">

@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-bottom: 30px">
+  <div style="margin-bottom: 30px" class="page-container" align="center">
     <tool-bar />
 
     <img

@@ -20,7 +20,7 @@
 
         <md-card-actions>
           <md-button 
-            class="md-icon-button md-fab" 
+            class="md-icon-button md-fab md-primary" 
             :target="data.target"
             :href="data.link"
           >
@@ -36,6 +36,18 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import 'vue-material/dist/vue-material.min.css';
+import {
+  MdIcon,
+  MdCard,
+  MdButton,
+  MdRipple,
+} from 'vue-material/dist/components';
+
+Vue.use(MdIcon);
+Vue.use(MdCard);
+Vue.use(MdButton);
+Vue.use(MdRipple);
 
 @Component({
   props: {
