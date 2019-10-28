@@ -7,4 +7,5 @@ export interface Letter {
 export interface Word {
   name: string;
   image: string;
+  isValid: boolean;
 }
