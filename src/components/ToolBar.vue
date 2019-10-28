@@ -7,7 +7,6 @@
 
         <md-button 
           class="md-icon-button" 
-          @click="$router.push('/')"
         >
           <md-icon>home</md-icon>
         </md-button>
@@ -36,21 +35,15 @@ Vue.use(MdIcon);
 Vue.use(MdButton);
 Vue.use(MdToolbar);
 
-export default class ToolBar extends Vue{}
-</script>
-
-<script>
-export default {
-  name: 'Toolbar',
-  mounted() {
-    this.$material.theming.theme = 'mono';
-  },
-};
+@Component({})
+export default class ToolBar extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-  .md-app {
-    max-height: 400px;
-    border: 1px solid rgba(#000, 0.12);
+  .md-toolbar {
+    background-color: #448aff;
+  }
+  .md-icon {
+    color: white;
   }
 </style>
