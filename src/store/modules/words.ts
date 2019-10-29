@@ -11,7 +11,11 @@ import { Word } from '../models';
   name: 'words',
 })
 export default class WordsModule extends VuexModule {
-  private words: {[index: string]: any} = {};
+  private words: {[index: string]: Word} = {};
+
+  public get Words() {
+    return this.words;
+  }
 
   @Mutation
   public setWord(word: any) {
@@ -32,7 +36,7 @@ export default class WordsModule extends VuexModule {
       } catch (error) {
         this.setWord(
           {name: word,
-           image: null,
+           image: '',
            isValid: false,
           });
       }
