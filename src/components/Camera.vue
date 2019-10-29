@@ -28,7 +28,7 @@
   import WordsModule from '@/store/modules/words';
   import { getModule } from 'vuex-module-decorators';
 
-  import MarkerStatsClass from './services/markersStats';
+  import MarkerStatsClass from '@/services/markersStats';
 
   @Component({})
   export default class App extends Vue {
@@ -136,7 +136,7 @@
     private addProcessedLetters(params: any) {
       let item: any;
       const { deviation, processedLetters } = params;
-      const correctionFactor = 0.06 * this.markers.size;
+      const correctionFactor = 0.09 * this.markers.size;
 
       for (item of this.markers.values()) {
         if (Math.abs(deviation) <= correctionFactor) {
