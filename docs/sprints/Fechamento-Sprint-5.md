@@ -52,7 +52,14 @@
 
 ---
 
-## 7. Visão do _Scrum Master_
+## 7. Presença _Daily_
+
+![](https://i.ibb.co/7QvPrF5/5a.png)
+![](https://i.ibb.co/YLLNCFL/5b.png)
+
+---------
+
+## 8. Visão do _Scrum Master_
 
 <p align="justify">&emsp;&emsp; Os meninos de MDS estão pegando o jeito da disciplina, fizemos treinamentos dos conteúdos de EPS para a Release e acredito que farão um boa apresentação, a sprint como o foco foi na correção de bugs fizeram um bom trabalho em completar toda a pontuação da sprint e aguardamos que continuem assim, agora vamos chegar chegando para a apresentação da Release.  </p>
 

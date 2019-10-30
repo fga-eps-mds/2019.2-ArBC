@@ -50,9 +50,15 @@
 ![](https://i.ibb.co/wwNrHhQ/conh2.png)
 
 ----
+## 7. Presença _Daily_
 
-## 7. Visão do _Scrum Master_
+![](https://i.ibb.co/jvW3KzQ/Captura-de-tela-de-2019-11-17-16-08-58.png)
+![](https://i.ibb.co/dD4qWKG/Captura-de-tela-de-2019-11-17-16-08-01.png)
 
-<p align="justify">&emsp;&emsp; Começamos a nos desesperar agora, a R1 está chegando e devemos começar a nos preocupar, ao menos a Conexão da Câmera foi um sucesso, sinceramente achei que eles precisariam de mais tempo para a realização da feature, que bom que deu certo. A Logo que antes tinha uma pontuação de 3 mudou para 8 pela dificuldade que o grupo teve para criar uma que expresse o tema lúdico e infantil que o trabalho tem. Esperamos que na próxima sprint não tenhamos tal problema.
+-------------
+
+## 8. Visão do _Scrum Master_
+
+<p align="justify">&emsp;&emsp; Começamos a nos desesperar agora, a R1 está chegando e devemos começar a nos preocupar, ao menos a Conexão da Câmera foi um sucesso, sinceramente achei que eles precisariam de mais tempo para a realização da feature, que bom que deu certo. A Logo que antes tinha uma pontuação de 3 mudou para 8 pela dificuldade que o grupo teve para criar uma que expresse o tema lúdico e infantil que o trabalho tem. Esperamos que na próxima sprint não tenhamos tal problema. </p>
 
 ![](https://media.giphy.com/media/oyFyFiXz0hrnG/giphy.gif)

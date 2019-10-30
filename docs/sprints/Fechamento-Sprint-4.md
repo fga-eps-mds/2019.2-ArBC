@@ -43,6 +43,7 @@
 ## 5. Retrospectiva da _Sprint_
 
 ![](https://i.ibb.co/tH7JtKz/res.png)
+
 ------------
 
 ## 6. Quadro de Conhecimento
@@ -51,8 +52,16 @@
 
 ----
 
-## 7. Visão do _Scrum Master_
+## 7. Presença _Daily_
 
-<p align="justify">&emsp;&emsp; A galera tá melhorando muito, as patterns do banco estão boas e as imagens do alfabeto estão em andamento. Alguns bugs foram reportados, agora aguardemos a Release e o que não espera como feedback, mas todos os MDS merecem os meus parabéns, espero que continuem assim.
+![](https://i.ibb.co/1ZK9rVH/Captura-de-tela-de-2019-11-17-16-16-11.png)
+![](https://i.ibb.co/ZcLdKZs/Captura-de-tela-de-2019-11-17-16-16-27.png)
+
+---------
+
+
+## 8. Visão do _Scrum Master_
+
+<p align="justify">&emsp;&emsp; A galera tá melhorando muito, as patterns do banco estão boas e as imagens do alfabeto estão em andamento. Alguns bugs foram reportados, agora aguardemos a Release e o que não espera como feedback, mas todos os MDS merecem os meus parabéns, espero que continuem assim. </p>
 
 ![](https://media.giphy.com/media/xT5LMYpSRSLATiXyY8/giphy.gif)

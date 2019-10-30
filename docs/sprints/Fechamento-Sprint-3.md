@@ -45,6 +45,7 @@
 ## 5. Retrospectiva da _Sprint_
 
 ![](https://i.ibb.co/pZszKx5/res3.png)
+
 ------------
 
 ## 6. Quadro de Conhecimento
@@ -53,8 +54,15 @@
 
 ----
 
-## 7. Visão do _Scrum Master_
+## 7. Presença _Daily_
 
-<p align="justify">&emsp;&emsp; Estamos mais ou menos, essa sprint também foi lenta, o banco de dados deu problema para os MDS pois nunca não sabiam nada de bancos (com exceção do Igor e Thiago), mas gostei da iniciativa deles de ir atrás de um banco substituto caso o MongoDB der problemas. Semana que vem é Universitária então esperamos colocar tudo em dia.
+![](https://i.ibb.co/YX4js6n/Captura-de-tela-de-2019-11-17-16-12-32.png)
+![](https://i.ibb.co/s9XYNSM/Captura-de-tela-de-2019-11-17-16-12-45.png)
+
+---------
+
+## 8. Visão do _Scrum Master_
+
+<p align="justify">&emsp;&emsp; Estamos mais ou menos, essa sprint também foi lenta, o banco de dados deu problema para os MDS pois nunca não sabiam nada de bancos (com exceção do Igor e Thiago), mas gostei da iniciativa deles de ir atrás de um banco substituto caso o MongoDB der problemas. Semana que vem é Universitária então esperamos colocar tudo em dia. </p>
 
 ![](https://media.giphy.com/media/AYP77klN85gWY/giphy.gif)
