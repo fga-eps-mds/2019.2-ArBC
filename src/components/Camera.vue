@@ -18,19 +18,17 @@
     </a-marker>
 
     <a-marker
-      v-for="letter in alphabet"
-      :key="letter"
       type='pattern'
-      :url="patternUrl(letter+'1')"
-      @markerFound="markerFound($event, letter+'1')"
-      @markerLost="markerLost($event, letter+'1')"
+      :url="patternUrl('R1')"
+      @markerFound="markerFound($event, 'R')"
+      @markerLost="markerLost($event, 'R')"
     >
       <a-entity
         v-if="iscreated"
         geometry="primitive: plane;"
         position="0 0 0"
         rotation="-90 0 0"
-        :material="gifURL(letter+'1')">
+        :material="gifURL('R')">
       </a-entity>
     </a-marker>
 
