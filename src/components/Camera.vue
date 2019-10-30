@@ -32,6 +32,21 @@
       </a-entity>
     </a-marker>
 
+    <a-marker
+      type='pattern'
+      :url="patternUrl('V1')"
+      @markerFound="markerFound($event, 'V')"
+      @markerLost="markerLost($event, 'V')"
+    >
+      <a-entity
+        v-if="iscreated"
+        geometry="primitive: plane;"
+        position="0 0 0"
+        rotation="-90 0 0"
+        :material="gifURL('V')">
+      </a-entity>
+    </a-marker>
+
     <a-entity camera></a-entity>
   </a-scene>
 </template>
