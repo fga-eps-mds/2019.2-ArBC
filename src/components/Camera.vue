@@ -17,33 +17,20 @@
       </a-entity>
     </a-marker>
 
-     <a-marker
-      type='pattern'
-      :url="patternUrl('A1')"
-      @markerFound="markerFound($event, 'A')"
-      @markerLost="markerLost($event, 'A')"
-    >
-      <a-entity
-        v-if="iscreated"
-        geometry="primitive: plane;"
-        position="0 0 0"
-        rotation="-90 0 0"
-        :material="gifURL('A')">
-      </a-entity>
-    </a-marker>
-
     <a-marker
+      v-for="letter in alphabet"
+      :key="letter"
       type='pattern'
-      :url="patternUrl('V1')"
-      @markerFound="markerFound($event, 'V')"
-      @markerLost="markerLost($event, 'V')"
+      :url="patternUrl(letter+'1')"
+      @markerFound="markerFound($event, letter+'1')"
+      @markerLost="markerLost($event, letter+'1')"
     >
       <a-entity
         v-if="iscreated"
         geometry="primitive: plane;"
         position="0 0 0"
         rotation="-90 0 0"
-        :material="gifURL('V')">
+        :material="gifURL(letter+'1')">
       </a-entity>
     </a-marker>
 
