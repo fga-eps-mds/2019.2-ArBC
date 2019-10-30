@@ -11,14 +11,14 @@ import {
   name: 'letters',
 })
 export default class LettersModule extends VuexModule {
-  private letters: {[index: string]: any} = {};
+  private letters: {[index: string]: string} = {};
 
   public get Letters() {
     return this.letters;
   }
 
   @Mutation
-  public async setLetters(letters: any) {
+  public async setLetters(letters: Letter[]) {
     await letters.forEach((letter: Letter) => {
         this.letters[letter.name] = letter.image;
       },

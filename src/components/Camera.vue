@@ -5,11 +5,11 @@
       :key="letter"
       type='pattern'
       :url="patternUrl(letter)"
-      @markerFound="markerFound($event,letter)"
+      @markerFound="markerFound($event, letter)"
       @markerLost="markerLost($event, letter)"
     >
       <a-entity
-        v-if="iscreated"
+        v-if="isCreated"
         geometry="primitive: plane;"
         position="0 0 0"
         rotation="-90 0 0"
@@ -29,6 +29,7 @@
   import { getModule } from 'vuex-module-decorators';
 
   import MarkerStatsClass from '@/services/markersStats';
+  import { Image, Marker } from '@/store/models';
 
   @Component({})
   export default class App extends Vue {
@@ -36,7 +37,7 @@
     private processHandler: any;
     private alphabet: string[] = [];
     private isReading: boolean = false;
-    private iscreated: boolean = false;
+    private isCreated: boolean = false;
     private lettersModule = getModule(LettersModule, this.$store);
     private wordsModule = getModule(WordsModule, this.$store);
     private wordLockFlag: boolean = false;
@@ -47,7 +48,7 @@
       await this.lettersModule.getLetters();
       this.alphabet = Object.keys(this.lettersModule.Letters);
 
-      this.iscreated = true;
+      this.isCreated = true;
     }
 
     public destroyed() {
@@ -88,19 +89,20 @@
       }
     }
 
-    private orderLettersHorizontally(processedLetters: object[]) {
-      processedLetters.sort((a: any, b: any) => {
+    private orderLettersHorizontally(processedLetters: Marker[]) {
+      processedLetters.sort((a: Marker, b: Marker) => {
         return (a.position.x >= b.position.x) ? 1 : -1;
       });
     }
 
     private createMarkerFromItem(item: any) {
-      return {
+      const marker: Marker = {
         key: item.key,
         position: item.object3D.position,
         quaternion: item.object3D.quaternion,
         scale: item.object3D.scale,
       };
+      return marker;
     }
 
     private addPositions() {
@@ -121,21 +123,20 @@
       return this.wordsModule.getWord(word);
     }
 
-    private setWord(processedLetters: object[]) {
+    private setWord(processedLetters: Marker[]) {
       let word = '';
 
       this.orderLettersHorizontally(processedLetters);
 
-      processedLetters.forEach((letter: any) => {
+      processedLetters.forEach((letter: Marker) => {
         word = word + `${letter.key}`;
       });
 
       return word;
     }
 
-    private addProcessedLetters(params: any) {
+    private addProcessedLetters(deviation: number, processedLetters: Marker[]) {
       let item: any;
-      const { deviation, processedLetters } = params;
       const correctionFactor = 0.09 * this.markers.size;
 
       for (item of this.markers.values()) {
@@ -147,7 +148,7 @@
 
     private processLetters() {
       let deviation: number;
-      const processedLetters: object[] = [];
+      const processedLetters: Marker[] = [];
 
       this.markersStats.clearValues();
 
@@ -155,11 +156,11 @@
 
       deviation = this.markersStats.deviation;
 
-      this.addProcessedLetters({ deviation, processedLetters });
+      this.addProcessedLetters(deviation, processedLetters);
 
       if (processedLetters.length > 0 && !this.wordLockFlag) {
-        let gifURL: object;
-        this.getGifWord(this.setWord(processedLetters)).then( (response: any) => {
+        let gifURL: Image;
+        this.getGifWord(this.setWord(processedLetters)).then( (response: Image) => {
           this.wordLockFlag = false;
           gifURL = response;
         });
