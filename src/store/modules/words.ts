@@ -5,28 +5,42 @@ import {
   Mutation,
   VuexModule,
 } from 'vuex-module-decorators';
+import { Word } from '../models';
 
 @Module({
   name: 'words',
 })
 export default class WordsModule extends VuexModule {
-  private word: {[index: string]: any} = {};
+  private words: {[index: string]: Word} = {};
 
-  public get Word() {
-    return this.word;
+  public get Words() {
+    return this.words;
   }
 
   @Mutation
   public setWord(word: any) {
-    this.word = word;
+    this.words[word.name] = { image: word.image, isValid: word.isValid};
   }
 
   @Action
   public async getWord(word: string) {
-    const url = `/Word/${word.toUpperCase()}`;
-
-    const requestedWord = await API.get(url);
-
-    this.setWord(requestedWord);
+    if (!this.words.hasOwnProperty(word)) {
+      const url = `/Word/${word.toUpperCase()}`;
+      try {
+        const response = await API.get(url);
+        this.setWord(
+          {name: response.name,
+           image: response.image,
+           isValid: true,
+          });
+      } catch (error) {
+        this.setWord(
+          {name: word,
+           image: '',
+           isValid: false,
+          });
+      }
+    }
+    return this.words[word];
   }
 }

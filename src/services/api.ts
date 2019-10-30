@@ -10,9 +10,18 @@ const CONFIG = {
   },
 };
 
+const requestSuccessHandler = (response: any) => {
+  if (response.data.hasOwnProperty('results')) {
+    return response.data.results;
+  }
+
+  return response.data;
+};
+
 export default {
   async get(path: string) {
     const response = await axios.get(path, CONFIG);
-    return response.data.results;
+
+    return requestSuccessHandler(response);
   },
 };

@@ -25,9 +25,10 @@
   import Vue from 'vue';
   import Component from 'vue-class-component';
   import LettersModule from '@/store/modules/letters';
+  import WordsModule from '@/store/modules/words';
   import { getModule } from 'vuex-module-decorators';
 
-  import MarkerStatsClass from '../services/markersStats';
+  import MarkerStatsClass from '@/services/markersStats';
 
   @Component({})
   export default class App extends Vue {
@@ -37,12 +38,13 @@
     private isReading: boolean = false;
     private iscreated: boolean = false;
     private lettersModule = getModule(LettersModule, this.$store);
+    private wordsModule = getModule(WordsModule, this.$store);
+    private wordLockFlag: boolean = false;
     private markersStats: MarkerStatsClass = new MarkerStatsClass();
     private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
 
     public async created() {
       await this.lettersModule.getLetters();
-
       this.alphabet = Object.keys(this.lettersModule.Letters);
 
       this.iscreated = true;
@@ -69,7 +71,9 @@
 
       if (this.markers.size === 2) {
         this.isReading = true;
-        this.processHandler = setInterval(this.processLetters, 16);
+        setTimeout(() => {
+          this.processHandler = setInterval(this.processLetters, 16);
+        }, 1000);
       }
     }
 
@@ -111,22 +115,28 @@
       }
     }
 
+    private getGifWord(word: string) {
+      this.wordLockFlag = true;
+
+      return this.wordsModule.getWord(word);
+    }
+
     private setWord(processedLetters: object[]) {
-      if (processedLetters.length > 0) {
-        let word = '';
+      let word = '';
 
-        this.orderLettersHorizontally(processedLetters);
+      this.orderLettersHorizontally(processedLetters);
 
-        processedLetters.forEach((letter: any) => {
-          word = word + `${letter.key}`;
-        });
-      }
+      processedLetters.forEach((letter: any) => {
+        word = word + `${letter.key}`;
+      });
+
+      return word;
     }
 
     private addProcessedLetters(params: any) {
       let item: any;
       const { deviation, processedLetters } = params;
-      const correctionFactor = 0.06 * this.markers.size;
+      const correctionFactor = 0.09 * this.markers.size;
 
       for (item of this.markers.values()) {
         if (Math.abs(deviation) <= correctionFactor) {
@@ -147,7 +157,13 @@
 
       this.addProcessedLetters({ deviation, processedLetters });
 
-      this.setWord(processedLetters);
+      if (processedLetters.length > 0 && !this.wordLockFlag) {
+        let gifURL: object;
+        this.getGifWord(this.setWord(processedLetters)).then( (response: any) => {
+          this.wordLockFlag = false;
+          gifURL = response;
+        });
+      }
     }
   }
 </script>
