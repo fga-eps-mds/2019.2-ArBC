@@ -17,6 +17,21 @@
       </a-entity>
     </a-marker>
 
+     <a-marker
+      type='pattern'
+      :url="patternUrl('A1')"
+      @markerFound="markerFound($event, 'A')"
+      @markerLost="markerLost($event, 'A')"
+    >
+      <a-entity
+        v-if="iscreated"
+        geometry="primitive: plane;"
+        position="0 0 0"
+        rotation="-90 0 0"
+        :material="gifURL('A')">
+      </a-entity>
+    </a-marker>
+
     <a-entity camera></a-entity>
   </a-scene>
 </template>
@@ -38,7 +53,7 @@
     private iscreated: boolean = false;
     private lettersModule = getModule(LettersModule, this.$store);
     private markersStats: MarkerStatsClass = new MarkerStatsClass();
-    private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
+    private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/test_patterns';
 
     public async created() {
       await this.lettersModule.getLetters();
