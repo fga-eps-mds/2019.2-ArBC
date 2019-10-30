@@ -5,21 +5,21 @@ import {
   Mutation,
   VuexModule,
 } from 'vuex-module-decorators';
-import { Word } from '../models';
+import {Image, Word} from '../models';
 
 @Module({
   name: 'words',
 })
 export default class WordsModule extends VuexModule {
-  private words: {[index: string]: Word} = {};
+  private words: {[index: string]: Image} = {};
 
   public get Words() {
     return this.words;
   }
 
   @Mutation
-  public setWord(word: any) {
-    this.words[word.name] = { image: word.image, isValid: word.isValid};
+  public setWord(word: Word) {
+    this.words[word.name] = word.image;
   }
 
   @Action
@@ -30,14 +30,12 @@ export default class WordsModule extends VuexModule {
         const response = await API.get(url);
         this.setWord(
           {name: response.name,
-           image: response.image,
-           isValid: true,
+           image: {url: response.image, isValid: true},
           });
       } catch (error) {
         this.setWord(
           {name: word,
-           image: '',
-           isValid: false,
+            image: {url: '', isValid: false},
           });
       }
     }
