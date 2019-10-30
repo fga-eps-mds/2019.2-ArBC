@@ -15,6 +15,19 @@
       >
       </a-entity>
     </a-marker>
+    <a-marker
+      type='pattern'
+      :url="patternUrl('A1')"
+    >
+      <a-entity
+        v-if="iscreated"
+        geometry="primitive: plane;"
+        position="0 0 0"
+        rotation="-90 0 0"
+        :material="gifURL('A')"
+      >
+      </a-entity>
+    </a-marker>
 
     <a-entity camera></a-entity>
   </a-scene>
@@ -53,7 +66,7 @@
   export default class App extends Vue {
     private lettersModule = getModule(LettersModule, this.$store);
     private alphabet: string[] = [];
-    private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
+    private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/test_patterns';
     private iscreated: boolean = false;
 
     public async created() {
