@@ -3,9 +3,11 @@
 <p align="justify">Como a Release se aproxima, está sprint tem o foco de fazer correções e refatorações do Produto: </p>
 
 
-* Configurar Estado de Aplicação
+* Configurar Estado da Aplicação
+* Correção dos Diagramas de Caso de Uso
+* Aprimorar do Diagrama de Pacotes
+* Planejamento da R1
 * Easter Eggs
-* Refatoração Documento de Arquitetura
 
 ## 2. Papéis
 
