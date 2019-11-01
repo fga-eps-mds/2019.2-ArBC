@@ -39,20 +39,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import 'vue-material/dist/vue-material.min.css';
-import {
-  MdApp,
-  MdIcon,
-  MdCard,
-  MdButton,
-  MdRipple,
-} from 'vue-material/dist/components';
-
-Vue.use(MdApp);
-Vue.use(MdIcon);
-Vue.use(MdCard);
-Vue.use(MdButton);
-Vue.use(MdRipple);
+import '@/vue_material/components';
 
 @Component({
   props: {

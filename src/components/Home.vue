@@ -55,7 +55,7 @@ export default class Home extends Vue {
     participantes e o software, clique no botão azul abaixo.',
   };
   private driveCardInfo: object = {
-    icon: 'backup',
+    icon: 'cloud_download',
     target: '_blank',
     link: 'https://drive.google.com/open?id=1Aa5jXFIh4385wKT36mFFP82zho7BmfBP',
     content: 'Para utilizar a aplicação é necessário os marcadores. Desse modo, \
