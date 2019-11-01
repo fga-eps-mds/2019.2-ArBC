@@ -1,5 +1,5 @@
 <template>
-  <div style="margin-bottom: 30px" class="page-container" align="center">
+  <div align="center">
     <tool-bar />
 
     <img
@@ -8,14 +8,38 @@
       src="../assets/ArBC_logo.png"
     />
 
-    <div>
-      <home-card :data="githubCardInfo" :localIcon="true" />
-      <home-card :data="cameraCardInfo" />
-      <home-card :data="wikiCardInfo" />
-      <home-card :data="driveCardInfo" />
+    <div class="cards-container">
+      <home-card :data="githubCardInfo" :localIcon="true" class="space-card" />
+      <home-card :data="cameraCardInfo" class="space-card" />
+      <home-card :data="wikiCardInfo" class="space-card" />
+      <home-card :data="driveCardInfo" class="space-card" />
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+  .space-card {
+    margin-bottom: 20px;
+  }
+@media (max-width: 1560px) {
+  .cards-container {
+    display: flex;
+    max-width: 100%; 
+    flex-wrap: wrap; 
+    flex-direction: colunm; 
+    justify-content: space-around; 
+  }
+}
+@media (min-width: 1561px) {
+  .cards-container {
+    display: flex;
+    max-width: 90%; 
+    flex-wrap: wrap; 
+    flex-direction: colunm; 
+    justify-content: space-around; 
+  }
+}
+</style>
 
 <script lang="ts">
 import Vue from 'vue';
