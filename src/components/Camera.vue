@@ -1,37 +1,39 @@
 <template>
   <a-scene embedded arjs='debugUIEnabled: false; trackingMethod: best;'>
-    <a-marker
-      v-for="letter in alphabet"
-      :key="letter"
-      type='pattern'
-      :url="patternUrl(letter)"
-      @markerFound="markerFound($event,letter)"
-      @markerLost="markerLost($event, letter)"
-    >
-      <a-entity
-        v-if="iscreated"
-        geometry="primitive: plane;"
-        position="0 0 0"
-        rotation="-90 0 0"
-        :material="gifURL(letter)">
-      </a-entity>
-    </a-marker>
-
-    <a-marker
-      type='pattern'
-      :url="patternUrl('R1')"
-      @markerFound="markerFound($event, 'R')"
-      @markerLost="markerLost($event, 'R')"
-    >
-      <a-entity
-        v-if="iscreated"
-        geometry="primitive: plane;"
-        position="0 0 0"
-        rotation="-90 0 0"
-        :material="gifURL('R')">
-      </a-entity>
-    </a-marker>
-
+      <a-marker
+        v-for="letter in alphabet"
+        :key="letter"
+        type='pattern'
+        :url="patternUrl(letter + '1')"
+        @markerFound="markerFound($event, letter)"
+        @markerLost="markerLost($event, letter)"
+      >
+        <a-entity
+          v-if="iscreated"
+          geometry="primitive: plane;"
+          position="0 0 0"
+          rotation="-90 0 0"
+          :material="gifURL(letter)"
+        >
+        </a-entity>
+      </a-marker>
+      <a-marker
+        v-for="letter in alphabet"
+        :key="letter"
+        type='pattern'
+        :url="patternUrl(letter + '2')"
+        @markerFound="markerFound($event, letter)"
+        @markerLost="markerLost($event, letter)"
+      >
+        <a-entity
+          v-if="iscreated"
+          geometry="primitive: plane;"
+          position="0 0 0"
+          rotation="-90 0 0"
+          :material="gifURL(letter)"
+        >
+        </a-entity>
+      </a-marker>
     <a-entity camera></a-entity>
   </a-scene>
 </template>
@@ -49,6 +51,7 @@
     private markers = new Set();
     private processHandler: any;
     private alphabet: string[] = [];
+    private letterNumbers: string[] = ['1', '2'];
     private isReading: boolean = false;
     private iscreated: boolean = false;
     private lettersModule = getModule(LettersModule, this.$store);
