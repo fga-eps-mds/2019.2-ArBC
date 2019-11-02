@@ -1,5 +1,13 @@
 <template>
-  <a-scene embedded arjs='debugUIEnabled: false; trackingMethod: best;'>
+  <a-scene vr-mode-ui="enabled: false" embedded arjs='debugUIEnabled: false; trackingMethod: best;'>
+    <a-entity
+      ref="wordGif"
+      geometry="primitive: plane;"
+      rotation="0 0 0"
+      material="shader:gif;"
+      visible="false">
+    </a-entity>
+
     <a-marker
       v-for="letter in alphabet"
       :key="letter"
@@ -10,6 +18,7 @@
     >
       <a-entity
         v-if="isCreated"
+        ref="letterGif"
         geometry="primitive: plane;"
         position="0 0 0"
         rotation="-90 0 0"
@@ -29,10 +38,17 @@
   import { getModule } from 'vuex-module-decorators';
 
   import MarkerStatsClass from '@/services/markersStats';
+  import WordsStats from '@/services/wordsStats';
   import { Image, Marker } from '@/store/models';
 
   @Component({})
   export default class App extends Vue {
+
+    public $refs!: {
+      wordGif: any,
+      letterGif: any,
+    };
+
     private markers = new Set();
     private processHandler: any;
     private alphabet: string[] = [];
@@ -82,6 +98,7 @@
       event.target.key = letter;
 
       this.markers.delete(event.target);
+      this.detachWordGif();
 
       if (this.markers.size === 1) {
         clearInterval(this.processHandler);
@@ -114,6 +131,47 @@
         * This '+10' above is because negative positions of 'y' can give
         * wrong standard deviation in the process
         */
+      }
+    }
+
+    private detachLettersGifs() {
+      this.$refs.letterGif.forEach( (letterGif: any) => {
+        letterGif.object3D.visible = false;
+      } );
+    }
+
+    private atachLettersGifs() {
+      this.$refs.letterGif.forEach( (letterGif: any) => {
+        letterGif.object3D.visible = true;
+      } );
+    }
+
+    private showWordGif(processedLetters: Marker[], wordGif: Image) {
+      this.detachLettersGifs();
+      const markerPositioned: Marker = WordsStats.markersMean(processedLetters);
+      this.$refs.wordGif.setAttribute('material', `shader:gif; src:url(${wordGif.url});`);
+      this.$refs.wordGif.object3D.position.set(
+        markerPositioned.position.x,
+        markerPositioned.position.y,
+        markerPositioned.position.z,
+      );
+
+      this.$refs.wordGif.object3D.scale.set(
+        markerPositioned.scale.x * 2.5,
+        markerPositioned.scale.y * 2.5,
+        markerPositioned.scale.z * 2.5,
+      );
+      this.$refs.wordGif.object3D.visible = true;
+      if (!this.$refs.wordGif.isPlaying) {
+        this.$refs.wordGif.play();
+      }
+    }
+
+    private detachWordGif() {
+      this.atachLettersGifs();
+      this.$refs.wordGif.object3D.visible = false;
+      if (this.$refs.wordGif.isPlaying) {
+        this.$refs.wordGif.pause();
       }
     }
 
@@ -159,10 +217,13 @@
       this.addProcessedLetters(deviation, processedLetters);
 
       if (processedLetters.length > 0 && !this.wordLockFlag) {
-        let gifURL: Image;
         this.getGifWord(this.setWord(processedLetters)).then( (response: Image) => {
           this.wordLockFlag = false;
-          gifURL = response;
+          if (response.isValid) {
+            this.showWordGif(processedLetters, response);
+          } else {
+            this.detachWordGif();
+          }
         });
       }
     }
