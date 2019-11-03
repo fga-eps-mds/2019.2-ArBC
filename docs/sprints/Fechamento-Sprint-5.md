@@ -9,17 +9,17 @@
 
 ### 2.1 Backlog da Sprint
 
-| ID | Issue | Status |
-|:--:| ------- | :----: |
-| Issue | [Correção das Patterns](https://github.com/fga-eps-mds/2019.2-arbc/issues/48) | Fechada |
-| Issue | [Melhorias e correções no Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/49) | Fechada |
-| Issue | [Configurar Deploy Contínuo](https://github.com/fga-eps-mds/2019.2-arbc/issues/50) | Fechada |
-| Issue | [Correções Documento de Visão](https://github.com/fga-eps-mds/2019.2-arbc/issues/67) | Fechada |
-| Issue | [Correções Diagramas do Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/72) | Fechada |
+| ID | Issue | Pontuação | Status |
+|:--:| ------- | :----: | :----: |
+| Issue | [Correção das Patterns](https://github.com/fga-eps-mds/2019.2-arbc/issues/48) | 3 | Fechada |
+| Issue | [Melhorias e correções no Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/49) | 1 | Fechada |
+| Issue | [Configurar Deploy Contínuo](https://github.com/fga-eps-mds/2019.2-arbc/issues/50) | 5 |Fechada |
+| Issue | [Correções Documento de Visão](https://github.com/fga-eps-mds/2019.2-arbc/issues/67) | 1| Fechada |
+| Issue | [Correções Diagramas do Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/72) |1| Fechada |
+| Issue | [Correção Leitura da Letra](https://github.com/fga-eps-mds/2019.2-arbc/issues/65) | 2| Fechada |
 
 
-
-### 2.3 Pontuação Final
+### 2.2 Pontuação Final
 
 * __Pontuação Total:__ 13
 * __Pontos Concluídos:__ 13

@@ -10,17 +10,17 @@
 
 ### 2.1 Backlog da Sprint
 
-| ID | Issue | Status |
-|:--:| ------- | :----: |
-| Issue | [Configurar Estado da Aplicação](https://github.com/fga-eps-mds/2019.2-arbc/issues/74) | Fechada |
-| Issue | [Correção dos Diagramas de Caso de Uso](https://github.com/fga-eps-mds/2019.2-arbc/issues/85) | Fechada |
-| Issue | [Aprimorar do Diagrama de Pacotes](https://github.com/fga-eps-mds/2019.2-arbc/issues/79) | Fechada |
-| Issue | [Planejamento da R1](https://github.com/fga-eps-mds/2019.2-arbc/issues/41) | Fechada |
-| Issue | [Easter Eggs](https://github.com/fga-eps-mds/2019.2-arbc/issues/77) | Fechada |
+| ID | Issue | Pontuação | Status |
+|:--:| ------- | :----: | :----: |
+| Issue | [Configurar Estado da Aplicação](https://github.com/fga-eps-mds/2019.2-arbc/issues/74) | 8 | Fechada |
+| Issue | [Correção dos Diagramas de Caso de Uso](https://github.com/fga-eps-mds/2019.2-arbc/issues/85) | 1 |Fechada |
+| Issue | [Aprimorar do Diagrama de Pacotes](https://github.com/fga-eps-mds/2019.2-arbc/issues/79) | 1 |Fechada |
+| Issue | [Planejamento da R1](https://github.com/fga-eps-mds/2019.2-arbc/issues/41) | 1 | Fechada |
+| Issue | [Easter Eggs](https://github.com/fga-eps-mds/2019.2-arbc/issues/77) | 1 | Fechada |
 
 
 
-### 2.3 Pontuação Final
+### 2.2 Pontuação Final
 
 * __Pontuação Total:__ 12
 * __Pontos Concluídos:__ 12

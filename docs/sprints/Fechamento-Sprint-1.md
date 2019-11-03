@@ -10,15 +10,15 @@
 
 ### 2.1 Backlog da Sprint
 
-| ID | Issue | Status |
-|:--:| ------- | :----: |
-| Issue | [Documento de Visão](https://github.com/fga-eps-mds/2019.2-arbc/issues/4) | Fechada |
-| Issue | [Ambiente Desenvolvimento](https://github.com/fga-eps-mds/2019.2-arbc/issues/8) | Fechada |
-| - | Definição da Licença| Fechada |
-| - | Criação do Backlog de Produto | Fechada |
-| - | Estudo do Tema e Tecnologias | Fechada |
+| ID | Issue | Pontuação|Status |
+|:--:| ------- | :----: | :----: |
+| Issue | [Documento de Visão](https://github.com/fga-eps-mds/2019.2-arbc/issues/4) | 3|Fechada |
+| Issue | [Ambiente Desenvolvimento](https://github.com/fga-eps-mds/2019.2-arbc/issues/8) |8| Fechada |
+| - | Definição da Licença| -|Fechada |
+| - | Criação do Backlog de Produto | -|Fechada |
+| - | Estudo do Tema e Tecnologias | -|Fechada |
 
-### 2.3 Pontuação Final
+### 2.2 Pontuação Final
 
 * __Pontuação Total:__ 11
 * __Pontos Concluídos:__ 11

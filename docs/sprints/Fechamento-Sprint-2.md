@@ -10,16 +10,16 @@
 
 ### 2.1 Backlog da Sprint
 
-| ID | Issue | Status |
-|:--:| ------- | :----: |
-| Issue | [Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/5) | Fechada |
-| Issue | [Estudo de JavaScript](https://github.com/fga-eps-mds/2019.2-arbc/issues/14) | Fechada |
-| Issue | [Estudo de Python](https://github.com/fga-eps-mds/2019.2-arbc/issues/24)| Fechada |
-| Issue | [Conexão com a Câmera](https://github.com/fga-eps-mds/2019.2-arbc/issues/21) | Fechada |
-| Issue | [Código de Conduta](https://github.com/fga-eps-mds/2019.2-arbc/issues/33) | Fechada |
-|Issue | [Logo](https://github.com/fga-eps-mds/2019.2-arbc/issues/16)| Aberta |
+| ID | Issue | Pontuação|Status |
+|:--:| ------- | :----: | :----: |
+| Issue | [Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/5) |5| Fechada |
+| Issue | [Estudo de JavaScript](https://github.com/fga-eps-mds/2019.2-arbc/issues/14) |3| Fechada |
+| Issue | [Estudo de Python](https://github.com/fga-eps-mds/2019.2-arbc/issues/24)| 3|Fechada |
+| Issue | [Conexão com a Câmera](https://github.com/fga-eps-mds/2019.2-arbc/issues/21) |2| Fechada |
+| Issue | [Código de Conduta](https://github.com/fga-eps-mds/2019.2-arbc/issues/33) |2| Fechada |
+|Issue | [Logo](https://github.com/fga-eps-mds/2019.2-arbc/issues/16)| 8|Aberta |
 
-### 2.3 Pontuação Final
+### 2.2 Pontuação Final
 
 * __Pontuação Total:__ 23
 * __Pontos Concluídos:__ 15

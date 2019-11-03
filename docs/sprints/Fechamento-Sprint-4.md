@@ -12,18 +12,18 @@
 
 ### 2.1 Backlog da Sprint
 
-| ID | Issue | Status |
-|:--:| ------- | :----: |
-| Issue | [Roadmap Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/30) | Aberta |
-| Issue | [Riscos do Projeto](https://github.com/fga-eps-mds/2019.2-arbc/issues/56)| Fechada |
-| Issue | [Roadmap DevOps](https://github.com/fga-eps-mds/2019.2-arbc/issues/29) | Fechada |
-| Issue | [TAP](https://github.com/fga-eps-mds/2019.2-arbc/issues/7) | Fechada |
+| ID | Issue | Pontuação|Status |
+|:--:| ------- | :----: | :----: |
+| Issue | [Protótipo Alta Fidelidade](https://github.com/fga-eps-mds/2019.2-arbc/issues/30) | 5| Fechada |
+| Issue | [Riscos do Projeto](https://github.com/fga-eps-mds/2019.2-arbc/issues/56)| 3| Fechada |
+| Issue | [Roadmap DevOps](https://github.com/fga-eps-mds/2019.2-arbc/issues/29) |3| Fechada |
+| Issue | [TAP](https://github.com/fga-eps-mds/2019.2-arbc/issues/7) | 5 | Fechada |
 
-### 2.3 Pontuação Final
+### 2.2 Pontuação Final
 
-* __Pontuação Total:__ 19
+* __Pontuação Total:__ 15
 * __Pontos Concluídos:__ 15
-* __Pontos Não Agregados:__ 4
+* __Pontos Não Agregados:__ 0
 
 ------------
 

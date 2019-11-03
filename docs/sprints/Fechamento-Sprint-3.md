@@ -13,15 +13,15 @@
 
 ### 2.1 Backlog da Sprint
 
-| ID | Issue | Status |
-|:--:| ------- | :----: |
-| Issue | [Roadmap](https://github.com/fga-eps-mds/2019.2-arbc/issues/20) | Aberta |
-| Issue | [Roadmap SM](https://github.com/fga-eps-mds/2019.2-arbc/issues/31) | Aberta |
-| Issue | [FT02 - Banco de Dados](https://github.com/fga-eps-mds/2019.2-arbc/issues/24)| Fechada |
-| Issue | [EAP](https://github.com/fga-eps-mds/2019.2-arbc/issues/37) | Fechada |
-| Issue | [Plano de Comunicação](https://github.com/fga-eps-mds/2019.2-arbc/issues/55) | Fechada |
+| ID | Issue | Pontuação|Status |
+|:--:| ------- | :----: | :----: |
+| Issue | [Roadmap](https://github.com/fga-eps-mds/2019.2-arbc/issues/20) | 5|Aberta |
+| Issue | [Roadmap SM](https://github.com/fga-eps-mds/2019.2-arbc/issues/31) |2| Aberta |
+| Issue | [FT02 - Banco de Dados](https://github.com/fga-eps-mds/2019.2-arbc/issues/24)|8| Fechada |
+| Issue | [EAP](https://github.com/fga-eps-mds/2019.2-arbc/issues/37) | 2|Fechada |
+| Issue | [Plano de Comunicação](https://github.com/fga-eps-mds/2019.2-arbc/issues/55) |3| Fechada |
 
-### 2.3 Pontuação Final
+### 2.2 Pontuação Final
 
 * __Pontuação Total:__ 20
 * __Pontos Concluídos:__ 13
