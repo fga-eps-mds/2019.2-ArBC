@@ -1,28 +1,30 @@
 <template>
-  <md-card :id="data.name" md-with-hover class="box">
-    <md-ripple>
-      <div class="upper-bar" />
+  <div @click="route()">
+    <md-card md-with-hover class="box">
+      <md-ripple>
+        <div class="upper-bar" />
 
-      <md-card-header>
-        <md-icon 
-          v-if="!localIcon"
-          class="md-size-4x"
-        >
-          {{ data.icon }}
-        </md-icon>
-        
-        <md-icon
-          v-else
-          class="md-size-4x"
-          :md-src="require('@/assets/github_gray.svg')"
-        />
-      </md-card-header>
+        <md-card-header>
+          <md-icon 
+            v-if="!localIcon"
+            class="md-size-4x"
+          >
+            {{ $data.icon }}
+          </md-icon>
+          
+          <md-icon
+            v-else
+            class="md-size-4x"
+            :md-src="require('@/assets/github_gray.svg')"
+          />
+        </md-card-header>
 
-      <md-card-content>
-        {{ data.content }}
-      </md-card-content>
-    </md-ripple>
-  </md-card>
+        <md-card-content>
+          {{ $data.content }}
+        </md-card-content>
+      </md-ripple>
+    </md-card>
+  </div>
 </template>
 
 <script lang="ts">
@@ -32,7 +34,7 @@ import '@/vue_material/components';
 
 @Component({
   props: {
-    data: {
+    $data: {
       type: Object,
       required: true,
     },
@@ -42,14 +44,10 @@ import '@/vue_material/components';
     },
   },
 })
-export default class HomeCard extends Vue {
-  public mounted() {
-    const card: any = document.getElementById(this.data.name);
 
-    card.addEventListener('click', this.route);
-  }
+export default class HomeCard extends Vue {
   private route() {
-    const { link, target } = this.data;
+    const { link, target } = this.$data;
 
     if (target === '_blank') {
       window.open(link, target);

@@ -9,10 +9,10 @@
     />
 
     <div class="cards-container">
-      <home-card :data="githubCardInfo" :localIcon="true" class="space-card" />
-      <home-card :data="cameraCardInfo" class="space-card" />
-      <home-card :data="wikiCardInfo" class="space-card" />
-      <home-card :data="driveCardInfo" class="space-card" />
+      <home-card :$data="githubCardInfo" :localIcon="true" class="space-card" />
+      <home-card :$data="cameraCardInfo" class="space-card" />
+      <home-card :$data="wikiCardInfo" class="space-card" />
+      <home-card :$data="driveCardInfo" class="space-card" />
     </div>
   </div>
 </template>
