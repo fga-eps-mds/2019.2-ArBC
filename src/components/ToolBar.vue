@@ -24,16 +24,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import 'vue-material/dist/vue-material.min.css';
-import {
-  MdIcon,
-  MdButton,
-  MdToolbar,
-} from 'vue-material/dist/components';
-
-Vue.use(MdIcon);
-Vue.use(MdButton);
-Vue.use(MdToolbar);
+import '@/vue_material/components';
 
 @Component({})
 export default class ToolBar extends Vue {}

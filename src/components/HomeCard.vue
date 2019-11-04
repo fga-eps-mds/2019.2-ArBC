@@ -1,13 +1,15 @@
 <template>
-  <div class="box">
-    <md-card md-with-hover>
+  <div @click="route()">
+    <md-card md-with-hover class="box">
       <md-ripple>
+        <div class="upper-bar" />
+
         <md-card-header>
           <md-icon 
             v-if="!localIcon"
             class="md-size-4x"
           >
-            {{ data.icon }}
+            {{ $data.icon }}
           </md-icon>
           
           <md-icon
@@ -18,19 +20,8 @@
         </md-card-header>
 
         <md-card-content>
-          {{ data.content }}
+          {{ $data.content }}
         </md-card-content>
-
-        <md-card-actions>
-          <md-button 
-            class="md-icon-button md-fab md-primary" 
-            :target="data.target"
-            :href="data.link"
-          >
-            <md-icon v-if="!localIcon" class="black">{{ data.icon }}</md-icon>
-            <md-icon v-else :md-src="require(`@/assets/${data.icon}.svg`)"/>
-          </md-button>
-        </md-card-actions>
       </md-ripple>
     </md-card>
   </div>
@@ -39,24 +30,11 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import 'vue-material/dist/vue-material.min.css';
-import {
-  MdApp,
-  MdIcon,
-  MdCard,
-  MdButton,
-  MdRipple,
-} from 'vue-material/dist/components';
-
-Vue.use(MdApp);
-Vue.use(MdIcon);
-Vue.use(MdCard);
-Vue.use(MdButton);
-Vue.use(MdRipple);
+import '@/vue_material/components';
 
 @Component({
   props: {
-    data: {
+    $data: {
       type: Object,
       required: true,
     },
@@ -66,16 +44,34 @@ Vue.use(MdRipple);
     },
   },
 })
-export default class HomeCard extends Vue {}
+
+export default class HomeCard extends Vue {
+  private route() {
+    const { link, target } = this.$data;
+
+    if (target === '_blank') {
+      window.open(link, target);
+    } else {
+      window.location.replace(link);
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>
   .box {
     width: 320px;
     margin: 4px;
-    height: 300px;
+    height: 250px;
+    border-radius: 5px;
     display: inline-block;
     vertical-align: top;
+  }
+  .upper-bar {
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #448aff;
   }
   .md-button {
     background-color: #448aff;
