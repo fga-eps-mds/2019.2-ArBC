@@ -1,10 +1,13 @@
 <template>
-  <a-scene vr-mode-ui="enabled: false" embedded arjs='debugUIEnabled: false; trackingMethod: best;'>
+  <a-scene
+    vr-mode-ui="enabled: false"
+    embedded arjs='debugUIEnabled: false; trackingMethod: best;'>
+
     <a-entity
       ref="wordGif"
-      geometry="primitive: plane;"
+      geometry="primitive: plane"
       rotation="0 0 0"
-      material="shader:gif;"
+      material="shader:gif"
       visible="false">
     </a-entity>
 
@@ -134,34 +137,42 @@
       }
     }
 
+    private changeMarkerObject(marker: Marker, targetMarker: any) {
+      targetMarker.object3D.position.set(
+        marker.position.x,
+        marker.position.y,
+        marker.position.z,
+      );
+
+      targetMarker.object3D.scale.set(
+        marker.scale.x * 2.5,
+        marker.scale.y * 2.5,
+        marker.scale.z * 2.5,
+      );
+
+      targetMarker.object3D.visible = true;
+    }
+
     private detachLettersGifs() {
-      this.$refs.letterGif.forEach( (letterGif: any) => {
+      this.$refs.letterGif.forEach((letterGif: any) => {
         letterGif.object3D.visible = false;
-      } );
+      });
     }
 
     private atachLettersGifs() {
-      this.$refs.letterGif.forEach( (letterGif: any) => {
+      this.$refs.letterGif.forEach((letterGif: any) => {
         letterGif.object3D.visible = true;
-      } );
+      });
     }
 
     private showWordGif(processedLetters: Marker[], wordGif: Image) {
       this.detachLettersGifs();
       const markerPositioned: Marker = WordsStats.markersMean(processedLetters);
-      this.$refs.wordGif.setAttribute('material', `shader:gif; src:url(${wordGif.url});`);
-      this.$refs.wordGif.object3D.position.set(
-        markerPositioned.position.x,
-        markerPositioned.position.y,
-        markerPositioned.position.z,
-      );
 
-      this.$refs.wordGif.object3D.scale.set(
-        markerPositioned.scale.x * 2.5,
-        markerPositioned.scale.y * 2.5,
-        markerPositioned.scale.z * 2.5,
-      );
-      this.$refs.wordGif.object3D.visible = true;
+      this.$refs.wordGif.setAttribute('material', `shader:gif; src:url(${wordGif.url});`);
+
+      this.changeMarkerObject(markerPositioned, this.$refs.wordGif);
+
       if (!this.$refs.wordGif.isPlaying) {
         this.$refs.wordGif.play();
       }
@@ -169,7 +180,9 @@
 
     private detachWordGif() {
       this.atachLettersGifs();
+
       this.$refs.wordGif.object3D.visible = false;
+
       if (this.$refs.wordGif.isPlaying) {
         this.$refs.wordGif.pause();
       }
@@ -204,6 +217,16 @@
       }
     }
 
+    private wordGifValidation(processedLetters: Marker[], image: Image) {
+      this.wordLockFlag = false;
+
+      if (image.isValid) {
+        this.showWordGif(processedLetters, image);
+      } else {
+        this.detachWordGif();
+      }
+    }
+
     private processLetters() {
       let deviation: number;
       const processedLetters: Marker[] = [];
@@ -217,13 +240,8 @@
       this.addProcessedLetters(deviation, processedLetters);
 
       if (processedLetters.length > 0 && !this.wordLockFlag) {
-        this.getGifWord(this.setWord(processedLetters)).then( (response: Image) => {
-          this.wordLockFlag = false;
-          if (response.isValid) {
-            this.showWordGif(processedLetters, response);
-          } else {
-            this.detachWordGif();
-          }
+        this.getGifWord(this.setWord(processedLetters)).then((response: Image) => {
+          this.wordGifValidation(processedLetters, response);
         });
       }
     }
