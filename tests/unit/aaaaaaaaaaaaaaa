@@ -1,0 +1,28 @@
+  describe('Letters being processed', () => {
+    describe('When there\'s less than 2 letters', () => {
+      it('It doesn\'t set a valid word', () => {
+        camera.markers = new Set();
+
+        camera.markers.add(fakeAMarkers(1)[0]);
+
+        const markersStatsClearValuesSpy =
+          jest.spyOn(camera.markersStats, 'clearValues');
+
+        camera.addPositions = jest.fn()
+          .mockImplementationOnce(() => camera.addPositions);
+
+        camera.addProcessedLetters = jest.fn()
+          .mockImplementationOnce(() => camera.addProcessedLetters);
+
+        camera.processLetters();
+
+        const { deviation } = camera.markersStats;
+        const { addPositions, addProcessedLetters } = camera;
+
+        expect(addPositions).toBeCalledTimes(1);
+        expect(markersStatsClearValuesSpy).toBeCalledTimes(1);
+        expect(addProcessedLetters).toBeCalledTimes(1);
+        expect(addProcessedLetters).toBeCalledWith(deviation, []);
+      });
+    });
+  });
