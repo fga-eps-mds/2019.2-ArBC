@@ -18,43 +18,51 @@
 git clone https://github.com/fga-eps-mds/2019.2-ArBC/
 ```
 
-## Rodar ambiente docker
+## Rodar ambiente 
 
+```
 sudo docker-compose build
 sudo docker-compose up
 ``` 
 
 ## Como instalar
+
 ```
 npm install
 ```
 
-### Compilar e roda para desenvolvimento
+### Compilar e rodar para desenvolvimento
+
 ```
 npm run serve
 ```
 
-### Compilar e roda build
+### Compilar e rodar build
+
 ```
 npm run build
 ```
 
 ### Rodar testes
+
 ```
 npm run test
 ```
 
 ### Lint e consertar arquivos
+
 ```
 npm run lint
 ```
 
 ### Rodar testes end-2-end
+
 ```
 npm run test:e2e
 ```
 
 ### Rodar testes unitários
+
 ```
 npm run test:unit
 ```
