@@ -1,6 +1,11 @@
+Data|Versão|Descrição|Autor
+-|-|-|-
+31/08|1.0.0|Criação da Política| João Lucas|
+
+
 # Política de criação de _Issue_.
 
-###### O Documento tem o objetivo de instruir os membros do projeto de como padronizar a criação de uma _issue_ e suas respectivas marcações.
+* O Documento tem o objetivo de instruir os membros do projeto de como padronizar a criação de uma _issue_ e suas respectivas marcações.
 
 ---
 
