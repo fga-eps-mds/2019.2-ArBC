@@ -1,10 +1,10 @@
-## 1. Objetivo da _Sprint 8_
+## 1. Objetivo da _Sprint 9_
 
 <p align="justify">Esta <i>Sprint</i> tem como objetivo:</p>
 
-* Identificar Palavra
-*	Documentação back-end e front-end
-*	Documento de instruções do produto
+* Aperfeiçoamento da Interface Gráfica
+*	Facetar o uso do Typescript
+*	Verificar Palavra
 
 ## 2. Papéis
 
@@ -49,25 +49,24 @@
 
 ## 3. Tamanho da _Sprint_
 
-| Data de Início | 20/10/2019 |
+| Data de Início | 27/10/2019 |
 |:--|:--:|
-| **Data de Término** | **26/10/2019** |
+| **Data de Término** | **02/11/2019** |
 | **Duração** | **7 dias** |
 
 
 ## 4. Pareamento
 
-
 |Issues| Duplas |
 |:--|:--:|
-| [Identificar Palavra](https://github.com/fga-eps-mds/2019.2-ArBC/issues/10) | Igor, João Henrique e Rhuan|
-| [Documentação back-end e front-end](https://github.com/fga-eps-mds/2019.2-ArBC-API/issues/97) | João Henrique e Marcelo |
-| [Documento de instruções do produto](https://github.com/fga-eps-mds/2019.2-ArBC/issues/96) | Sérgio e Thiago |
+| [Aperfeiçoamento da Interface Gráfica](https://github.com/fga-eps-mds/2019.2-ArBC/issues/106) | Igor, Marcelo e Thiago|
+| [Facetar o uso do Typescript](https://github.com/fga-eps-mds/2019.2-ArBC-API/issues/104) | João Henrique, Rhuan e Sérgio|
+| [Verificar Palavra](https://github.com/fga-eps-mds/2019.2-ArBC/issues/11) | Igor, João Henrique e Rhuan |
 
 
 ## 5. Sprint Backlog
 
-A Milestone da _Sprint_ 8 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/9)
+A Milestone da _Sprint_ 9 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/10)
 
 ## 6. Débitos Acumulados
 
