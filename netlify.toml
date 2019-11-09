@@ -8,7 +8,7 @@
   ## Not needed for static site generators.
   [[redirects]]
     from = "https://arbc-lab.netlify.com"
-    to = "/camera"
+    to = "https://arbc-lab.netlify.com/camera"
     status = 200
   
   ## (optional) Settings for Netlify Dev
