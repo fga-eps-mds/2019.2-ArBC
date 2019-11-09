@@ -59,7 +59,8 @@
       "vue"
     ],
     "moduleNameMapper": {
-      "^@/(.*)$": "<rootDir>/src/$1"
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
     },
     "snapshotSerializers": [
       "jest-serializer-vue"
@@ -71,7 +72,8 @@
       "^.+\\.(js|jsx)$": "babel-jest"
     },
     "transformIgnorePatterns": [
-      "<rootDir>/node_modules/(?!@babel\\/runtime)"
+      "<rootDir>/node_modules/(?!@babel\\/runtime)",
+      "<rootDir>/node_modules/(?!vue-material)"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/tests/e2e"
