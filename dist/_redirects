@@ -1,2 +1,2 @@
 # Redirects from what the browser requests to what we serve
-https://arbc-lab.netlify.com        /camera
+/*       /camera    200
