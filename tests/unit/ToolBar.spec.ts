@@ -17,7 +17,7 @@ beforeAll(() => {
   });
 
   buttons = [wrapper.findAll('div').at(1).findAll('button'),
-    wrapper.findAll('div').at(1).findAll('button')];
+    wrapper.findAll('div').at(1).findAll('a')];
 });
 
 afterAll(() => {
@@ -39,7 +39,7 @@ describe('ToolBar.vue', () => {
     });
 
     it('When user click in home button', () => {
-        buttons[0].trigger('click');
+        buttons[1].trigger('click');
         expect(wrapper.vm.$route.path).toEqual('/');
     });
 
