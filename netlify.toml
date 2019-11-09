@@ -8,8 +8,10 @@
   ## Not needed for static site generators.
   [[redirects]]
     from = "https://arbc-lab.netlify.com"
-    to = "https://arbc-lab.netlify.com/camera"
+    to = "/camera"
     status = 200
+    force = true
+    headers = {X-From = "ArBC"}
   
   ## (optional) Settings for Netlify Dev
   ## https://github.com/netlify/cli/blob/master/docs/netlify-dev.md#project-detection
