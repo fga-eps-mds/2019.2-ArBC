@@ -7,8 +7,8 @@
   ## Uncomment to use this redirect for Single Page Applications like create-react-app. 
   ## Not needed for static site generators.
   [[redirects]]
-    from = "https://arbc-lab.netlify.com/*"
-    to = "/camera"
+    from = "https://arbc-lab.netlify.com"
+    to = "https://arbc-lab.netlify.com/camera"
     status = 200
     force = true
     headers = {X-From = "ArBC"}
