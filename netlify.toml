@@ -7,11 +7,19 @@
   ## Uncomment to use this redirect for Single Page Applications like create-react-app. 
   ## Not needed for static site generators.
   [[redirects]]
-    from = "https://arbc-lab.netlify.com"
-    to = "https://arbc-lab.netlify.com/camera"
-    status = 200
-    force = true
-    headers = {X-From = "ArBC"}
+    from = "/*"
+    to = "/camera"
+    status = 301
+    force = false
+    query = {path = ":path"}
+  
+
+  #[[redirects]]
+   # from = "https://arbc-lab.netlify.com"
+   # to = "https://arbc-lab.netlify.com/camera"
+   # status = 200
+   # force = true
+   # headers = {X-From = "ArBC"}
   
   ## (optional) Settings for Netlify Dev
   ## https://github.com/netlify/cli/blob/master/docs/netlify-dev.md#project-detection
