@@ -20,7 +20,7 @@ test:
    - npm install
    - npm run test:unit
    - npm run lint
-   #- ./node_modules/.bin/codecov --token="$CODECOV_TOKEN"
+   - ./node_modules/.bin/codacy-coverage.js --token="$CODECOV_TOKEN"
 
 
 # Stage II
