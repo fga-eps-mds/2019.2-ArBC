@@ -6,11 +6,11 @@
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app. 
   ## Not needed for static site generators.
-  #[[redirects]]
-   # from = "/*"
-   # to = "/camera"
-   # status = 301
-   # force = false
+  [[redirects]]
+    from = "/*"
+    to = "/camera"
+    status = 200
+    force = true
    # query = {path = ":path"}
   
 
