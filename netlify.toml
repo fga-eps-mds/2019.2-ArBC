@@ -1,25 +1,12 @@
-# example netlify.toml
 [build]
   command = "npm build"
   functions = "functions"
   publish = "dist"
 
-  ## Uncomment to use this redirect for Single Page Applications like create-react-app. 
-  ## Not needed for static site generators.
-  [[redirects]]
-    from = "/*"
-    to = "/camera"
-    status = 200
-    force = true
-   # query = {path = ":path"}
-  
-
-  #[[redirects]]
-   # from = "https://arbc-lab.netlify.com"
-   # to = "https://arbc-lab.netlify.com/camera"
-   # status = 200
-   # force = true
-   # headers = {X-From = "ArBC"}
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
   
   ## (optional) Settings for Netlify Dev
   ## https://github.com/netlify/cli/blob/master/docs/netlify-dev.md#project-detection
