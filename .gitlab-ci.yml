@@ -20,7 +20,6 @@ test:
    - npm install
    - npm run test:unit
    - npm run lint
-   - npm run vue-cli-service test:unit -u --coverage && cat ./coverage/lcov.info | codacy-coverage --token $CODECOV_TOKEN
    # - npm run cat ./coverage/lcov.info | codacy-coverage --accountToken $CODACY_ACCOUNT_TOKEN --username $USER_CODACY --projectName 2019.2-ArBC
    #- ./node_modules/.bin/codacy-coverage.js --token="$CODECOV_TOKEN"
 
