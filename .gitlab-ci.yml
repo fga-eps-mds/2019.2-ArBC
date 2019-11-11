@@ -20,7 +20,8 @@ test:
    - npm install
    - npm run test:unit
    - npm run lint
-   #- ./node_modules/.bin/codecov --token="$CODECOV_TOKEN"
+   # - npm run cat ./coverage/lcov.info | codacy-coverage --accountToken $CODACY_ACCOUNT_TOKEN --username $USER_CODACY --projectName 2019.2-ArBC
+   #- ./node_modules/.bin/codacy-coverage.js --token="$CODECOV_TOKEN"
 
 
 # Stage II
