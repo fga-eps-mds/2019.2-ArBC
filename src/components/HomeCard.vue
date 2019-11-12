@@ -1,22 +1,23 @@
 <template>
-  <div @click="route()">
+  <div @click="route">
     <md-card md-with-hover class="box">
       <md-ripple>
-        <div class="upper-bar" />
+        <div
+          :style="{
+            width: '100%',
+            height: '5px',
+            borderRadius: '5px',
+            backgroundColor: $data.iconColor
+          }"
+        />
 
         <md-card-header>
-          <md-icon 
-            v-if="!localIcon"
+          <md-icon
             class="md-size-4x"
+            :style="{ color: $data.iconColor }"
           >
             {{ $data.icon }}
           </md-icon>
-          
-          <md-icon
-            v-else
-            class="md-size-4x"
-            :md-src="require('@/assets/github_gray.svg')"
-          />
         </md-card-header>
 
         <md-card-content>
@@ -24,54 +25,92 @@
         </md-card-content>
       </md-ripple>
     </md-card>
+
+    <how-to-use-modal ref="howToUseModal" @onConfirmed="openCameraConfirmed = true" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import { Watch } from 'vue-property-decorator';
 import '@/vue_material/components';
 
+import HowToUseModal from '@/components/HowToUseModal.vue';
+
+Vue.component('home-card', HowToUseModal);
+
 @Component({
+  components: {
+    HowToUseModal,
+  },
   props: {
     $data: {
       type: Object,
       required: true,
     },
-    localIcon: {
-      type: Boolean,
-      default: false,
-    },
   },
 })
 
 export default class HomeCard extends Vue {
-  private route() {
-    const { link, target } = this.$data;
+  public $refs!: {
+    howToUseModal: any,
+  };
 
-    if (target === '_blank') {
-      window.open(link, target);
-    } else {
-      window.location.replace(link);
-    }
+  private openCameraConfirmed: boolean = false;
+
+  private openModal(data: any) {
+    this.$refs.howToUseModal.open(data);
+  }
+
+  private canRoute(path: string) {
+    return new Promise((resolve: any, reject: any) => {
+      const showHowToUseDialog = localStorage.getItem('showHowToUseDialog');
+
+      if (path !== '/camera' || showHowToUseDialog == 'false') {
+        resolve();
+      } else {
+        this.$refs.howToUseModal.open();
+
+        this.openCameraConfirmed ? (resolve()) : (reject());
+      }
+    });
+  }
+
+  @Watch('openCameraConfirmed')
+  private route() {
+    const { path, targetBlank } = this.$data;
+
+    this.canRoute(path).then(() => {
+      if (targetBlank) {
+        window.open(path, '_blank');
+      } else {
+        window.history.pushState({}, path, window.location.pathname);
+
+        window.location.replace(path);
+      }
+    });
   }
 }
 </script>
 
 <style lang="scss" scoped>
+  @media (min-width: 425px) {
+    .box {
+      width: 320px;
+    }
+  }
+  @media (max-width: 424px) {
+    .box {
+      width: 80%;
+    }
+  }
   .box {
-    width: 320px;
     margin: 4px;
-    height: 250px;
+    height: 245px;
     border-radius: 5px;
     display: inline-block;
     vertical-align: top;
-  }
-  .upper-bar {
-    width: 100%;
-    height: 5px;
-    border-radius: 5px;
-    background-color: #448aff;
   }
   .md-button {
     background-color: #448aff;
