@@ -67,7 +67,7 @@ export default class HomeCard extends Vue {
     return new Promise((resolve: any, reject: any) => {
       const showHowToUseDialog = localStorage.getItem('showHowToUseDialog');
 
-      if (path !== '/camera' || showHowToUseDialog == 'false') {
+      if (path !== '/camera' || showHowToUseDialog === 'false') {
         resolve();
       } else {
         this.$refs.howToUseModal.open();
