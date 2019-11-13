@@ -17,7 +17,7 @@ describe('api.ts', () => {
 
   describe('when response.data has a results property', () => {
     const requestURL: string = `${API_URL}/Letter`;
-    const responseResultsExample = [
+    const responseResults = [
       { name: 'G', image: 'https://media.giphy.com/media/7SX1EWzetp0GVAgoqp/giphy.gif' },
       { name: 'I', image: 'https://giphy.com/gifs/oh-wow-ooh-ooo-Rhdx0Vp9cOwnLiGmb6' },
       { name: 'P', image: 'https://gph.is/g/Zdov3n1' },
@@ -25,29 +25,29 @@ describe('api.ts', () => {
       { name: 'Y', image: 'https://giphy.com/gifs/no-bird-shake-head-fsPcMdeXPxSP6zKxCA' },
     ];
 
-    mockedAxios.onGet(requestURL).reply(200, responseResultsExample);
+    mockedAxios.onGet(requestURL).reply(200, responseResults);
 
     it ('returns the results on data.results property', async () => {
       const APIResponse: any = await API.get(requestURL);
 
-      expect(APIResponse).toEqual(responseResultsExample);
+      expect(APIResponse).toEqual(responseResults);
       expect(spyOnAxiosGet).toHaveBeenCalledWith(requestURL, CONFIG);
     });
   });
 
   describe('when response.data does not have a results property', () => {
     const requestURL: string = `${API_URL}/Word/BOLA`;
-    const responseResultExample = {
+    const responseResult = {
       name: 'BOLA',
       image: 'https://gph.is/1k0ps5A',
     };
 
-    mockedAxios.onGet(requestURL).reply(200, responseResultExample);
+    mockedAxios.onGet(requestURL).reply(200, responseResult);
 
     it ('returns the results on data property', async () => {
       const APIResponse: any = await API.get(requestURL);
 
-      expect(APIResponse).toEqual(responseResultExample);
+      expect(APIResponse).toEqual(responseResult);
       expect(spyOnAxiosGet).toHaveBeenCalledWith(requestURL, CONFIG);
     });
   });
