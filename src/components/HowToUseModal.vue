@@ -95,7 +95,7 @@ export default class Home extends Vue {
     }
   }
   .dialog {
-    padding: 30px;
+    padding: 10px 30px 30px 30px;
     background-color: white;
   }
   .dialog-title {
