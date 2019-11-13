@@ -1,6 +1,6 @@
 <template>
   <div @click="route">
-    <md-card md-with-hover class="box">
+    <md-card md-with-hover class="card">
       <md-ripple>
         <div
           :style="{
@@ -96,16 +96,16 @@ export default class HomeCard extends Vue {
 
 <style lang="scss" scoped>
   @media (min-width: 425px) {
-    .box {
+    .card {
       width: 320px;
     }
   }
   @media (max-width: 424px) {
-    .box {
+    .card {
       width: 80%;
     }
   }
-  .box {
+  .card {
     margin: 4px;
     height: 245px;
     border-radius: 5px;
