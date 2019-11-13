@@ -107,7 +107,7 @@ export default class HomeCard extends Vue {
   }
   .card {
     margin: 4px;
-    height: 245px;
+    height: 230px;
     border-radius: 5px;
     display: inline-block;
     vertical-align: top;
