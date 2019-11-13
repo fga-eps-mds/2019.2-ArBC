@@ -66,6 +66,8 @@
     flex-wrap: wrap; 
     flex-direction: colunm; 
     justify-content: space-around;
+    text-align: justify;
+    text-align-last: center;
     margin-top: 15px;
   }
   .space-card {
