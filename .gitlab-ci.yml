@@ -20,7 +20,7 @@ test:
    - npm install
    - npm run test:unit
    - npm run lint
-   - npm install -g codacy-coverage --save
+   - npm install codacy-coverage --save
    - npm run test:unit -u --coverage && cat ./coverage/lcov.info | codacy-coverage --token $CODACY_ACCOUNT_TOKEN --username $USER_CODACY --projectName $PROJECT_CODACY
 
 # Stage II
