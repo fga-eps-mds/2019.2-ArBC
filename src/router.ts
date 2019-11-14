@@ -9,12 +9,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: () => import('./views/Home.vue'),
     },
     {
       path: '/camera',
-      name: 'camera',
+      name: 'Camera',
       component: () => import('./views/Camera.vue'),
     },
   ],
