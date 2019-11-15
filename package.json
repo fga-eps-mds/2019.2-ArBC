@@ -7,10 +7,9 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit -u --coverage && cat ./coverage/lcov.info",
     "jest:update": "jest --updateSnapshot",
-    "codacy": "jest --coverage && cat ./coverage/lcov.info",
-    "code-coverall": "jest -s-coverage --coverageReporters=text-lcov && cat ./coverage/lcov.info | coveralls"
+    "codacy": "jest --coverage && cat ./coverage/lcov.info"
   },
   "dependencies": {
     "axios": "^0.19.0",
