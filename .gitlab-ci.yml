@@ -24,7 +24,7 @@ test:
    #- npm run test:unit -u --coverage && cat ./coverage/lcov.info | codacy-coverage --accountToken $CODACY_ACCOUNT_TOKEN --username $USER_CODACY --projectName 2019.2-ArBC
    - export CODACY_PROJECT_TOKEN=$CODACY_ACCOUNT_TOKEN 
    - npm run jest:update 
-   - npm run codacy | codacy-coverage
+   - npm run codacy | codacy-coverage --username $USER_CODACY --projectName 2019.2-ArBC
 # Stage II
 # Build Phase:
 # This is where the main code is built
