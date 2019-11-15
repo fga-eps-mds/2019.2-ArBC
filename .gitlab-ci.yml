@@ -22,7 +22,8 @@ test:
    - npm run lint
    - npm install -g codacy-coverage --save
    #- npm run test:unit -u --coverage && cat ./coverage/lcov.info | codacy-coverage --accountToken $CODACY_ACCOUNT_TOKEN --username $USER_CODACY --projectName 2019.2-ArBC
-   - npm run coveralls
+   - npm run code-coverall
+   - npm run code-coverall -- -u
 # Stage II
 # Build Phase:
 # This is where the main code is built
