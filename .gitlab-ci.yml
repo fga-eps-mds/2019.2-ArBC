@@ -18,7 +18,7 @@ test:
   script:
    - rm -rf package-lock.json
    - npm install
-   - npm run test:unit
+   # - npm run test:unit
    - npm run lint
    - npm install -g codacy-coverage --save
    #- npm run test:unit -u --coverage && cat ./coverage/lcov.info | codacy-coverage --accountToken $CODACY_ACCOUNT_TOKEN --username $USER_CODACY --projectName 2019.2-ArBC
