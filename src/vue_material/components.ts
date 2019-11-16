@@ -7,6 +7,7 @@ import {
   MdButton,
   MdRipple,
   MdToolbar,
+  MdDialog,
 } from 'vue-material/dist/components';
 
 Vue.use(MdApp);
@@ -15,3 +16,4 @@ Vue.use(MdCard);
 Vue.use(MdButton);
 Vue.use(MdRipple);
 Vue.use(MdToolbar);
+Vue.use(MdDialog);
