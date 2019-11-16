@@ -19,6 +19,7 @@ test:
    - rm -rf package-lock.json
    - npm install
    - npm install -g codacy-coverage --save
+   - npm run jest:update
    - npm run test:unit
    - npm run lint
    - npm run coverage
