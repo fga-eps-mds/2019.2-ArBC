@@ -1,22 +1,27 @@
 <template>
-    <md-toolbar class="md-primary">   
-      <div class="md-toolbar-section-start">
-        <span class="md-title" style="color: rgb(255, 255, 255)">
-          ArBC
-        </span>
+    <md-toolbar class="md-primary" style="position: relative">
+      <span class="title">
+        ArBC
+      </span>
 
-        <md-button 
-          class="md-icon-button" 
-        >
+      <div style="position: absolute; right: 10px">
+        <md-button class="md-icon-button">
           <md-icon>home</md-icon>
         </md-button>
 
         <md-button 
-          class="md-icon-button" 
+          class="md-icon-button"
           href="./camera"
         >
           <md-icon >camera_alt</md-icon>
-        </md-button>  
+        </md-button>
+
+        <md-button 
+          class="md-icon-button"
+          @click="sendBugEmail"
+        >
+          <md-icon >bug_report</md-icon>
+        </md-button>
       </div>
     </md-toolbar>
 </template>
@@ -27,7 +32,11 @@ import Component from 'vue-class-component';
 import '@/vue_material/components';
 
 @Component({})
-export default class ToolBar extends Vue {}
+export default class ToolBar extends Vue {
+  private sendBugEmail() {
+    window.open('mailto:projetoarbc@gmail.com?subject=Bug');
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -36,5 +45,10 @@ export default class ToolBar extends Vue {}
   }
   .md-icon {
     color: white;
+  }
+  .title {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
   }
 </style>

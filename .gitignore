@@ -1,6 +1,5 @@
 .DS_Store
 node_modules
-/dist
 
 /tests/e2e/reports/
 selenium-debug.log
@@ -25,3 +24,10 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# Coverage directory
+/coverage/
+
+
+# Snapshots
+/tests/unit/__snapshots__/

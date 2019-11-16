@@ -16,7 +16,7 @@ export interface Image {
 
 export interface Marker {
   key: string;
-  position: {x: number, y: number, z: number};
-  quaternion: {x: number, y: number, z: number, w: number};
-  scale: {x: number, y: number, z: number};
+  position: { x: number, y: number, z: number };
+  quaternion: { x: number, y: number, z: number, w: number };
+  scale: { x: number, y: number, z: number };
 }
