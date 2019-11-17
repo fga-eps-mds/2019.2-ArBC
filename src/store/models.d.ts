@@ -9,6 +9,11 @@ export interface Word {
   image: Image;
 }
 
+export interface Pattern {
+  name: string;
+  patt: string;
+}
+
 export interface Image {
   url: string;
   isValid: boolean;
