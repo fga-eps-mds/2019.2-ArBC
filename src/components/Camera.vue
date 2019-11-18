@@ -15,7 +15,7 @@
       v-for="letter in alphabet"
       :key="letter"
       type='pattern'
-      :url="patternUrl(letter)"
+      :url="patternUrl(letter+'1')"
       @markerFound="markerFound($event, letter)"
       @markerLost="markerLost($event, letter)"
     >
@@ -37,6 +37,7 @@
   import Vue from 'vue';
   import Component from 'vue-class-component';
   import LettersModule from '@/store/modules/letters';
+  import PatternModule from '@/store/modules/patterns';
   import WordsModule from '@/store/modules/words';
   import { getModule } from 'vuex-module-decorators';
 
@@ -58,14 +59,17 @@
     private isReading: boolean = false;
     private isCreated: boolean = false;
     private lettersModule = getModule(LettersModule, this.$store);
+    private patternsModule = getModule(PatternModule, this.$store);
     private wordsModule = getModule(WordsModule, this.$store);
     private wordLockFlag: boolean = false;
     private markersStats: MarkerStatsClass = new MarkerStatsClass();
-    private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
+    private patterns: Map<string, string> = new Map();
 
     public async created() {
       await this.lettersModule.getLetters();
+      await this.patternsModule.getPatterns();
       this.alphabet = Object.keys(this.lettersModule.Letters);
+      this.patterns = Map.prototype.set(this.patternsModule.Patterns.keys, this.patternsModule.Patterns.values);
 
       this.isCreated = true;
     }
@@ -75,7 +79,7 @@
     }
 
     public patternUrl(letter: string) {
-      return `${this.mediaBaseUrl}/src/assets/patterns/pattern-${letter}.patt`;
+      return this.patterns.get(letter);
     }
 
     public gifURL(letter: string) {

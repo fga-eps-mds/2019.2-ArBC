@@ -11,7 +11,7 @@ import {
   name: 'patterns',
 })
 export default class PatternsModule extends VuexModule {
-  private patterns: {[index: string]: string} = {};
+  private patterns: Map<string, string> = new Map();
 
   public get Patterns() {
     return this.patterns;
@@ -19,8 +19,8 @@ export default class PatternsModule extends VuexModule {
 
   @Mutation
   public async setPatterns(patterns: Pattern[]) {
-    await patterns.forEach((pattern: Pattern) => {
-        this.patterns[pattern.name] = pattern.patt;
+    patterns.forEach((pattern: Pattern) => {
+        this.patterns.set(pattern.name, pattern.patt);
       },
     );
   }

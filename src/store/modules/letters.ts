@@ -19,7 +19,7 @@ export default class LettersModule extends VuexModule {
 
   @Mutation
   public async setLetters(letters: Letter[]) {
-    await letters.forEach((letter: Letter) => {
+    letters.forEach((letter: Letter) => {
         this.letters[letter.name] = letter.image;
       },
     );
