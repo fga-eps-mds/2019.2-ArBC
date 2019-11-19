@@ -1,9 +1,8 @@
 ## 1. Objetivo da _Sprint 12_
 
-<p align="justify">Esta <i>Sprint</i> tem como objetivo finalizar os testes e todos os debitos das sprints passadas e deixar tudo preparado para a Release 2,:</p>
+<p align="justify">Esta <i>Sprint</i> tem como objetivo finalizar os testes e todos os debitos das sprints passadas e deixar tudo preparado para a Release 2.
+</p>
 
-* Gifs sendo mostrados de cabeça pra baixo
-*	Melhoria na experiência de usuário
 
 ## 2. Papéis
 
