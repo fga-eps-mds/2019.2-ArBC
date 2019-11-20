@@ -11,6 +11,8 @@ beforeAll(() => {
   localVue.use(VueRouter);
   const router = new VueRouter();
 
+  window.open = jest.fn();
+
   wrapper = mount(ToolBar, {
     localVue,
     router,
