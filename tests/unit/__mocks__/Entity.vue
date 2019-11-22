@@ -14,6 +14,7 @@
     @Prop(String) public geometry: string = '';
     @Prop(String) public rotation: string = '';
     @Prop(String) public visible: string = '';
+
     public object3D = new Object3D();
     public isPlaying: boolean = false;
 
