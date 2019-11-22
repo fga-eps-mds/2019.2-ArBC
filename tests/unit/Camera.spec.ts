@@ -138,10 +138,14 @@ describe('Camera.vue', () => {
       const processedLetters: Marker[] = [];
 
       it('Returns an empty string', () => {
+        camera.orderLettersHorizontally = jest.fn()
+          .mockImplementation(() => camera.orderLettersHorizontally);
+
         const word: string = camera.setWord(processedLetters);
 
         expect(word).toEqual(expectedWord);
         expect(word.length).toEqual(0);
+        expect(camera.orderLettersHorizontally).toBeCalledTimes(1);
       });
     });
 
@@ -155,10 +159,14 @@ describe('Camera.vue', () => {
       });
 
       it('Return the respective word', () => {
+        camera.orderLettersHorizontally = jest.fn()
+          .mockImplementation(() => camera.orderLettersHorizontally);
+
         const word: string = camera.setWord(processedLetters);
 
         expect(word).toEqual(expectedWord);
         expect(word.length).toEqual(wordLength);
+        expect(camera.orderLettersHorizontally).toBeCalledTimes(1);
       });
     });
   });
