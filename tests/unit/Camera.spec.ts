@@ -23,13 +23,14 @@ beforeAll(async () => {
   const localVue = createLocalVue();
 
   API.get = jest.fn().mockReturnValueOnce([
-    {name: 'A', image: 'https://giphy.com/gifs/new-girl-YVvTCqTBglkOs'},
-    {name: 'R', image: 'https://giphy.com/gifs/teachersseries-tv-land-teacher-26Bl15BW6nqVoYUDK'},
-    {name: 'B', image: 'https://giphy.com/gifs/japan-jet-alt-BemKqR9RDK4V2'},
-    {name: 'C', image: 'https://giphy.com/gifs/coffee-gif-brockurealities-DrJm6F9poo4aA'},
+    { name: 'A', image: 'https://gph.is/1YdJDfl' },
+    { name: 'R', image: 'https://gph.is/2GcXdhf' },
+    { name: 'B', image: 'https://gph.is/1HGEo1e' },
+    { name: 'C', image: 'https://gph.is/1Pv6s9f' },
   ]).mockReturnValueOnce([]);
-  lettersModule = getModule(LettersModule, store);
+
   wordsModule = getModule(WordsModule, store);
+  lettersModule = getModule(LettersModule, store);
 
   cameraWrapper = mount(Camera, {
     localVue,
@@ -39,50 +40,38 @@ beforeAll(async () => {
       'a-entity': AEntity,
     },
   });
+
   camera = cameraWrapper.vm;
 });
 
 describe('Camera.vue', () => {
   test('Markers being ordered horizontally', () => {
-
-    const markers: Marker[] = [{
+    const AMarker: Marker = {
       key: 'A',
       position: { x: 1.5, y: 2, z: 5.1 },
       quaternion: { x: -1, y: 5, z: 6, w: 4.3 },
       scale: { x: 1.2, y: 1.1, z: 1.23 },
-    }, {
+    };
+
+    const UMarker: Marker = {
       key: 'U',
       position: { x: 1, y: 2.1, z: 5 },
       quaternion: { x: 7.2, y: 2, z: -3, w: 9 },
       scale: { x: 1.11, y: 1.13, z: 1.17 },
-    }, {
+    };
+
+    const VMarker: Marker = {
       key: 'V',
       position: { x: 1.2, y: 1.9, z: 5.2 },
       quaternion: { x: 7, y: 9, z: 10, w: 3 },
       scale: { x: 1.07, y: 1.01, z: 0.99 },
-    },
-    ];
+    };
+
+    const markers: Marker[] = [AMarker, UMarker, VMarker];
 
     camera.orderLettersHorizontally(markers);
 
-    expect(markers).toMatchObject([
-      {
-        key: 'U',
-        position: { x: 1, y: 2.1, z: 5 },
-        quaternion: { x: 7.2, y: 2, z: -3, w: 9 },
-        scale: { x: 1.11, y: 1.13, z: 1.17 },
-      }, {
-        key: 'V',
-        position: { x: 1.2, y: 1.9, z: 5.2 },
-        quaternion: { x: 7, y: 9, z: 10, w: 3 },
-        scale: { x: 1.07, y: 1.01, z: 0.99 },
-      }, {
-        key: 'A',
-        position: { x: 1.5, y: 2, z: 5.1 },
-        quaternion: { x: -1, y: 5, z: 6, w: 4.3 },
-        scale: { x: 1.2, y: 1.1, z: 1.23 },
-      },
-    ]);
+    expect(markers).toMatchObject([UMarker, VMarker, AMarker]);
   });
 
   test('Marker being created from html item', async () => {
@@ -90,6 +79,7 @@ describe('Camera.vue', () => {
     Obj3d.position.set(0.5, 0.7, 0.9);
     Obj3d.quaternion.set(0.7, 1.42, 1.53, 2.31);
     Obj3d.scale.set(1.12, 1.21, 1.32);
+
     const item: object = {
       key: 'G',
       object3D: Obj3d,
