@@ -12,6 +12,8 @@ import AEntity from './__mocks__/Entity.vue';
 import { getModule } from 'vuex-module-decorators';
 import API from '@/services/api';
 
+import generateMarkers from './helpers/generateFakeMarkers';
+
 let camera: any;
 let cameraWrapper: Wrapper<Camera>;
 let lettersModule: LettersModule;
@@ -127,6 +129,37 @@ describe('Camera.vue', () => {
 
       expect(clearInterval).toBeCalledTimes(1);
       expect(camera.processHandler).toBeFalsy();
+    });
+  });
+
+  describe('setWord', () => {
+    describe('When there is no markers', () => {
+      const expectedWord: string = '';
+      const processedLetters: Marker[] = [];
+
+      it('Returns an empty string', () => {
+        const word: string = camera.setWord(processedLetters);
+
+        expect(word).toEqual(expectedWord);
+        expect(word.length).toEqual(0);
+      });
+    });
+
+    describe('When there is more than one marker', () => {
+      let expectedWord: string = '';
+      const wordLength: number = Math.round(Math.random() * 10);
+      const processedLetters: Marker[] = generateMarkers(wordLength, true);
+
+      processedLetters.forEach((marker: Marker) => {
+        expectedWord = expectedWord + `${marker.key}`;
+      });
+
+      it('Return the respective word', () => {
+        const word: string = camera.setWord(processedLetters);
+
+        expect(word).toEqual(expectedWord);
+        expect(word.length).toEqual(wordLength);
+      });
     });
   });
 });
