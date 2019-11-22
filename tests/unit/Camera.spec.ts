@@ -17,7 +17,6 @@ let cameraWrapper: Wrapper<Camera>;
 let lettersModule: LettersModule;
 let wordsModule: WordsModule;
 
-
 beforeAll(async () => {
   Vue.config.ignoredElements = ['a-scene', 'a-entity', 'a-marker'];
   const localVue = createLocalVue();
@@ -117,6 +116,17 @@ describe('Camera.vue', () => {
     test('Markers being rendered after request', () => {
       expect(cameraWrapper.findAll('a-marker').length)
         .toBe(Object.keys(lettersModule.Letters).length);
+    });
+  });
+
+  describe('Component being destroyed', () => {
+    jest.useFakeTimers();
+
+    test('It restore the processHandler property', () => {
+      cameraWrapper.destroy();
+
+      expect(clearInterval).toBeCalledTimes(1);
+      expect(camera.processHandler).toBeFalsy();
     });
   });
 });

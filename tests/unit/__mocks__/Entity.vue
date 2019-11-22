@@ -5,7 +5,7 @@
 <script lang="ts">
   import Vue from 'vue';
   import Component from 'vue-class-component';
-  import { Object3D } from "three";
+  import { Object3D } from 'three';
 
   @Component({
     name: 'a-entity',
@@ -14,12 +14,11 @@
       rotation: String,
       visible: String,
       material: String,
-    }
+    },
   })
   export default class AEntity extends Vue {
     public object3D = new Object3D();
     public isPlaying: boolean = false;
-    private enMaterial: string = this.material;
 
     public setAttribute = jest.fn().mockImplementation((target: string, value: string) => {
       this.enMaterial = value;
@@ -32,5 +31,7 @@
     public pause = jest.fn().mockImplementation(() => {
       this.isPlaying = false;
     });
+
+    private enMaterial: string = this.material;
   }
 </script>
