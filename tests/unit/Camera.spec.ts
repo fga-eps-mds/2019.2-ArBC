@@ -3,7 +3,7 @@ import 'regenerator-runtime/runtime';
 import { createLocalVue, mount, Wrapper } from '@vue/test-utils';
 import Vue from 'vue';
 import Camera from '@/components/Camera.vue';
-import { Marker } from '@/store/models';
+import { Marker , Word } from '@/store/models';
 import store from '@/store';
 import LettersModule from '@/store/modules/letters';
 import WordsModule from '@/store/modules/words';
@@ -167,6 +167,48 @@ describe('Camera.vue', () => {
         expect(word).toEqual(expectedWord);
         expect(word.length).toEqual(wordLength);
         expect(camera.orderLettersHorizontally).toBeCalledTimes(1);
+      });
+    });
+  });
+
+  describe('getGifWord', () => {
+    describe('Word is not valid', () => {
+      const requestedWord: Word = {
+        name: 'XABLAU',
+        image: {
+          isValid: false,
+          url: '',
+        },
+      };
+
+      it('set word flag to true and returns a rejected promise', () => {
+        wordsModule.getWord = jest.fn()
+          .mockImplementationOnce(() => Promise.reject(requestedWord.image));
+
+        const returnValue: Promise<any> = camera.getGifWord(requestedWord.name);
+
+        expect(camera.wordLockFlag).toEqual(true);
+        expect(returnValue).rejects.toBe(requestedWord.image);
+      });
+    });
+
+    describe('Word is valid', () => {
+      const word: Word = {
+        name: 'BOLA',
+        image: {
+          isValid: true,
+          url: 'urldaimagem.com/BOLA.gif',
+        },
+      };
+
+      it('set word flag to true and returns a rejected promise', () => {
+        wordsModule.getWord = jest.fn()
+          .mockImplementation(() => Promise.resolve(word.image));
+
+        const returnValue: Promise<any> = camera.getGifWord(word.name);
+
+        expect(camera.wordLockFlag).toEqual(true);
+        expect(returnValue).resolves.toBe(word.image);
       });
     });
   });
