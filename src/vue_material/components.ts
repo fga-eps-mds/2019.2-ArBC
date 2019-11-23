@@ -1,6 +1,4 @@
 import Vue from 'vue';
-import '../assets/themes.scss';
-import 'vue-material/dist/theme/default.css';
 import 'vue-material/dist/vue-material.min.css';
 import {
   MdApp,
@@ -9,6 +7,7 @@ import {
   MdButton,
   MdRipple,
   MdToolbar,
+  MdDialog,
 } from 'vue-material/dist/components';
 
 Vue.use(MdApp);
@@ -17,3 +16,4 @@ Vue.use(MdCard);
 Vue.use(MdButton);
 Vue.use(MdRipple);
 Vue.use(MdToolbar);
+Vue.use(MdDialog);

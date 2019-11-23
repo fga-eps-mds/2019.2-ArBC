@@ -1,4 +1,4 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9597bd729fa34472aa1a10de74557942)](https://www.codacy.com/manual/lucianosz7/2019.2-ArBC?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fga-eps-mds/2019.2-ArBC&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9597bd729fa34472aa1a10de74557942)](https://www.codacy.com/manual/lucianosz7/2019.2-ArBC?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=fga-eps-mds/2019.2-ArBC&amp;utm_campaign=Badge_Grade)[![Coverage Status](https://coveralls.io/repos/github/fga-eps-mds/2019.2-ArBC/badge.svg?branch=Fix/%23code_coverage_command)](https://coveralls.io/github/fga-eps-mds/2019.2-ArBC?branch=Fix/%23code_coverage_command)
 
 ![](https://jlucassr.github.io/ArBC-Pages/imagens/logo.jpg)
 

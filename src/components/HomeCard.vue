@@ -1,79 +1,114 @@
 <template>
-  <div class="box">
-    <md-card md-with-hover>
+  <div @click="route">
+    <md-card md-with-hover class="card">
       <md-ripple>
+        <div
+          :style="{
+            width: '100%',
+            height: '5px',
+            borderRadius: '5px',
+            backgroundColor: $data.iconColor
+          }"
+        />
+
         <md-card-header>
-          <md-icon 
-            v-if="!localIcon"
-            class="md-size-4x"
-          >
-            {{ data.icon }}
-          </md-icon>
-          
           <md-icon
-            v-else
             class="md-size-4x"
-            :md-src="require('@/assets/github_gray.svg')"
-          />
+            :style="{ color: $data.iconColor }"
+          >
+            {{ $data.icon }}
+          </md-icon>
         </md-card-header>
 
         <md-card-content>
-          {{ data.content }}
+          {{ $data.content }}
         </md-card-content>
-
-        <md-card-actions>
-          <md-button 
-            class="md-icon-button md-fab md-primary" 
-            :target="data.target"
-            :href="data.link"
-          >
-            <md-icon v-if="!localIcon" class="black">{{ data.icon }}</md-icon>
-            <md-icon v-else :md-src="require(`@/assets/${data.icon}.svg`)"/>
-          </md-button>
-        </md-card-actions>
       </md-ripple>
     </md-card>
+
+    <how-to-use-modal ref="howToUseModal" @onConfirmed="openCameraConfirmed = true" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
-import 'vue-material/dist/vue-material.min.css';
-import {
-  MdApp,
-  MdIcon,
-  MdCard,
-  MdButton,
-  MdRipple,
-} from 'vue-material/dist/components';
+import { Watch } from 'vue-property-decorator';
+import '@/vue_material/components';
 
-Vue.use(MdApp);
-Vue.use(MdIcon);
-Vue.use(MdCard);
-Vue.use(MdButton);
-Vue.use(MdRipple);
+import HowToUseModal from '@/components/HowToUseModal.vue';
+
+Vue.component('home-card', HowToUseModal);
 
 @Component({
+  components: {
+    HowToUseModal,
+  },
   props: {
-    data: {
+    $data: {
       type: Object,
       required: true,
     },
-    localIcon: {
-      type: Boolean,
-      default: false,
-    },
   },
 })
-export default class HomeCard extends Vue {}
+
+export default class HomeCard extends Vue {
+  public $refs!: {
+    howToUseModal: any,
+  };
+
+  private openCameraConfirmed: boolean = false;
+
+  private openModal(data: any) {
+    this.$refs.howToUseModal.open(data);
+  }
+
+  private canRoute(path: string) {
+    return new Promise((resolve: any, reject: any) => {
+      const showHowToUseDialog = localStorage.getItem('showHowToUseDialog');
+
+      if (path !== '/camera' || showHowToUseDialog === 'false') {
+        resolve();
+      } else {
+        this.$refs.howToUseModal.open();
+
+        this.openCameraConfirmed ? (resolve()) : (reject());
+      }
+    });
+  }
+
+  @Watch('openCameraConfirmed')
+  private route() {
+    const { path, targetBlank } = this.$data;
+
+    this.canRoute(path).then(() => {
+      if (targetBlank) {
+        window.open(path, '_blank');
+      } else {
+        window.history.pushState({}, path, window.location.pathname);
+
+        window.location.replace(path);
+      }
+    });
+  }
+}
 </script>
 
 <style lang="scss" scoped>
-  .box {
-    width: 320px;
+  @media (min-width: 425px) {
+    .card {
+      width: 320px;
+    }
+  }
+  @media (max-width: 424px) {
+    .card {
+      width: 80%;
+    }
+  }
+  .card {
     margin: 4px;
-    height: 300px;
+    height: 230px;
+    border-radius: 5px;
     display: inline-block;
     vertical-align: top;
   }

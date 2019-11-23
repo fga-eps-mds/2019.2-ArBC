@@ -1,15 +1,27 @@
 <template>
-  <a-scene embedded arjs='debugUIEnabled: false; trackingMethod: best;'>
+  <a-scene
+    vr-mode-ui="enabled: false"
+    embedded arjs='debugUIEnabled: false; trackingMethod: best;'>
+
+    <a-entity
+      ref="wordGif"
+      geometry="primitive: plane"
+      rotation="0 0 0"
+      material="shader:gif"
+      visible="false">
+    </a-entity>
+
     <a-marker
       v-for="letter in alphabet"
       :key="letter"
       type='pattern'
       :url="patternUrl(letter)"
-      @markerFound="markerFound($event,letter)"
+      @markerFound="markerFound($event, letter)"
       @markerLost="markerLost($event, letter)"
     >
       <a-entity
-        v-if="iscreated"
+        v-if="isCreated"
+        ref="letterGif"
         geometry="primitive: plane;"
         position="0 0 0"
         rotation="-90 0 0"
@@ -25,27 +37,37 @@
   import Vue from 'vue';
   import Component from 'vue-class-component';
   import LettersModule from '@/store/modules/letters';
+  import WordsModule from '@/store/modules/words';
   import { getModule } from 'vuex-module-decorators';
 
-  import MarkerStatsClass from '../services/markersStats';
+  import MarkerStatsClass from '@/services/markersStats';
+  import WordsStats from '@/services/wordsStats';
+  import { Image, Marker } from '@/store/models';
 
   @Component({})
   export default class App extends Vue {
+
+    public $refs!: {
+      wordGif: any,
+      letterGif: any,
+    };
+
     private markers = new Set();
     private processHandler: any;
     private alphabet: string[] = [];
     private isReading: boolean = false;
-    private iscreated: boolean = false;
+    private isCreated: boolean = false;
     private lettersModule = getModule(LettersModule, this.$store);
+    private wordsModule = getModule(WordsModule, this.$store);
+    private wordLockFlag: boolean = false;
     private markersStats: MarkerStatsClass = new MarkerStatsClass();
     private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
 
     public async created() {
       await this.lettersModule.getLetters();
-
       this.alphabet = Object.keys(this.lettersModule.Letters);
 
-      this.iscreated = true;
+      this.isCreated = true;
     }
 
     public destroyed() {
@@ -69,7 +91,9 @@
 
       if (this.markers.size === 2) {
         this.isReading = true;
-        this.processHandler = setInterval(this.processLetters, 16);
+        setTimeout(() => {
+          this.processHandler = setInterval(this.processLetters, 16);
+        }, 1000);
       }
     }
 
@@ -77,6 +101,7 @@
       event.target.key = letter;
 
       this.markers.delete(event.target);
+      this.detachWordGif();
 
       if (this.markers.size === 1) {
         clearInterval(this.processHandler);
@@ -84,19 +109,20 @@
       }
     }
 
-    private orderLettersHorizontally(processedLetters: object[]) {
-      processedLetters.sort((a: any, b: any) => {
+    private orderLettersHorizontally(processedLetters: Marker[]) {
+      processedLetters.sort((a: Marker, b: Marker) => {
         return (a.position.x >= b.position.x) ? 1 : -1;
       });
     }
 
     private createMarkerFromItem(item: any) {
-      return {
+      const marker: Marker = {
         key: item.key,
         position: item.object3D.position,
         quaternion: item.object3D.quaternion,
         scale: item.object3D.scale,
       };
+      return marker;
     }
 
     private addPositions() {
@@ -111,22 +137,78 @@
       }
     }
 
-    private setWord(processedLetters: object[]) {
-      if (processedLetters.length > 0) {
-        let word = '';
+    private changeMarkerObject(marker: Marker, targetMarker: any) {
+      targetMarker.object3D.position.set(
+        marker.position.x,
+        marker.position.y,
+        marker.position.z,
+      );
 
-        this.orderLettersHorizontally(processedLetters);
+      targetMarker.object3D.scale.set(
+        marker.scale.x * 2.5,
+        marker.scale.y * 2.5,
+        marker.scale.z * 2.5,
+      );
 
-        processedLetters.forEach((letter: any) => {
-          word = word + `${letter.key}`;
-        });
+      targetMarker.object3D.visible = true;
+    }
+
+    private detachLettersGifs() {
+      this.$refs.letterGif.forEach((letterGif: any) => {
+        letterGif.object3D.visible = false;
+      });
+    }
+
+    private atachLettersGifs() {
+      this.$refs.letterGif.forEach((letterGif: any) => {
+        letterGif.object3D.visible = true;
+      });
+    }
+
+    private showWordGif(processedLetters: Marker[], wordGif: Image) {
+      this.detachLettersGifs();
+      const markerPositioned: Marker = WordsStats.markersMean(processedLetters);
+
+      this.$refs.wordGif.setAttribute('material', `shader:gif; src:url(${wordGif.url});`);
+
+      this.changeMarkerObject(markerPositioned, this.$refs.wordGif);
+
+      if (!this.$refs.wordGif.isPlaying) {
+        this.$refs.wordGif.play();
       }
     }
 
-    private addProcessedLetters(params: any) {
+    private detachWordGif() {
+      this.atachLettersGifs();
+
+      this.$refs.wordGif.object3D.visible = false;
+
+      if (this.$refs.wordGif.isPlaying) {
+        this.$refs.wordGif.pause();
+      }
+    }
+
+    private getGifWord(word: string) {
+      this.wordLockFlag = true;
+
+      return this.wordsModule.getWord(word);
+    }
+
+    private setWord(processedLetters: Marker[]) {
+      let word = '';
+
+      this.orderLettersHorizontally(processedLetters);
+
+      processedLetters.forEach((letter: Marker) => {
+        word = word + `${letter.key}`;
+      });
+
+      return word;
+    }
+
+    private addProcessedLetters(deviation: number, processedLetters: Marker[]) {
       let item: any;
-      const { deviation, processedLetters } = params;
-      const correctionFactor = 0.06 * this.markers.size;
+      const correctionFactor = 0.09 * this.markers.size;
 
       for (item of this.markers.values()) {
         if (Math.abs(deviation) <= correctionFactor) {
@@ -135,9 +217,19 @@
       }
     }
 
+    private wordGifValidation(processedLetters: Marker[], image: Image) {
+      this.wordLockFlag = false;
+
+      if (image.isValid) {
+        this.showWordGif(processedLetters, image);
+      } else {
+        this.detachWordGif();
+      }
+    }
+
     private processLetters() {
       let deviation: number;
-      const processedLetters: object[] = [];
+      const processedLetters: Marker[] = [];
 
       this.markersStats.clearValues();
 
@@ -145,9 +237,13 @@
 
       deviation = this.markersStats.deviation;
 
-      this.addProcessedLetters({ deviation, processedLetters });
+      this.addProcessedLetters(deviation, processedLetters);
 
-      this.setWord(processedLetters);
+      if (processedLetters.length > 0 && !this.wordLockFlag) {
+        this.getGifWord(this.setWord(processedLetters)).then((response: Image) => {
+          this.wordGifValidation(processedLetters, response);
+        });
+      }
     }
   }
 </script>

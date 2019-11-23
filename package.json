@@ -7,7 +7,9 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit --coverage",
+    "jest:update": "jest --updateSnapshot",
+    "coverage": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -27,19 +29,59 @@
     "vuex-module-decorators": "^0.10.1"
   },
   "devDependencies": {
-    "@types/chai": "^4.1.0",
-    "@types/mocha": "^5.2.4",
+    "@types/jest": "^24.0.22",
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-e2e-nightwatch": "^4.0.5",
     "@vue/cli-plugin-pwa": "^3.11.0",
     "@vue/cli-plugin-typescript": "^3.11.0",
-    "@vue/cli-plugin-unit-mocha": "^3.11.0",
+    "@vue/cli-plugin-unit-jest": "^4.0.5",
     "@vue/cli-service": "^3.11.0",
     "@vue/test-utils": "1.0.0-beta.29",
-    "chai": "^4.1.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.9.0",
+    "codacy-coverage": "^3.4.0",
+    "coveralls": "^3.0.7",
+    "jest": "^24.9.0",
+    "jest-transform-stub": "^2.0.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "ts-jest": "^24.1.0",
     "typescript": "^3.4.3",
+    "vue-jest": "^3.0.5",
     "vue-template-compiler": "^2.6.10"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/src/**/*.{js,ts,vue}",
+      "!**/node_modules/**",
+      "!**/dist/**"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json",
+      "vue"
+    ],
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1",
+      "^.+.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.tsx?$": "ts-jest",
+      ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "<rootDir>/node_modules/(?!@babel\\/runtime)"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/tests/e2e"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testURL": "http://localhost/"
   }
 }
