@@ -3,6 +3,7 @@
 Data|Versão|Descrição|Autor
 -|-|-|-
 15/09|1.0.0|Adição da Versão 1.0 do EAP| João Lucas|
+23/09|2.0.0|Adição da Versão 2.0 do EAP| João Lucas|
 
 # Estrutura Analítica do Projeto
 
@@ -15,3 +16,7 @@ Data|Versão|Descrição|Autor
 ### Versão 1.0
 
 ![EAP 1.0 ArBC](https://i.ibb.co/jZz0Fyt/EAP.png)
+
+### Versão 2.0
+
+![EAP 2.0 ArBC](https://i.ibb.co/NyYz00f/EAP-2-0.png)
