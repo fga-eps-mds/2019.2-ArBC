@@ -14,8 +14,9 @@ Data|Versão|Descrição|Autor
 02/10|1.5.0|Atualizando subtópico 1.1, 1.2 | Rhuan Carlos|
 02/10|1.5.1|Refatoração do subtópico 1.5 | Marcelo Victor|
 02/10|2.0.0|Refatoração do Documento de Arquitetura | Thiago Santos|
-25/11|3.0.0|Alteração link do diagrama de caso de uso | Sérgio Cipriano|
-
+25/11|2.0.1|Alteração link do diagrama de caso de uso | Sérgio Cipriano e Marcelo Victor|
+25/11|3.0.0|Reformulação e Fragmentação do Diagrama de Pacotes | Sérgio Cipriano e Marcelo Victor|
+25/11|3.0.1|Correções de texto e erros ortográficos | Sérgio Cipriano e Marcelo Victor|
 
 # Sumário
 
@@ -61,7 +62,7 @@ Documento de Arquitetura de Software
 ### 1.3 <a name="1_3">Definições, Acrônimos e Abreviações</a>
 
 Abreviação|Significado
-|:-:|:-:|
+|:-:|:-|
 |**MDS**| Métodos de Desenvolvimento de Software|
 |**EPS**| Engenharia de Produto de Software|
 |**MVT**| *Model View Template*|
@@ -101,7 +102,7 @@ Sendo dividido em:</p>
  pattern</i>, e consiste em <i>State</i>, <i>View</i> e <i>Actions</i>, cada uma com suas respectivas funções:</p>
 
  Camada|Função
-|:-:|:-:|
+|:-:|:-|
 |*State*| A fonte dos dados locais da aplicação.
 |*Mutations*| Um mapa do estado atual.
 |*Actions*| As diferentes maneiras de mutar o estado em reação ao usuário.
@@ -118,7 +119,7 @@ Sendo dividido em:</p>
 </p>
 
  Camada|Função
- |:-:|:-:|
+ |:-|:-|
  |*Model*| A camada que interage com o bando de dados.
  |*View*| A camada que interage com o *template* e com a *model*.
  |*Template*| A camada de renderização da página.
@@ -153,32 +154,34 @@ Sendo dividido em:</p>
 
 ### 4.1 <a name="4_1">Diagrama de Casos de Uso</a>
 
-![Diagrama_Caso_Uso_ArBC]((../imagens/documento_de_arquitetura/Diagrama_Caso_Uso_ArBC.jpeg)
+![Diagrama_Caso_Uso_ArBC](../imagens/documento_de_arquitetura/Diagrama_Caso_Uso_ArBC.jpeg)
 
 
 ### 4.2 <a name="4_2">Atores de Casos de Uso</a>
 
 |**Ator**|**Descrição**
-|:-:|:-:|
-|**Usuário**|O usuário, ao utilizar o software, poderá, ao apontar a câmera de seu aparelho (smartphone ou tablet), para algum tipo de letra ou palavra com significado dentro do idioma PT-BR,captar a informação e mostrar ao usuário a respectiva imagem correspondente à informação enviada pela câmera.
+|:-|:-|
+|**Usuário**|O usuário poderá, ao apontar a câmera de seu aparelho para uma palavra, formada por um conjunto de marcadores, e visualizar o gif correspondente dessa palavra. 
 
 ### 4.3 <a name="4_3">Descrições de Casos de Uso</a>
 
 | Caso de uso | Descrição |
-|:-:|:-:|
-| UC01 - Visualizar letra | Mostrar imagem respectiva à letra. |
-| UC02 - Visualizar Palavra | Mostrar imagem respectiva à palavra. |
+|:-|:-|
+| US01 - Leitura de letras | Ler uma ou mais letras. |
+| US02 - Identificar Palavra | Reconhecer corretamenta a palavra exibida. |
+| US03 - Verificar Palavra | Verificar se a palavra já foi cadastrada. |
+| US04 - Visualizar Imagem | Mostrar imagem respectiva a palavra. |
 
 ## 5. <a name="5">Visão Lógica</a>
 
-<p align = "justify">Através de um celular, o usuário acessa o aplicativo pelo navegador, fornece permissão à utilização da câmera e a aponta para uma palavra. Na tela, será mostrada uma imagem correspondente à palavra lida.</p>
+<p align = "justify">Através de um celular o usuário acessa o aplicativo pelo navegador, fornece permissão à utilização da câmera e a aponta para uma palavra. Na tela, será mostrada uma imagem correspondente à palavra lida.</p>
 
 <p align = "justify">No banco de dados, serão armazenadas as letras, palavras e respectivas imagens de cada uma delas. Ao apontar a câmera a uma palavra, uma requisição será feita no <i>back-end</i>, e caso uma palavra seja encontrada,uma imagem correspondente será apresentada ao usuário. Caso tal palavra não seja encontrada, imagens das letras aparecerão.</p>
 
 ## 6. <a name="6">Tamanho e Desempenho</a>
 
-<p align = "justify">A aplicação é executada no navegador como uma <i>PWA</i>. Será feita uma identificação da imagem da câmera, o que demanda um certo processamento do o aparelho. Após sua conclusão, uma requisição será feita para o <i>back-end</i> para buscar a imagem correspondente. A imagem pode ter dimensões variadas e será baixada do servidor, mas não é recomendado que seu tamanho exceda 1MB.</p>
+<p align = "justify">A aplicação é executada no navegador como uma <i>PWA</i>. Será feita uma identificação da imagem da câmera, o que demanda um certo processamento do aparelho. Após sua conclusão, uma requisição será feita para o <i>back-end</i> para buscar a imagem correspondente. A imagem pode ter dimensões variadas e será baixada do servidor, mas não é recomendado que seu tamanho exceda 1MB.</p>
 
 ## 7. <a name="7">Qualidade</a>
 
-<p align = "justify">O aplicativo terá uma interface gráfica simples, disponibilizando apenas o acesso à câmera e mostrando a imagem na tela do usuário quando apontada a uma letra ou palavra. O estilo será feito utilizando <i>HTML</i> e <i>CSS</i>.</p>
+<p align = "justify">O aplicativo terá uma interface gráfica simples, disponibilizando acesso à câmera, links para se obter mais informações sobre o produto e disponibilização dos marcadores para download. Na parte da câmera, que é a alma da aplicação, será realizado a identificação dos marcadores e exibição dos gifs.</p>
