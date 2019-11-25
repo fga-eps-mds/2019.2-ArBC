@@ -21,10 +21,10 @@ describe('LettersModule.ts', () => {
     lettersModule = getModule(LettersModule, store);
 
     API.get = jest.fn().mockReturnValue([
-      {name: 'A', image: 'https://giphy.com/gifs/new-girl-YVvTCqTBglkOs'},
-      {name: 'R', image: 'https://giphy.com/gifs/teachersseries-tv-land-teacher-26Bl15BW6nqVoYUDK'},
-      {name: 'B', image: 'https://giphy.com/gifs/japan-jet-alt-BemKqR9RDK4V2'},
-      {name: 'C', image: 'https://giphy.com/gifs/coffee-gif-brockurealities-DrJm6F9poo4aA'},
+      { name: 'A', image: 'https://giphy.com/gifs/new-girl-YVvTCqTBglkOs'},
+      { name: 'R', image: 'https://giphy.com/gifs/teachersseries-tv-land-teacher-26Bl15BW6nqVoYUDK'},
+      { name: 'B', image: 'https://giphy.com/gifs/japan-jet-alt-BemKqR9RDK4V2'},
+      { name: 'C', image: 'https://giphy.com/gifs/coffee-gif-brockurealities-DrJm6F9poo4aA'},
     ]);
   });
 
