@@ -3,7 +3,7 @@ import 'regenerator-runtime/runtime';
 import { createLocalVue, mount, Wrapper } from '@vue/test-utils';
 import Vue from 'vue';
 import Camera from '@/components/Camera.vue';
-import { Marker , Word } from '@/store/models';
+import { Image, Marker, Word } from '@/store/models';
 import store from '@/store';
 import LettersModule from '@/store/modules/letters';
 import WordsModule from '@/store/modules/words';
@@ -13,6 +13,7 @@ import { getModule } from 'vuex-module-decorators';
 import API from '@/services/api';
 
 import generateMarkers from './helpers/generateFakeMarkers';
+import generateFakeMarkers from './helpers/generateFakeMarkers';
 
 let camera: any;
 let cameraWrapper: Wrapper<Camera>;
@@ -21,6 +22,7 @@ let wordsModule: WordsModule;
 
 beforeAll(async () => {
   Vue.config.ignoredElements = ['a-scene', 'a-entity', 'a-marker'];
+  Vue.config.silent = true;
   const localVue = createLocalVue();
 
   API.get = jest.fn().mockReturnValueOnce([
@@ -94,6 +96,27 @@ describe('Camera.vue', () => {
     expect(marker.scale).toBe(Obj3d.scale);
   });
 
+  test('Marker component being changed', () => {
+    const marker: Marker = generateMarkers(1)[0];
+
+    const Obj3d: THREE.Object3D = new THREE.Object3D();
+    Obj3d.position.set(0.5, 0.7, 0.9);
+    Obj3d.quaternion.set(0.7, 1.42, 1.53, 2.31);
+    Obj3d.scale.set(1.12, 1.21, 1.32);
+
+    const target = {
+      key: 'K',
+      object3D: Obj3d,
+    };
+
+    camera.changeMarkerObject(marker, target);
+
+    expect(target.object3D.position).toEqual(marker.position);
+    expect(target.object3D.scale.x).toBeCloseTo(marker.scale.x * 2.5, 5);
+    expect(target.object3D.scale.y).toBeCloseTo(marker.scale.y * 2.5, 5);
+    expect(target.object3D.scale.z).toBeCloseTo(marker.scale.z * 2.5, 5);
+  });
+
   describe('Rendering components', () => {
     test('Scene being rendered', () => {
       expect(cameraWrapper.find('a-scene').exists()).toBe(true);
@@ -121,14 +144,73 @@ describe('Camera.vue', () => {
     });
   });
 
-  describe('Component being destroyed', () => {
-    jest.useFakeTimers();
+  describe('Attaching and dettaching word and letters entities', () => {
+    describe('show Word gif', () => {
+      let refWordGif: any;
+      let markers: Marker[];
+      let image: Image;
 
-    test('It restore the processHandler property', () => {
-      cameraWrapper.destroy();
+      beforeEach(() => {
+        refWordGif = camera.$refs.wordGif;
+        refWordGif.isPlaying = false;
 
-      expect(clearInterval).toBeCalledTimes(1);
-      expect(camera.processHandler).toBeFalsy();
+        camera.detachLettersGifs = jest.fn();
+        refWordGif.play.mockClear();
+
+        markers = generateFakeMarkers(5, true);
+        image = {
+          url: 'https://gph.is/1v6FYQX',
+          isValid: true,
+        };
+      });
+
+      test('WordGif is not playing', async () => {
+        camera.showWordGif(markers, image);
+
+        await camera.$nextTick();
+
+        expect(camera.detachLettersGifs).toBeCalledTimes(1);
+
+        expect(refWordGif.play).toBeCalledTimes(1);
+      });
+
+      test('WordGif is playing', () => {
+        refWordGif.isPlaying = true;
+        camera.showWordGif(markers, image);
+
+        expect(camera.detachLettersGifs).toBeCalledTimes(1);
+
+        expect(refWordGif.play).toBeCalledTimes(0);
+      });
+    });
+
+    describe('detach word gif', () => {
+      let refWordGif: any;
+
+      beforeEach(() => {
+        refWordGif = camera.$refs.wordGif;
+
+        camera.atachLettersGifs = jest.fn();
+        refWordGif.pause.mockClear();
+      });
+
+      test('WordGif is not playing', () => {
+        refWordGif.isPlaying = false;
+        camera.detachWordGif();
+
+        expect(camera.atachLettersGifs).toBeCalledTimes(1);
+
+        expect(refWordGif.pause).toBeCalledTimes(0);
+      });
+
+      test('WordGif is playing', () => {
+        refWordGif.isPlaying = true;
+        camera.detachWordGif();
+
+        expect(camera.atachLettersGifs).toBeCalledTimes(1);
+
+        expect(refWordGif.pause).toBeCalledTimes(1);
+      });
     });
   });
 
@@ -210,6 +292,17 @@ describe('Camera.vue', () => {
         expect(camera.wordLockFlag).toEqual(true);
         expect(returnValue).resolves.toBe(word.image);
       });
+    });
+  });
+
+  describe('Component being destroyed', () => {
+    jest.useFakeTimers();
+
+    test('It restore the processHandler property', () => {
+      cameraWrapper.destroy();
+
+      expect(clearInterval).toBeCalledTimes(1);
+      expect(camera.processHandler).toBeFalsy();
     });
   });
 });
