@@ -14,7 +14,7 @@ Data|Versão|Descrição|Autor
 02/10|1.5.0|Atualizando subtópico 1.1, 1.2 | Rhuan Carlos|
 02/10|1.5.1|Refatoração do subtópico 1.5 | Marcelo Victor|
 02/10|2.0.0|Refatoração do Documento de Arquitetura | Thiago Santos|
-
+25/11|3.0.0|Alteração link do diagrama de caso de uso | Sérgio Cipriano|
 
 
 # Sumário
@@ -28,8 +28,9 @@ Data|Versão|Descrição|Autor
  2. [Representação da Arquitetura](#2)
   - 2.1 [Front-end](#2_1)
   - 2.2 [Back-end](#2_2)
-  - 2.3 [Diagrama de relações](#2_3)
-  - 2.4 [Diagrama de pacotes](#2_4)
+  - 2.3 [Diagrama de Relações](#2_3)
+  - 2.4 [Diagrama de Pacotes do Front](#2_4)
+  - 2.5 [Diagrama de Pacotes da Back](#2_5)
  3. [Metas e Restrições de Arquitetura](#3)
   - 3.1 [Metas](#3_1)
   - 3.2 [Restrições](#3_2)
@@ -101,9 +102,9 @@ Sendo dividido em:</p>
 
  Camada|Função
 |:-:|:-:|
- |*State*| A fonte dos dados locais da aplicação.
- |*Mutations*| Um mapa do estado atual.
- |*Actions*| As diferentes maneiras de mutar o estado em reação ao usuário.
+|*State*| A fonte dos dados locais da aplicação.
+|*Mutations*| Um mapa do estado atual.
+|*Actions*| As diferentes maneiras de mutar o estado em reação ao usuário.
 
  <p align="justify">O <i>Vue.js</i> adota em sua própria maneira o modelo acima, substituindo a <i>View</i> por <i> Vue
   Components</i> e, além disso, insere as <i>Mutations</i> que de maneira geral alteram o estado.
@@ -126,11 +127,13 @@ Sendo dividido em:</p>
 
 ![Diagrama_Relações](../imagens/documento_de_arquitetura/Diagrama_Relações.jpeg)
 
-### 2.4 <a name="2_4">Diagrama de Pacotes</a>
+### 2.4 <a name="2_4">Diagrama de Pacotes do Front</a>
 
-![Diagrama_de_Pacotes](../imagens/documento_de_arquitetura/Diagrama_de_Pacotes.jpeg)
+![Diagrama_de_Pacotes_Front](../imagens/documento_de_arquitetura/Diagrama_de_Pacotes_Front.jpeg)
 
-<p align = "justify"></p>
+### 2.4 <a name="2_4">Diagrama de Pacotes do Back</a>
+
+![Diagrama_de_Pacotes_Back](../imagens/documento_de_arquitetura/Diagrama_de_Pacotes_Back.jpeg)
 
 ## 3. <a name="3">Metas e Restrições de Arquitetura</a>
 
@@ -150,7 +153,7 @@ Sendo dividido em:</p>
 
 ### 4.1 <a name="4_1">Diagrama de Casos de Uso</a>
 
-![Diagrama_Caso_Uso_ArBC](https://user-images.githubusercontent.com/36544528/64479740-7088fe00-d191-11e9-8f9c-911f075961e5.jpeg)
+![Diagrama_Caso_Uso_ArBC]((../imagens/documento_de_arquitetura/Diagrama_Caso_Uso_ArBC.jpeg)
 
 
 ### 4.2 <a name="4_2">Atores de Casos de Uso</a>
