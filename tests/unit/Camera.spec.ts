@@ -145,6 +145,24 @@ describe('Camera.vue', () => {
   });
 
   describe('Attaching and dettaching word and letters entities', () => {
+    test('attach Letters gifs', async () => {
+      const letters = camera.$refs.letterGif;
+      camera.atachLettersGifs();
+      await camera.$nextTick();
+      letters.forEach((entity: any) => {
+        expect(entity.object3D.visible).toBe(true);
+      });
+    });
+
+    test('detach Letters gifs', async () => {
+      const letters = camera.$refs.letterGif;
+      camera.detachLettersGifs();
+      await camera.$nextTick();
+      letters.forEach((entity: any) => {
+        expect(entity.object3D.visible).toBe(false);
+      });
+    });
+
     describe('show Word gif', () => {
       let refWordGif: any;
       let markers: Marker[];
