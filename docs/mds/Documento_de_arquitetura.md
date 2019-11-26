@@ -1,4 +1,4 @@
-# Histórico de Versões
+    # Histórico de Versões
 
 Data|Versão|Descrição|Autor
 -|-|-|-
@@ -132,7 +132,7 @@ Sendo dividido em:</p>
 
 ![Diagrama_de_Pacotes_Front](../imagens/documento_de_arquitetura/Diagrama_de_Pacotes_Front.jpeg)
 
-### 2.4 <a name="2_4">Diagrama de Pacotes do Back</a>
+### 2.5 <a name="2_5">Diagrama de Pacotes do Back</a>
 
 ![Diagrama_de_Pacotes_Back](../imagens/documento_de_arquitetura/Diagrama_de_Pacotes_Back.jpeg)
 

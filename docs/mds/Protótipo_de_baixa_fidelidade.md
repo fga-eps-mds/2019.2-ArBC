@@ -9,6 +9,7 @@ Data|Versão|Descrição|Autor
 27/09|1.2.0|Adição do item 3| João Henrique Paulino|
 27/09|1.3.0|Adição do item 4| João Henrique Paulino|
 27/09|1.4.0|Adição do item 2| Rhuan Carlos e Igor Batista|
+26/11|1.4.1|Alteração do tamanho das imagens e de referências| Sérgio Cipriano|
 
 # Sumário
 
@@ -42,7 +43,7 @@ ___
 ##### 1.4 <a name="1_4">  Referências:</a>
 
 <p align="left">
-https://startupsorocaba.com/startup-sorocaba-o-que-sao-prototipos-de-baixa-e-alta-fidelidade/
+O que são protótipos de baixa e alta fidelidade. Startup Sorocaba, 2019. Disponível em: https://startupsorocaba.com/startup-sorocaba-o-que-sao-prototipos-de-baixa-e-alta-fidelidade/. Acesso em: 27 de set. de 2019.
 </p>
 
 ##### 1.5 <a name="1_5">Visão geral</a>
@@ -68,7 +69,8 @@ O sistema dispõem dos seguintes recursos:<br />
 </ul>
 
 ### 4. <a name="4">Imagens do Protótipo de Baixa Fidelidade</a>
-<img src="../imagens/low_fidelity_prototype/Component 1.png" />
-<img src="../imagens/low_fidelity_prototype/Component 2.png" />
-<img src="../imagens/low_fidelity_prototype/Component 3.png" />
-<img src="../imagens/low_fidelity_prototype/Component 4.png" />
+<img src="../imagens/low_fidelity_prototype/Component 1.png" width="150"/>
+<img src="../imagens/low_fidelity_prototype/Component 2.png" width="150"/>
+<br>
+<img src="../imagens/low_fidelity_prototype/Component 3.png" width="250"/>
+<img src="../imagens/low_fidelity_prototype/Component 4.png" width="250"/>
