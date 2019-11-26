@@ -17,6 +17,7 @@ Data|Versão|Descrição|Autor
 25/11|2.0.1|Alteração link do diagrama de caso de uso | Sérgio Cipriano e Marcelo Victor|
 25/11|3.0.0|Reformulação e Fragmentação do Diagrama de Pacotes | Sérgio Cipriano e Marcelo Victor|
 25/11|3.0.1|Correções de texto e erros ortográficos | Sérgio Cipriano e Marcelo Victor|
+26/11|3.0.1|Atualização do Diagrama de Caso de Uso | Sérgio Cipriano|
 
 # Sumário
 
