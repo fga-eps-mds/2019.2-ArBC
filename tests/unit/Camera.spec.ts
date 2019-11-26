@@ -321,9 +321,10 @@ describe('Camera.vue', () => {
       it('Shows the word gif', () => {
         camera.showWordGif = jest.fn()
           .mockImplementationOnce(() => camera.showWordGif);
-  
+
         camera.wordGifValidation(processedLetters, image);
 
+        expect(camera.wordLockFlag).toEqual(false);
         expect(camera.showWordGif).toBeCalledTimes(1);
         expect(camera.showWordGif).toBeCalledWith(processedLetters, image);
       });
@@ -339,9 +340,10 @@ describe('Camera.vue', () => {
       it('Detaches the word gif', () => {
         camera.detachWordGif = jest.fn()
           .mockImplementationOnce(() => camera.detachWordGif);
-  
+
         camera.wordGifValidation(processedLetters, image);
 
+        expect(camera.wordLockFlag).toEqual(false);
         expect(camera.detachWordGif).toBeCalledTimes(1);
       });
     });

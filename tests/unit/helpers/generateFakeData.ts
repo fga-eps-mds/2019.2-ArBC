@@ -2,8 +2,9 @@ import { Marker } from '@/store/models';
 
 export const randomNum = (integer: boolean = false): number => {
   const realNumber = Math.random() * 10;
+
   return integer ? (Math.round(realNumber)) : (realNumber);
-}  
+};
 
 export const fakeLetter = (): string => {
   const max: number = 'A'.charCodeAt(0);
