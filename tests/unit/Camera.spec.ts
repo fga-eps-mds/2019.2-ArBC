@@ -11,9 +11,7 @@ import * as THREE from 'three';
 import AEntity from './__mocks__/Entity.vue';
 import { getModule } from 'vuex-module-decorators';
 import API from '@/services/api';
-
-import generateMarkers from './helpers/generateFakeMarkers';
-import generateFakeMarkers from './helpers/generateFakeMarkers';
+import { randomNum, fakeMarkers } from './helpers/generateFakeData';
 
 let camera: any;
 let cameraWrapper: Wrapper<Camera>;
@@ -97,7 +95,7 @@ describe('Camera.vue', () => {
   });
 
   test('Marker component being changed', () => {
-    const marker: Marker = generateMarkers(1)[0];
+    const marker: Marker = fakeMarkers(1)[0];
 
     const Obj3d: THREE.Object3D = new THREE.Object3D();
     Obj3d.position.set(0.5, 0.7, 0.9);
@@ -175,7 +173,7 @@ describe('Camera.vue', () => {
         camera.detachLettersGifs = jest.fn();
         refWordGif.play.mockClear();
 
-        markers = generateFakeMarkers(5, true);
+        markers = fakeMarkers(5, true);
         image = {
           url: 'https://gph.is/1v6FYQX',
           isValid: true,
@@ -251,8 +249,8 @@ describe('Camera.vue', () => {
 
     describe('When there is more than one marker', () => {
       let expectedWord: string = '';
-      const wordLength: number = Math.round(Math.random() * 10);
-      const processedLetters: Marker[] = generateMarkers(wordLength, true);
+      const wordLength: number = randomNum(true);
+      const processedLetters: Marker[] = fakeMarkers(wordLength, true);
 
       processedLetters.forEach((marker: Marker) => {
         expectedWord = expectedWord + `${marker.key}`;
@@ -309,6 +307,42 @@ describe('Camera.vue', () => {
 
         expect(camera.wordLockFlag).toEqual(true);
         expect(returnValue).resolves.toBe(word.image);
+      });
+    });
+  });
+  describe('wordGifValidation', () => {
+    describe('word gif is valid', () => {
+      const processedLetters: Marker[] = fakeMarkers(randomNum(true), true);
+      const image: Image = {
+        url: 'https://gph.is/YZCZdD',
+        isValid: true,
+      };
+
+      it('Shows the word gif', () => {
+        camera.showWordGif = jest.fn()
+          .mockImplementationOnce(() => camera.showWordGif);
+  
+        camera.wordGifValidation(processedLetters, image);
+
+        expect(camera.showWordGif).toBeCalledTimes(1);
+        expect(camera.showWordGif).toBeCalledWith(processedLetters, image);
+      });
+    });
+
+    describe('word gif isn\'t valid', () => {
+      const processedLetters: Marker[] = fakeMarkers(randomNum(true), true);
+      const image: Image = {
+        url: 'https://gph.is/g/4AvxqV7',
+        isValid: false,
+      };
+
+      it('Detaches the word gif', () => {
+        camera.detachWordGif = jest.fn()
+          .mockImplementationOnce(() => camera.detachWordGif);
+  
+        camera.wordGifValidation(processedLetters, image);
+
+        expect(camera.detachWordGif).toBeCalledTimes(1);
       });
     });
   });
