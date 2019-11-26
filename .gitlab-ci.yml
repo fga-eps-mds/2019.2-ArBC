@@ -60,7 +60,7 @@ release_development:
     name: development
     url: https://arbc-dev.netlify.com/
   only: 
-    - update_pipeline
+    - develop
 
 release_staging:
   extends: .release
@@ -68,7 +68,7 @@ release_staging:
     name: staging
     url: https://arbc-stg.netlify.com/
   only: 
-    - update_pipeline
+    - develop
     
 release_production:
   extends: .release
@@ -76,5 +76,5 @@ release_production:
     name: production
     url: https://arbc.netlify.com/
   only:
-    - update_pipeline
+    - master
 
