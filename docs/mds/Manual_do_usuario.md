@@ -3,6 +3,7 @@
 Data|Versão|Descrição|Autor
 -|-|-|-
 26/11|1.0.0|Adição do template do Documento| Sérgio Cipriano|
+26/11|1.1.0|Adição dos tópicos 1 e 2| Marcelo Victor|
 
 
 # Sumário
@@ -25,22 +26,42 @@ ___
 
 #### 1.1 <a name="1_1">O que é o ArBC</a>
 
+<p align="justify"> &emsp;&emsp; O ArBC é um software com intuito de alfabetizar crianças através da tecnologia de realidade aumentada, que
+possibilita a visualização de Gifs de acordo com a palavra a ser aprendida. </p>
+
 #### 1.2 <a name="1_2">Como usamos realidade aumentada</a>
+
+<p align="justify"> &emsp;&emsp; Utilizamos a realidade aumentada como um meio mais interativo e lúdico para a alfabetização da criança, 
+ocorrendo isso a partir da combinação de letras que quando formada uma palavra é mostrado um Gif que a representa. </p>
 
 ### 2. <a name="2">Usuários</a>
 
 #### 2.1 <a name="2_1">Papel do professor</a>
 
+<p align="justify"> &emsp;&emsp; Ensinar as crianças a utilizar a tecnologia e a partir disso tornar a atividade de alfabetização
+muito mais divertida e interativa. </p>
+
 #### 2.2 <a name="2_2">Como guiar a criança</a>
+
+<p align="justify"> &emsp;&emsp; O professor de acordo com sua metodologia de aula, pode introduzir a tecnologia através de diversas
+atividades didáticas que promoverão a interação entre as crianças e o software juntamente aos marcadores para facilitar a aprendizagem. </p>
 
 ### 3. <a name="3">Funcionalidades</a>
 
 #### 3.1 <a name="3_1">Usando marcadores para mostrar um gif</a>
 
+<p align="justify"> &emsp;&emsp;  </p>
+
 #### 3.2 <a name="3_2">Adicionando novos gifs</a>
+
+<p align="justify"> &emsp;&emsp;  </p>
 
 ### 4. <a name="4">Como nos contactar</a>
 
 #### 4.1 <a name="4_1">Membros do time</a>
 
+<p align="justify"> &emsp;&emsp;  </p>
+
 #### 4.2 <a name="4_2">Informações adicionais</a>
+
+<p align="justify"> &emsp;&emsp;  </p>
