@@ -52,7 +52,7 @@ O que são protótipos de baixa e alta fidelidade. Startup Sorocaba, 2019. Dispo
 * **Introdução:** no qual é introduzido os detalhes gerais sobre a visão do projeto;
 * **Visão Geral do Protótipo do Produto:** esta seção fornece uma visualização de alto nível das capacidades do produto e da sua interface;
 * **Funcionalidades:** descrevendo como a interface irá funcionar;
-* **Imagens do Protótipo de Baixa Fidelidade:** representação inicial e com baixa fidelidade de como será o modelo final;
+* **Imagens do Protótipo de Alta Fidelidade:** representação inicial e com baixa fidelidade de como será o modelo final;
 
 ### 2. <a name="2">Visão Geral do Protótipo do Produto</a>
 
@@ -69,7 +69,7 @@ O sistema dispõem dos seguintes recursos:<br />
   <li>Reconhecimento e ilustração de palavra ao posicionar a câmera sobre os marcadores das letras que a representam.</li>
 </ul>
 
-### 4. <a name="4">Imagens do Protótipo de Baixa Fidelidade</a>
+### 4. <a name="4">Imagens do Protótipo de Alta  Fidelidade</a>
 <img src="../imagens/prototipo_de_alta_fidelidade/Component 1.png" width="150"/>
 <img src="../imagens/prototipo_de_alta_fidelidade/Component 2.png" width="150"/>
 <br>
