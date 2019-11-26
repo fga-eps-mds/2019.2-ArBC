@@ -10,16 +10,16 @@
 
 ### 2.1 Backlog da Sprint
 
-| ID | Issue | Status |
-|:--:| ------- | :----: |
-| Issue | [Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/5) | Fechada |
-| Issue | [Estudo de JavaScript](https://github.com/fga-eps-mds/2019.2-arbc/issues/14) | Fechada |
-| Issue | [Estudo de Python](https://github.com/fga-eps-mds/2019.2-arbc/issues/24)| Fechada |
-| Issue | [Conexão com a Câmera](https://github.com/fga-eps-mds/2019.2-arbc/issues/21) | Fechada |
-| Issue | [Código de Conduta](https://github.com/fga-eps-mds/2019.2-arbc/issues/33) | Fechada |
-|Issue | [Logo](https://github.com/fga-eps-mds/2019.2-arbc/issues/16)| Aberta |
+| ID | Issue | Pontuação|Status |
+|:--:| ------- | :----: | :----: |
+| Issue | [Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/5) |5| Fechada |
+| Issue | [Estudo de JavaScript](https://github.com/fga-eps-mds/2019.2-arbc/issues/14) |3| Fechada |
+| Issue | [Estudo de Python](https://github.com/fga-eps-mds/2019.2-arbc/issues/24)| 3|Fechada |
+| Issue | [Conexão com a Câmera](https://github.com/fga-eps-mds/2019.2-arbc/issues/21) |2| Fechada |
+| Issue | [Código de Conduta](https://github.com/fga-eps-mds/2019.2-arbc/issues/33) |2| Fechada |
+|Issue | [Logo](https://github.com/fga-eps-mds/2019.2-arbc/issues/16)| 8|Aberta |
 
-### 2.3 Pontuação Final
+### 2.2 Pontuação Final
 
 * __Pontuação Total:__ 23
 * __Pontos Concluídos:__ 15
@@ -50,9 +50,15 @@
 ![](https://i.ibb.co/wwNrHhQ/conh2.png)
 
 ----
+## 7. Presença _Daily_
 
-## 7. Visão do _Scrum Master_
+![](https://i.ibb.co/jvW3KzQ/Captura-de-tela-de-2019-11-17-16-08-58.png)
+![](https://i.ibb.co/dD4qWKG/Captura-de-tela-de-2019-11-17-16-08-01.png)
 
-<p align="justify">&emsp;&emsp; Começamos a nos desesperar agora, a R1 está chegando e devemos começar a nos preocupar, ao menos a Conexão da Câmera foi um sucesso, sinceramente achei que eles precisariam de mais tempo para a realização da feature, que bom que deu certo. A Logo que antes tinha uma pontuação de 3 mudou para 8 pela dificuldade que o grupo teve para criar uma que expresse o tema lúdico e infantil que o trabalho tem. Esperamos que na próxima sprint não tenhamos tal problema.
+-------------
+
+## 8. Visão do _Scrum Master_
+
+<p align="justify">&emsp;&emsp; Começamos a nos desesperar agora, a R1 está chegando e devemos começar a nos preocupar, ao menos a Conexão da Câmera foi um sucesso, sinceramente achei que eles precisariam de mais tempo para a realização da feature, que bom que deu certo. A Logo que antes tinha uma pontuação de 3 mudou para 8 pela dificuldade que o grupo teve para criar uma que expresse o tema lúdico e infantil que o trabalho tem. Esperamos que na próxima sprint não tenhamos tal problema. </p>
 
 ![](https://media.giphy.com/media/oyFyFiXz0hrnG/giphy.gif)
