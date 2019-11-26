@@ -9,17 +9,17 @@
 
 ### 2.1 Backlog da Sprint
 
-| ID | Issue | Status |
-|:--:| ------- | :----: |
-| Issue | [Correção das Patterns](https://github.com/fga-eps-mds/2019.2-arbc/issues/48) | Fechada |
-| Issue | [Melhorias e correções no Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/49) | Fechada |
-| Issue | [Configurar Deploy Contínuo](https://github.com/fga-eps-mds/2019.2-arbc/issues/50) | Fechada |
-| Issue | [Correções Documento de Visão](https://github.com/fga-eps-mds/2019.2-arbc/issues/67) | Fechada |
-| Issue | [Correções Diagramas do Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/72) | Fechada |
+| ID | Issue | Pontuação | Status |
+|:--:| ------- | :----: | :----: |
+| Issue | [Correção das Patterns](https://github.com/fga-eps-mds/2019.2-arbc/issues/48) | 3 | Fechada |
+| Issue | [Melhorias e correções no Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/49) | 1 | Fechada |
+| Issue | [Configurar Deploy Contínuo](https://github.com/fga-eps-mds/2019.2-arbc/issues/50) | 5 |Fechada |
+| Issue | [Correções Documento de Visão](https://github.com/fga-eps-mds/2019.2-arbc/issues/67) | 1| Fechada |
+| Issue | [Correções Diagramas do Documento de Arquitetura](https://github.com/fga-eps-mds/2019.2-arbc/issues/72) |1| Fechada |
+| Issue | [Correção Leitura da Letra](https://github.com/fga-eps-mds/2019.2-arbc/issues/65) | 2| Fechada |
 
 
-
-### 2.3 Pontuação Final
+### 2.2 Pontuação Final
 
 * __Pontuação Total:__ 13
 * __Pontos Concluídos:__ 13
@@ -52,7 +52,14 @@
 
 ---
 
-## 7. Visão do _Scrum Master_
+## 7. Presença _Daily_
+
+![](https://i.ibb.co/7QvPrF5/5a.png)
+![](https://i.ibb.co/YLLNCFL/5b.png)
+
+---------
+
+## 8. Visão do _Scrum Master_
 
 <p align="justify">&emsp;&emsp; Os meninos de MDS estão pegando o jeito da disciplina, fizemos treinamentos dos conteúdos de EPS para a Release e acredito que farão um boa apresentação, a sprint como o foco foi na correção de bugs fizeram um bom trabalho em completar toda a pontuação da sprint e aguardamos que continuem assim, agora vamos chegar chegando para a apresentação da Release.  </p>
 

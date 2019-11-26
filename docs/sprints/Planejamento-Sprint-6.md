@@ -1,14 +1,13 @@
-## 1. Objetivo da _Sprint 5_
+## 1. Objetivo da _Sprint 6_
 
-<p align="justify">Esta <i>Sprint</i> tem como objetivo:</p>
+<p align="justify">Como a Release se aproxima, está sprint tem o foco de fazer correções e refatorações do Produto: </p>
 
 
-* Correção das Patterns
-* Melhorias e correções no Documento de Arquitetura
-* Configurar Deploy Contínuo
-* Correções Documento de Visão
-* Correções dos Diagramas do Documento de Arquitetura
-* Correção Leitura da Letra
+* Configurar Estado da Aplicação
+* Correção dos Diagramas de Caso de Uso
+* Aprimorar do Diagrama de Pacotes
+* Planejamento da R1
+* Easter Eggs
 
 ## 2. Papéis
 
@@ -55,9 +54,9 @@ Os papéis dos EPS serão mantidos até a _Release 1_, porém nessa sprint, assi
 
 ## 3. Tamanho da _Sprint_
 
-| Data de Início | 29/09/2019 |
+| Data de Início | 06/10/2019 |
 |:--|:--:|
-| **Data de Término** | **05/10/2019** |
+| **Data de Término** | **12/10/2019** |
 | **Duração** | **7 dias** |
 
 
@@ -68,7 +67,7 @@ Os papéis dos EPS serão mantidos até a _Release 1_, porém nessa sprint, assi
 
 ## 5. Sprint Backlog
 
-A Milestone da _Sprint_ 5 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/6)
+A Milestone da _Sprint_ 6 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/7)
 
 ## 6. Débitos Acumulados
 

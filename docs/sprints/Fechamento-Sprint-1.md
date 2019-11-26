@@ -10,15 +10,15 @@
 
 ### 2.1 Backlog da Sprint
 
-| ID | Issue | Status |
-|:--:| ------- | :----: |
-| Issue | [Documento de Visão](https://github.com/fga-eps-mds/2019.2-arbc/issues/4) | Fechada |
-| Issue | [Ambiente Desenvolvimento](https://github.com/fga-eps-mds/2019.2-arbc/issues/8) | Fechada |
-| - | Definição da Licença| Fechada |
-| - | Criação do Backlog de Produto | Fechada |
-| - | Estudo do Tema e Tecnologias | Fechada |
+| ID | Issue | Pontuação|Status |
+|:--:| ------- | :----: | :----: |
+| Issue | [Documento de Visão](https://github.com/fga-eps-mds/2019.2-arbc/issues/4) | 3|Fechada |
+| Issue | [Ambiente Desenvolvimento](https://github.com/fga-eps-mds/2019.2-arbc/issues/8) |8| Fechada |
+| - | Definição da Licença| -|Fechada |
+| - | Criação do Backlog de Produto | -|Fechada |
+| - | Estudo do Tema e Tecnologias | -|Fechada |
 
-### 2.3 Pontuação Final
+### 2.2 Pontuação Final
 
 * __Pontuação Total:__ 11
 * __Pontos Concluídos:__ 11
@@ -49,9 +49,14 @@
 ![](https://i.ibb.co/KKdGHmJ/conhe1.png)
 
 ----
+## 7. Presença _Daily_
 
-## 7. Visão do _Scrum Master_
+![](https://i.ibb.co/GkXY0rf/Captura-de-tela-de-2019-11-17-16-03-16.png)
+![](https://i.ibb.co/x1Ks1xL/Captura-de-tela-de-2019-11-17-16-04-29.png)
+----
 
-<p align="justify">&emsp;&emsp; Sendo a primeira Sprint do projeto, ainda havia dúvidas do projeto, tentamos exemplificar mais o contexto dele e com isso foi feito o nosso backlog de produto. O ruim que nenhum de nós é design para a logo na próxima sprint então novamente teremos que demandar tempo para estudo da arte visual do projeto. Os MDSs continuam empenhados e animados com o projeto, espero que essa animação continue até o fim do projeto.
+## 8. Visão do _Scrum Master_
+
+<p align="justify">&emsp;&emsp; Sendo a primeira Sprint do projeto, ainda havia dúvidas do projeto, tentamos exemplificar mais o contexto dele e com isso foi feito o nosso backlog de produto. O ruim que nenhum de nós é design para a logo na próxima sprint então novamente teremos que demandar tempo para estudo da arte visual do projeto. Os MDSs continuam empenhados e animados com o projeto, espero que essa animação continue até o fim do projeto. </p>
 
 ![](https://media.giphy.com/media/xT4uQDJXzTDB134msM/giphy.gif)

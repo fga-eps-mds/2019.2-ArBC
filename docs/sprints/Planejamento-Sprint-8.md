@@ -1,18 +1,12 @@
-## 1. Objetivo da _Sprint 5_
+## 1. Objetivo da _Sprint 8_
 
 <p align="justify">Esta <i>Sprint</i> tem como objetivo:</p>
 
-
-* Correção das Patterns
-* Melhorias e correções no Documento de Arquitetura
-* Configurar Deploy Contínuo
-* Correções Documento de Visão
-* Correções dos Diagramas do Documento de Arquitetura
-* Correção Leitura da Letra
+* Identificar Palavra
+*	Documentação back-end e front-end
+*	Documento de instruções do produto
 
 ## 2. Papéis
-
-Os papéis dos EPS serão mantidos até a _Release 1_, porém nessa sprint, assim como a passada, foi definido que o DevOps também fará papel do Arquiteto: </p>
 
 | <img src=" https://i.ibb.co/4gqXmYg/eduardolima.png" width="200" height="200"/>
 |:--:|
@@ -55,20 +49,25 @@ Os papéis dos EPS serão mantidos até a _Release 1_, porém nessa sprint, assi
 
 ## 3. Tamanho da _Sprint_
 
-| Data de Início | 29/09/2019 |
+| Data de Início | 20/10/2019 |
 |:--|:--:|
-| **Data de Término** | **05/10/2019** |
+| **Data de Término** | **26/10/2019** |
 | **Duração** | **7 dias** |
 
 
 ## 4. Pareamento
 
-> Não obtivemos Pareamentos definidos nessa Sprint
+
+|Issues| Duplas |
+|:--|:--:|
+| [Identificar Palavra](https://github.com/fga-eps-mds/2019.2-ArBC/issues/10) | Igor, João Henrique e Rhuan|
+| [Documentação back-end e front-end](https://github.com/fga-eps-mds/2019.2-ArBC-API/issues/97) | João Henrique e Marcelo |
+| [Documento de instruções do produto](https://github.com/fga-eps-mds/2019.2-ArBC/issues/96) | Sérgio e Thiago |
 
 
 ## 5. Sprint Backlog
 
-A Milestone da _Sprint_ 5 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/6)
+A Milestone da _Sprint_ 8 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/9)
 
 ## 6. Débitos Acumulados
 
