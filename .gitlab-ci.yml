@@ -50,23 +50,31 @@ build:
 
     - npm install
     - npm i -g netlify-cli
-    - netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_AUTH_TOKEN --prod
+    - npm run build
   dependencies:
     - build
-    
-release_production:
-  extends: .release
-  environment: production
-  only:
-    - tags
-  except:
-   - ^(?!master).+@/
 
 release_development:
   extends: .release
   environment: 
     name: development
-    url: https://arbc-lab.netlify.com
+    url: https://arbc-dev.netlify.com/
   only: 
-    - master
+    - update_pipeline
+
+release_staging:
+  extends: .release
+  environment: 
+    name: staging
+    url: https://arbc-stg.netlify.com/
+  only: 
+    - update_pipeline
+    
+release_production:
+  extends: .release
+  environment: 
+    name: production
+    url: https://arbc.netlify.com/
+  only:
+    - update_pipeline
 
