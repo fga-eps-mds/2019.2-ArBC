@@ -23,7 +23,7 @@ describe('WordsModule.ts', () => {
       if (word === '/Word/DOMINGO') {
         return {
           name: 'DOMINGO',
-          image: 'https://giphy.com/gifs/lol-FQaQtdbLnk676',
+          image: 'https://gph.is/1LeL7Qh',
         };
       } else {
         throw new Error('invalidastes?');
@@ -39,7 +39,7 @@ describe('WordsModule.ts', () => {
     const word: Word = {
       name: 'PATO',
       image: {
-        url: 'https://giphy.com/gifs/duck-2ATElMHGKoVeo',
+        url: 'https://gph.is/1sG3OZT',
         isValid: true,
       },
     };
@@ -54,7 +54,7 @@ describe('WordsModule.ts', () => {
   test('Valid word is being requested and doesn\'t exists in store', async () => {
     const image: Image = await wordsModule.getWord('DOMINGO');
     expect(image).toMatchObject({
-      url: 'https://giphy.com/gifs/lol-FQaQtdbLnk676',
+      url: 'https://gph.is/1LeL7Qh',
       isValid: true,
     });
   });
@@ -71,7 +71,7 @@ describe('WordsModule.ts', () => {
     const word: Word = {
       name: 'BOLA',
       image: {
-        url: 'https://giphy.com/gifs/therighteousgemstones-hbo-gemstones-gemstoneshbo-H21DItDslSGP4lxjBs',
+        url: 'https://gph.is/g/46gweQw',
         isValid: true,
       },
     };
@@ -81,7 +81,7 @@ describe('WordsModule.ts', () => {
     const image: Image = await wordsModule.getWord('BOLA');
 
     expect(image).toMatchObject({
-      url: 'https://giphy.com/gifs/therighteousgemstones-hbo-gemstones-gemstoneshbo-H21DItDslSGP4lxjBs',
+      url: 'https://gph.is/g/46gweQw',
       isValid: true,
     });
   });
