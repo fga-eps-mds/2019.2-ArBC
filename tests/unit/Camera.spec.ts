@@ -310,6 +310,7 @@ describe('Camera.vue', () => {
       });
     });
   });
+
   describe('wordGifValidation', () => {
     describe('word gif is valid', () => {
       const processedLetters: Marker[] = fakeMarkers(randomNum(true), true);
@@ -356,6 +357,7 @@ describe('Camera.vue', () => {
       cameraWrapper.destroy();
 
       expect(clearInterval).toBeCalledTimes(1);
+      expect(clearInterval).toBeCalledWith(camera.processHandler);
       expect(camera.processHandler).toBeFalsy();
     });
   });
