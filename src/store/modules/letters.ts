@@ -25,7 +25,7 @@ export default class LettersModule extends VuexModule {
     );
   }
 
-  @Action
+  @Action({ rawError: true })
   public async getLetters() {
     const url = '/Letter';
 
