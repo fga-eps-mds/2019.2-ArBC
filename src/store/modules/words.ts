@@ -22,7 +22,7 @@ export default class WordsModule extends VuexModule {
     this.words[word.name] = word.image;
   }
 
-  @Action
+  @Action({ rawError: true })
   public async getWord(word: string) {
     if (!this.words.hasOwnProperty(word)) {
       const url = `/Word/${word.toUpperCase()}`;
