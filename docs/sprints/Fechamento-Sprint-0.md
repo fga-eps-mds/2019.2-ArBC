@@ -10,14 +10,14 @@
 
 ### 2.1 Backlog da Sprint
 
-| ID | Issue | Status |
-|:--:| ------- | :----: |
-| Issue | [Testar o Slack](https://github.com/fga-eps-mds/2019.2-arbc/issues/3) | Fechada |
-| Issue | [Dojo de GitFlow](https://github.com/fga-eps-mds/2019.2-arbc/issues/1) | Fechada |
-| Issue | [Dojo de Agile](https://github.com/fga-eps-mds/2019.2-arbc/issues/2) | Fechada |
-| - | Dojo de Docker | Fechada |
+| ID | Issue |Pontuação| Status |
+|:--:| ------- | :----: | :----: |
+| Issue | [Testar o Slack](https://github.com/fga-eps-mds/2019.2-arbc/issues/3) | 2|Fechada |
+| Issue | [Dojo de GitFlow](https://github.com/fga-eps-mds/2019.2-arbc/issues/1) | 1|Fechada |
+| Issue | [Dojo de Agile](https://github.com/fga-eps-mds/2019.2-arbc/issues/2) | 1|Fechada |
+| - | Dojo de Docker |-| Fechada |
 
-### 2.3 Pontuação Final
+### 2.2 Pontuação Final
 
 * __Pontuação Total:__ 4
 * __Pontos Concluídos:__ 4

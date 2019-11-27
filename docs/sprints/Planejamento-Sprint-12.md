@@ -1,18 +1,10 @@
-## 1. Objetivo da _Sprint 5_
+## 1. Objetivo da _Sprint 12_
 
-<p align="justify">Esta <i>Sprint</i> tem como objetivo:</p>
+<p align="justify">Esta <i>Sprint</i> tem como objetivo finalizar os testes e todos os debitos das sprints passadas e deixar tudo preparado para a Release 2.
+</p>
 
-
-* Correção das Patterns
-* Melhorias e correções no Documento de Arquitetura
-* Configurar Deploy Contínuo
-* Correções Documento de Visão
-* Correções dos Diagramas do Documento de Arquitetura
-* Correção Leitura da Letra
 
 ## 2. Papéis
-
-Os papéis dos EPS serão mantidos até a _Release 1_, porém nessa sprint, assim como a passada, foi definido que o DevOps também fará papel do Arquiteto: </p>
 
 | <img src=" https://i.ibb.co/4gqXmYg/eduardolima.png" width="200" height="200"/>
 |:--:|
@@ -55,21 +47,23 @@ Os papéis dos EPS serão mantidos até a _Release 1_, porém nessa sprint, assi
 
 ## 3. Tamanho da _Sprint_
 
-| Data de Início | 29/09/2019 |
+| Data de Início | 17/11/2019 |
 |:--|:--:|
-| **Data de Término** | **05/10/2019** |
+| **Data de Término** | **23/11/2019** |
 | **Duração** | **7 dias** |
 
 
 ## 4. Pareamento
 
-> Não obtivemos Pareamentos definidos nessa Sprint
+> Não haverá Pareamento nessa Sprint
 
 
 ## 5. Sprint Backlog
 
-A Milestone da _Sprint_ 5 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/6)
+A Milestone da _Sprint_ 12 encontra-se neste [link](https://github.com/fga-eps-mds/2019.2-ArBC/milestone/13)
 
 ## 6. Débitos Acumulados
 
-> Não houve
+* Marcadores Físicos
+*	Procurar GIFs
+*	Testar funcionamento da palavra com Marcador Físico
