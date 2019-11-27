@@ -46,7 +46,10 @@ Para conferir os pipelines executados [entre aqui](https://gitlab.com/lucianosz7
 
  - <b>build:</b> O projeto é construido nessa fase, com o auxílio do docker que contém a imagem com as ferramentas de desenvolvimento.
  - <b>test:</b> Nessa fase os testes e o lint do projeto é executado para verificar se não há nenhum erro na aplicação.
-  -  <b>deploy:</b> Nessa fase ocorre o build do projeto novamente, e também o build do projeto para a produção, que é o build nativo do vuejs.
+  -  <b>deploy:</b> Nessa fase ocorre o build do projeto novamente, e também o build do projeto para a produção.
+  - <b>release production:</b> Depois da fase do deploy é lançada o ambiente de produção do backend, onde o backend já está funcional.
+ - <b>release development:</b> Outro ambiente que é lançado logo após a fase de deploy é o ambiente de desenvolvimento, onde estão as ultimas adições referentes ao desenvolvimento da api.
+ - <b>release staging:</b> Que é o ambiente de testes lançado após o deploy da api.
 
 
 ### 4.2. Ambientes
