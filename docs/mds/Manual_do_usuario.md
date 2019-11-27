@@ -6,6 +6,7 @@ Data|Versão|Descrição|Autor
 26/11|1.1.0|Adição dos tópicos 1 e 2| Marcelo Victor|
 26/11|1.2.0|Adição dos tópicos 3 e 4| Marcelo Victor|
 27/11|1.3.0|Recriando o tópico 1| Sérgio Cipriano|
+27/11|1.4.0|Recriando o tópico 2| Sérgio Cipriano|
 
 # Sumário
 
@@ -36,12 +37,17 @@ ___
 
 #### 2.1 <a name="2_1">Papel do professor</a>
 
-<p align="justify"> &emsp;&emsp; O professor possui, sem dúvidas, o papel mais importante no ArBC... </p>
+<p align="justify"> &emsp;&emsp; O professor possui, sem dúvidas, o papel mais importante no ArBC. Quando estávamos fazendo testes nos gifs e no reconhecimento das palavras nos veio uma pergunta "Como vamos fazer o controle dos gifs que entram na aplicação?". Pode não parecer, a primeiro momento, mas essa é uma questão difícil de se responder, já que envolve muitas variáveis.</p>
+
+<p align="justify"> &emsp;&emsp; A princípio, pensamos em dar poder para qualquer pessoa se cadastrar na aplicação, mas como não tinhamos como criar um sistema que validasse se a palavra e o gif seguiam valores adequados para uma criança ter acesso, decidimos restringir esse poder apenas para os professores.</p>
+
+<p align="justify"> &emsp;&emsp; Assim, por esse motivo, o professor possui grande atuação na aplicação. Além de ser um dos responsáveis por guiar a criança nesse processo de aprendizagem, será responsável por adicionar novos gifs e palavras na aplicação. Desse modo, para ter acesso à essas funcionalidades, designadas ao educador, basta entrar em contato que nós daremos todo o suporte e informações necessários para prosseguir.</p>
+
+<p align="justify"> &emsp;&emsp; Pode parecer burocrático, mas esse controle é fundamental para garantir que a criança não tenha acesso a nenhum conteúdo impróprio.</p>
 
 #### 2.2 <a name="2_2">Como guiar a criança</a>
 
-<p align="justify"> &emsp;&emsp; O professor de acordo com sua metodologia de aula, pode introduzir a tecnologia através de diversas
-atividades didáticas que promoverão a interação entre as crianças e o software juntamente aos marcadores para facilitar a aprendizagem. </p>
+<p align="justify"> &emsp;&emsp; O professor, os pais ou responsáveis podem desenolver atividades que envolvam o ArBC, como um caça palavras interativo, por exemplo, ou podem simplesmente utilizar seguindo nosso escopo da aplicação. Independente da metodologia utilizada para alfabetizar, é fundamental que o uso do software seja acompanhado de um responsável que guiará a criança no caminho correto.</p>
 
 ### 3. <a name="3">Funcionalidades</a>
 
