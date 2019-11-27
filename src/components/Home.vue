@@ -35,7 +35,7 @@
   export default class Home extends Vue {
     private cameraCardInfo: object = {
       icon: 'camera_alt',
-      iconColor: '#448aff',
+      iconColor: '#5fad46',
       targetBlank: false,
       path: '/camera',
       content: 'Para acessar a câmera da aplicação, que é usada para fazer \
@@ -43,7 +43,7 @@
     };
     private driveCardInfo: object = {
       icon: 'cloud_download',
-      iconColor: '#5fad46',
+      iconColor: '#448aff',
       targetBlank: true,
       path: 'https://drive.google.com/open?id=1Aa5jXFIh4385wKT36mFFP82zho7BmfBP',
       content: 'O reconhecimento das letras é feito por meio de marcadores, \
