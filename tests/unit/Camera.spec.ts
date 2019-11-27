@@ -9,6 +9,7 @@ import LettersModule from '@/store/modules/letters';
 import WordsModule from '@/store/modules/words';
 import * as THREE from 'three';
 import AEntity from './__mocks__/Entity.vue';
+import AMarker from './__mocks__/AMarker.vue';
 import { getModule } from 'vuex-module-decorators';
 import API from '@/services/api';
 import { randomNum, fakeMarkers } from './helpers/generateFakeData';
@@ -18,7 +19,7 @@ let cameraWrapper: Wrapper<Camera>;
 let lettersModule: LettersModule;
 let wordsModule: WordsModule;
 
-beforeAll(async () => {
+beforeEach(async () => {
   Vue.config.ignoredElements = ['a-scene', 'a-entity', 'a-marker'];
   Vue.config.silent = true;
   const localVue = createLocalVue();
@@ -43,36 +44,37 @@ beforeAll(async () => {
   });
 
   camera = cameraWrapper.vm;
+  await cameraWrapper.vm.$nextTick();
 });
 
 describe('Camera.vue', () => {
   test('Markers being ordered horizontally', () => {
-    const AMarker: Marker = {
+    const Amarker: Marker = {
       key: 'A',
       position: { x: 1.5, y: 2, z: 5.1 },
       quaternion: { x: -1, y: 5, z: 6, w: 4.3 },
       scale: { x: 1.2, y: 1.1, z: 1.23 },
     };
 
-    const UMarker: Marker = {
+    const Umarker: Marker = {
       key: 'U',
       position: { x: 1, y: 2.1, z: 5 },
       quaternion: { x: 7.2, y: 2, z: -3, w: 9 },
       scale: { x: 1.11, y: 1.13, z: 1.17 },
     };
 
-    const VMarker: Marker = {
+    const Vmarker: Marker = {
       key: 'V',
       position: { x: 1.2, y: 1.9, z: 5.2 },
       quaternion: { x: 7, y: 9, z: 10, w: 3 },
       scale: { x: 1.07, y: 1.01, z: 0.99 },
     };
 
-    const markers: Marker[] = [AMarker, UMarker, VMarker];
+    const markers: Marker[] = [Amarker, Umarker, Vmarker];
 
     camera.orderLettersHorizontally(markers);
 
-    expect(markers).toMatchObject([UMarker, VMarker, AMarker]);
+    expect(markers).toMatchObject([Umarker, Vmarker, Amarker]);
   });
 
   test('Marker being created from html item', async () => {
@@ -139,6 +141,83 @@ describe('Camera.vue', () => {
     test('Markers being rendered after request', () => {
       expect(cameraWrapper.findAll('a-marker').length)
         .toBe(Object.keys(lettersModule.Letters).length);
+    });
+  });
+
+  describe('Marker found and lost events', () => {
+    afterAll(() => {
+      jest.clearAllMocks();
+    });
+
+    test('MarkerFound method', () => {
+      const event: object = {target: new AMarker()};
+      const markers = camera.$data.markers;
+
+      expect(markers.size).toBe(0);
+      camera.markerFound(event, 'A');
+      expect(markers.size).toBe(1);
+    });
+
+    test('MarkerFound to init \'processLetters\'', () => {
+      const event1: object = {target: new AMarker()};
+      const event2: object = {target: new AMarker()};
+
+      jest.useFakeTimers();
+      camera.processLetters = jest.fn();
+
+      camera.markerFound(event1, 'A');
+      camera.markerFound(event2, 'D');
+
+      expect(camera.$data.isReading).toBe(true);
+      expect(setTimeout).toBeCalledTimes(1);
+      expect(setTimeout).toBeCalledWith(expect.any(Function), 1000);
+
+      jest.advanceTimersToNextTimer();
+      expect(setInterval).toBeCalledTimes(1);
+      expect(setInterval).toBeCalledWith(camera.processLetters, 16);
+      expect(camera.processHandler).toBeTruthy();
+
+      jest.advanceTimersToNextTimer();
+      expect(camera.processLetters).toBeCalled();
+    });
+
+    test('Markers being removed from set', () => {
+      const event1: object = {target: new AMarker()};
+      const event2: object = {target: new AMarker()};
+      const event3: object = {target: new AMarker()};
+      const markers = camera.$data.markers;
+
+      camera.detachWordGif = jest.fn();
+
+      camera.markerFound(event1, 'S');
+      camera.markerFound(event2, 'O');
+      camera.markerFound(event3, 'L');
+
+      expect(markers.size).toBe(3);
+
+      camera.markerLost(event3, 'L');
+
+      expect(markers.size).toBe(2);
+    });
+
+    test('\'processHandler\' data being cleared', () => {
+      const event1: object = {target: new AMarker()};
+      const event2: object = {target: new AMarker()};
+      const markers = camera.$data.markers;
+
+      camera.detachWordGif = jest.fn();
+
+      camera.markerFound(event1, 'P');
+      camera.markerFound(event2, 'A');
+
+      expect(markers.size).toBe(2);
+
+      camera.markerLost(event2, 'A');
+
+      expect(markers.size).toBe(1);
+      expect(clearInterval).toBeCalledTimes(1);
+      expect(clearInterval).toBeCalledWith(camera.processHandler);
+      expect(camera.processHandler).toBeFalsy();
     });
   });
 

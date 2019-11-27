@@ -4,6 +4,7 @@
 
 <script lang="ts">
   import Vue from 'vue';
+  import 'jest';
   import Component from 'vue-class-component';
   import { Prop } from 'vue-property-decorator';
   import { Object3D } from 'three';
