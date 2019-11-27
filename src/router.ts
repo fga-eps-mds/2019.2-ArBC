@@ -17,6 +17,7 @@ export default new Router({
       name: 'Camera',
       component: () => import('./views/Camera.vue'),
     },
+    // Always leave this as last one
     {
       path: '/*',
       name: 'not-found',
