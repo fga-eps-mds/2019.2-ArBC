@@ -8,6 +8,7 @@ Data|Versão|Descrição|Autor
 27/11|1.3.0|Recriando o tópico 1| Sérgio Cipriano|
 27/11|1.4.0|Recriando o tópico 2| Sérgio Cipriano|
 27/11|1.5.0|Melhorando tópicos 3 e 4| Sérgio Cipriano|
+27/11|1.5.1|Correção de erros ortográficos e semânticos| Sérgio Cipriano|
 
 # Sumário
 
@@ -28,11 +29,11 @@ ___
 
 #### 1.1 <a name="1_1">O que é o ArBC</a>
 
-<p align="justify"> &emsp;&emsp; O ArBC é um software com intuito de auxiliar na alfabetização de crianças através da tecnologia de realidade aumentada. Com nossa aplicação, a criança terá um experiência mais lúdica e interativa ao tentar aprender palavras novas. Isso porque, com a realidade aumentada, conseguimos fazer atividades simples se tornarem visualmente muito mais interessantes.</p>
+<p align="justify"> &emsp;&emsp; O ArBC é um software com intuito de auxiliar na alfabetização de crianças por meio da tecnologia de realidade aumentada. Com nossa aplicação, a criança terá um experiência mais lúdica e interativa ao tentar aprender palavras novas. Isso porque, com a realidade aumentada, conseguimos fazer atividades simples se tornarem visualmente muito mais interessantes.</p>
 
-<p align="justify"> &emsp;&emsp; O nome ArBC surgiu de uma junção entre Ar (realidade aumentada do inglês "augmented reality") e ABC, que simboliza a alfabetização. Além disso, a ideia do projeto surgiu a partir do Jandig, um software de realidade aumentada criado também dentro da UnB/FGA, que inclusive nos auxiliou quando precisamos. Por fim, sobre a representação visual do nosso produto, temos a arara, que foi escolhida para ser nosso mascote tendo em vista a biodiversidade brasileira como também o fato de apresentar um leque de cores vivas e chamativas, que consideramos ideal para chamar atenção de uma criança.</p>
+<p align="justify"> &emsp;&emsp; O nome ArBC surgiu de uma junção entre Ar (realidade aumentada, do inglês "augmented reality") e ABC, que simboliza a alfabetização. Além disso, a ideia do projeto surgiu a partir do Jandig, um software de realidade aumentada criado também dentro da UnB/FGA, que inclusive nos auxiliou quando precisamos. Por fim, sobre a representação visual do nosso produto, temos a arara, que foi escolhida para ser nosso mascote tendo em vista a biodiversidade brasileira, como também o fato de apresentar um leque de cores vivas e chamativas, que consideramos ideal para chamar atenção de uma criança.</p>
 
-<p align="justify"> &emsp;&emsp; Na nossa aplicação temos 2 peças fundamentais para o funcionamento: um dispositivo com câmera,que tenha acesso à internet, e os marcadores, que são nossas letras. Tendo isso em mãos já é possível aproveitar 100% do que oferecemos. Assim, basta combinar os marcadores para montar palavras e apontar a câmera para ver o que cada palavra representa. </p>
+<p align="justify"> &emsp;&emsp; Na nossa aplicação temos 2 peças fundamentais para o funcionamento: um dispositivo com câmera e acesso à internet e os marcadores, que são nossas letras. Tendo isso em mãos já é possível aproveitar 100% do que oferecemos. Assim, basta combinar os marcadores para montar palavras e apontar a câmera para ver o que cada palavra representa. </p>
 
 ### 2. <a name="2">Usuários</a>
 
@@ -54,7 +55,7 @@ ___
 
 #### 3.1 <a name="3_1">Usando marcadores para mostrar um gif</a>
 
-<p align="justify"> &emsp;&emsp; Para aparecer o gif desejado é muito simples. Ordene os marcadores de forma que represente uma palavra, já cadastrada no banco de dados, de maneira alinhada, e aponte a câmera do aparelho eletrònico para os marcadores. Apenas com isso já será possivel visualizar os gifs. </p>
+<p align="justify"> &emsp;&emsp; Para aparecer o gif desejado é muito simples. Ordene os marcadores de forma que represente uma palavra, alinhada, já cadastrada no banco de dados e aponte a câmera do aparelho eletrònico para os marcadores. Apenas com isso já será possivel visualizar os gifs. </p>
 
 #### 3.2 <a name="3_2">Adicionando novos gifs</a>
 
@@ -66,7 +67,7 @@ ___
 
 A equipe de gestão do projeto tem como representantes: 
 
-Membros|Email
+Gestores|Email
 |:-|:-:| 
 |Eduardo Lima|eduardolimrib@gmail.com|
 |Luciano dos Santos|Luciano_z7@hotmail.com|
@@ -74,7 +75,7 @@ Membros|Email
 
 A equipe de desenvolvimento tem como representantes: 
 
-Membros|Email
+Programadores|Email
 |:-|:-:| 
 |Igor Batista|igorbatistapaiva@outlook.com|
 |João Paulino|joao.henrique1299@gmail.com|
