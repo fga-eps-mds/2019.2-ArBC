@@ -4,6 +4,7 @@ Data|Versão|Descrição|Autor
 -|-|-|-
 26/11|1.0.0|Adição do template do Documento| Sérgio Cipriano|
 26/11|1.1.0|Adição dos tópicos 1 e 2| Marcelo Victor|
+26/11|1.2.0|Adição dos tópicos 3 e 4| Marcelo Victor|
 
 
 # Sumário
@@ -50,18 +51,36 @@ atividades didáticas que promoverão a interação entre as crianças e o softw
 
 #### 3.1 <a name="3_1">Usando marcadores para mostrar um gif</a>
 
-<p align="justify"> &emsp;&emsp;  </p>
+<p align="justify"> &emsp;&emsp; Para aparecer o gif desejado é muito simples, simplesmente ordene os marcadores de forma com que represente uma palavra,
+de maneira alinhada, e aponte a câmera do aparelho eletrònico para os marcadores, e pronto você estará vendo o gif. </p>
 
 #### 3.2 <a name="3_2">Adicionando novos gifs</a>
 
-<p align="justify"> &emsp;&emsp;  </p>
+<p align="justify"> &emsp;&emsp; Para adicionar novos Gifs o responsável, no caso o professor, deve entrar em contato com a equipe de desenvolvedores. que irá guiar este processo. </p>
 
 ### 4. <a name="4">Como nos contactar</a>
 
 #### 4.1 <a name="4_1">Membros do time</a>
 
-<p align="justify"> &emsp;&emsp;  </p>
+A equipe de gestão do projeto tem como representantes: 
+
+Membros|Email
+|:-|:-:| 
+|Eduardo Lima|eduardolimrib@gmail.com|
+|Luciano dos Santos|Luciano_z7@hotmail.com|
+|João Lucas|joao.lucas.ssr@gmail.com|
+
+A equipe de desenvolvimento tem como representantes: 
+
+Membros|Email
+|:-|:-:| 
+|Igor Batista|igorbatistapaiva@outlook.com|
+|João Paulino|joao.henrique1299@gmail.com|
+|Marcelo Victor|marcelovictorg2@gmail.com|
+|Rhuan Carlos|rhuancarlos.queiroz@gmail.com|
+|Sérgio Cipriano|sergiosacj@hotmail.com.br|
+|Thiago Lopes|thiago.lopes.santos.tls@gmail.com|
 
 #### 4.2 <a name="4_2">Informações adicionais</a>
 
-<p align="justify"> &emsp;&emsp;  </p>
+<p align="justify"> &emsp;&emsp; Caso tenha alguma duvida, entre em contato a partir do email de algum membro da equipe. </p>
