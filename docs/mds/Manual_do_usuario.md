@@ -7,6 +7,7 @@ Data|Versão|Descrição|Autor
 26/11|1.2.0|Adição dos tópicos 3 e 4| Marcelo Victor|
 27/11|1.3.0|Recriando o tópico 1| Sérgio Cipriano|
 27/11|1.4.0|Recriando o tópico 2| Sérgio Cipriano|
+27/11|1.5.0|Melhorando tópicos 3 e 4| Sérgio Cipriano|
 
 # Sumário
 
@@ -53,12 +54,11 @@ ___
 
 #### 3.1 <a name="3_1">Usando marcadores para mostrar um gif</a>
 
-<p align="justify"> &emsp;&emsp; Para aparecer o gif desejado é muito simples, simplesmente ordene os marcadores de forma com que represente uma palavra,
-de maneira alinhada, e aponte a câmera do aparelho eletrònico para os marcadores, e pronto você estará vendo o gif. </p>
+<p align="justify"> &emsp;&emsp; Para aparecer o gif desejado é muito simples. Ordene os marcadores de forma que represente uma palavra, já cadastrada no banco de dados, de maneira alinhada, e aponte a câmera do aparelho eletrònico para os marcadores. Apenas com isso já será possivel visualizar os gifs. </p>
 
 #### 3.2 <a name="3_2">Adicionando novos gifs</a>
 
-<p align="justify"> &emsp;&emsp; Para adicionar novos Gifs o responsável, no caso o professor, deve entrar em contato com a equipe de desenvolvedores. que irá guiar este processo. </p>
+<p align="justify"> &emsp;&emsp; Para adicionar novos gifs, o professor ou responsável que tenha sido autorizado, acessará a tabela de palavras e colocará no campo nome a palavra e no campo de imagem o gif que representa a palavra. É recomendável que o gif seja transparente, assim fará com que o efeito de "sair da tela" seja mais evidente. Além disso, quanto menor o tamanho do gif menos será exigido do aparelho eletrônico.</p>
 
 ### 4. <a name="4">Como nos contactar</a>
 
@@ -85,4 +85,11 @@ Membros|Email
 
 #### 4.2 <a name="4_2">Informações adicionais</a>
 
-<p align="justify"> &emsp;&emsp; Caso tenha alguma duvida, entre em contato a partir do email de algum membro da equipe. </p>
+*Wiki:*
+> https://jlucassr.github.io/ArBC-Pages/
+
+*Repositório Front-End*
+> https://github.com/fga-eps-mds/2019.2-ArBC
+
+*Repositório Back-End*
+> https://github.com/fga-eps-mds/2019.2-ArBC-API
