@@ -20,14 +20,17 @@ Data|Versão|Descrição|Autor
 3. [Funcionalidades](#3)
   - 3.1 [Usando marcadores para mostrar um gif](#3_1)
   - 3.2 [Adicionando novos gifs](#3_2)
-4. [Como nos contactar](#4)
-  - 4.1 [Membros do time](#4_1)
-  - 4.2 [Informações adicionais](#4_2)
+4. [Passo a Passo](#4)
+5. [Como nos contactar](#5)
+  - 5.1 [Membros do time](#5_1)
+  - 5.2 [Informações adicionais](#5_2)
 ___
 
 ### 1. <a name="1">Introdução</a>
 
 #### 1.1 <a name="1_1">O que é o ArBC</a>
+
+![Logo](../../src/assets/ArBC-logo.png)
 
 <p align="justify"> &emsp;&emsp; O ArBC é um software com intuito de auxiliar na alfabetização de crianças por meio da tecnologia de realidade aumentada. Com nossa aplicação, a criança terá um experiência mais lúdica e interativa ao tentar aprender palavras novas. Isso porque, com a realidade aumentada, conseguimos fazer atividades simples se tornarem visualmente muito mais interessantes.</p>
 
@@ -61,9 +64,29 @@ ___
 
 <p align="justify"> &emsp;&emsp; Para adicionar novos gifs, o professor ou responsável que tenha sido autorizado, acessará a tabela de palavras e colocará no campo nome a palavra e no campo de imagem o gif que representa a palavra. É recomendável que o gif seja transparente, assim fará com que o efeito de "sair da tela" seja mais evidente. Além disso, quanto menor o tamanho do gif menos será exigido do aparelho eletrônico.</p>
 
-### 4. <a name="4">Como nos contactar</a>
+### 4. <a name="4">Passo a passo</a>
 
-#### 4.1 <a name="4_1">Membros do time</a>
+> Abrir o ArBC
+
+[ArBC](https://arbc.netlify.com/) 
+
+<img src="../imagens/manual_do_usuario/Home.jpg" width="200"/>
+
+> Acessar a Câmera
+
+<img src="../imagens/manual_do_usuario/HomeGuiada.jpg" width="200"/>
+
+> Apontar para os marcadores alinhados
+
+<img src="../imagens/manual_do_usuario/TREM.jpg" width="250"/>
+
+> Pronto, o GIF irá aparecer
+
+<img src="../imagens/manual_do_usuario/TREM_GIF.jpg" width="300"/>
+
+### 5. <a name="5">Como nos contactar</a>
+
+#### 5.1 <a name="5_1">Membros do time</a>
 
 A equipe de gestão do projeto tem como representantes: 
 
@@ -84,7 +107,7 @@ Programadores|Email
 |Sérgio Cipriano|sergiosacj@hotmail.com.br|
 |Thiago Lopes|thiago.lopes.santos.tls@gmail.com|
 
-#### 4.2 <a name="4_2">Informações adicionais</a>
+#### 5.2 <a name="5_2">Informações adicionais</a>
 
 *Wiki:*
 > https://jlucassr.github.io/ArBC-Pages/
