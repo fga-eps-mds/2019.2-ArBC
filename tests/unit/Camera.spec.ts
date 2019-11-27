@@ -117,6 +117,43 @@ describe('Camera.vue', () => {
     expect(target.object3D.scale.z).toBeCloseTo(marker.scale.z * 2.5, 5);
   });
 
+  test('Positions being added to \'markerStats\'', () => {
+    const items = [{
+      object3D: {
+        position: { x: 1.2, y: 1.9, z: 5.2 },
+        quaternion: { x: 7, y: 9, z: 10, w: 3 },
+        scale: { x: 1.07, y: 1.01, z: 0.99 },
+      }}, {
+      object3D: {
+        position: { x: 1, y: 2.1, z: 5 },
+        quaternion: { x: 7.2, y: 2, z: -3, w: 9 },
+        scale: { x: 1.11, y: 1.13, z: 1.17 },
+      }}, {
+      object3D: {
+        position: { x: 1.5, y: 2, z: 5.1 },
+        quaternion: { x: -1, y: 5, z: 6, w: 4.3 },
+        scale: { x: 1.2, y: 1.1, z: 1.23 },
+      }},
+    ];
+
+    const markersSet = camera.$data.markers;
+
+    const markerStats = camera.markersStats;
+    markerStats.addPosition = jest.fn();
+
+    markersSet.add(items[0]);
+    markersSet.add(items[1]);
+    markersSet.add(items[2]);
+
+    camera.addPositions();
+
+    let item: any;
+    for (item of markersSet.values()) {
+      expect(markerStats.addPosition).toBeCalledWith(item.object3D.position.y + 10);
+
+    }
+  });
+
   describe('Rendering components', () => {
     test('Scene being rendered', () => {
       expect(cameraWrapper.find('a-scene').exists()).toBe(true);
