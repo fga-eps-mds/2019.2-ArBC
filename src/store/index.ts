@@ -1,17 +1,15 @@
 import Vue from 'vue';
-import Vuex, { StoreOptions } from 'vuex';
-import { RootState } from './types';
-import { letter } from './letter';
-import { word } from './word';
+import Vuex from 'vuex';
+import LettersModule from './modules/letters';
+import WordsModule from './modules/words';
 
 Vue.use(Vuex);
 
-const store: StoreOptions<RootState> = {
-  state: {},
+const store = new Vuex.Store({
   modules: {
-    word,
-    letter,
+    letters: LettersModule,
+    words: WordsModule,
   },
-};
+});
 
-export default new Vuex.Store<RootState>(store);
+export default store;
