@@ -18,4 +18,16 @@ describe('HowToUseModal.vue', () => {
       expect(HowToUseModal.opened).toEqual(true);
     });
   });
+
+  describe('Open camera button clicked', () => {
+    it('Emits onConfirmed event', () => {
+      HowToUseModal.$emit = jest.fn()
+        .mockImplementationOnce(() => HowToUseModal.$emit);
+
+      HowToUseModal.openCamera();
+
+      expect(HowToUseModal.$emit).toBeCalledTimes(1);
+      expect(HowToUseModal.$emit).toBeCalledWith('onConfirmed');
+    });
+  });
 });
