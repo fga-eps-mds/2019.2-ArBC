@@ -22,7 +22,12 @@
 
 ## Acessar o ArBC
 
+> Por qrcode
+
 ![](./src/assets/qrcodeCamera-master.png)
+
+> Por link
+[ArBC](https://arbc.netlify.com/) 
 
 ## Clonar repositório 
 
