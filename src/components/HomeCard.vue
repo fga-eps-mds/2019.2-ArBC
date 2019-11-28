@@ -59,10 +59,6 @@ export default class HomeCard extends Vue {
 
   private openCameraConfirmed: boolean = false;
 
-  private openModal(data: any) {
-    this.$refs.howToUseModal.open(data);
-  }
-
   private canRoute(path: string) {
     return new Promise((resolve: any, reject: any) => {
       const showHowToUseDialog = localStorage.getItem('showHowToUseDialog');
