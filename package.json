@@ -54,6 +54,8 @@
   "jest": {
     "collectCoverageFrom": [
       "**/src/**/*.{js,ts,vue}",
+      "!**/src/main.ts",
+      "!**/src/registerServiceWorker.ts",
       "!**/node_modules/**",
       "!**/dist/**"
     ],
