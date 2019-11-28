@@ -12,7 +12,7 @@
     </a-entity>
 
     <a-marker
-      v-for="letter in alphabet"
+      v-for="letter in patternsLetters"
       :key="letter"
       type='pattern'
       :url="patternUrl(letter)"
@@ -45,8 +45,7 @@ import WordsStats from '@/services/wordsStats';
 import { Image, Marker } from '@/store/models';
 
 @Component({})
-export default class Camera extends Vue {
-
+export default class App extends Vue {
   public $refs!: {
     wordGif: any,
     letterGif: any,
@@ -54,7 +53,10 @@ export default class Camera extends Vue {
 
   private markers = new Set();
   private processHandler: any;
-  private alphabet: string[] = [];
+  private patternsLetters: string[] = [
+    'A1', 'A2', 'E1', 'I1', 'O1', 'O2','T1',
+    'R1', 'S1', 'N1', 'P1', 'C1', 'U1',
+  ];
   private isReading: boolean = false;
   private isCreated: boolean = false;
   private lettersModule = getModule(LettersModule, this.$store);
@@ -63,13 +65,15 @@ export default class Camera extends Vue {
   private markersStats: MarkerStatsClass = new MarkerStatsClass();
   private mediaBaseUrl: string = 'https://raw.githubusercontent.com/fga-eps-mds/2019.2-ArBC/develop';
 
-  public created(): void {
-    this.lettersModule.getLetters().then(() => {
-      this.alphabet = Object.keys(this.lettersModule.Letters);
+  public async created() {
+    await this.lettersModule.getLetters();
 
-      this.isCreated = true;
-    });
-  }
+    const alphabet: any = Object.keys(this.lettersModule.Letters);
+
+    this.patternsLetters = this.patternsLetters.concat(alphabet);
+
+    this.isCreated = true;
+  };
 
   public destroyed(): void {
     clearInterval(this.processHandler);
@@ -79,14 +83,14 @@ export default class Camera extends Vue {
     return `${this.mediaBaseUrl}/src/assets/patterns/pattern-${letter}.patt`;
   }
 
-  public gifURL(letter: string): string {
-    const url = new URL(this.lettersModule.Letters[letter]);
+  public gifURL(letter: string) {
+    const url = new URL(this.lettersModule.Letters[letter[0]]);
 
     return `shader:gif; src:url(${url.href});`;
   }
 
-  public markerFound(event: any, letter: string): void {
-    event.target.key = letter;
+  public markerFound(event: any, letter: string) {
+    event.target.key = letter[0];
 
     this.markers.add(event.target);
 
@@ -98,8 +102,8 @@ export default class Camera extends Vue {
     }
   }
 
-  public markerLost(event: any, letter: string): void {
-    event.target.key = letter;
+  public markerLost(event: any, letter: string) {
+    event.target.key = letter[0];
 
     this.markers.delete(event.target);
     this.detachWordGif();
