@@ -6,9 +6,9 @@ interface Marker {
 }
 
 export default {
-  markersMean(markers: Marker[]) {
-    const length = markers.length;
-    const resMarker = {
+  markersMean(markers: Marker[]): Marker {
+    const length: number = markers.length;
+    const resMarker: Marker = {
       key: '',
       position: { x: 0, y: 0, z: 0 },
       quaternion: { x: 0, y: 0, z: 0, w: 0 },
