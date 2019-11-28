@@ -35,5 +35,13 @@ describe('HomeCard.vue', () => {
       expect(HomeCard.canRoute('/camera')).rejects.toBeUndefined();
       expect(spyOnStorageGetItem).toBeCalledWith('showHowToUseDialog');
     });
+
+    test('Invalid path with open camera confirmed', () => {
+      const spyOnStorageGetItem: any = jest.spyOn(Storage.prototype, 'getItem');
+      HomeCard.$data.openCameraConfirmed = true;
+
+      expect(HomeCard.canRoute('/what-im-doing-sir')).resolves.toBeUndefined();
+      expect(spyOnStorageGetItem).toBeCalledWith('showHowToUseDialog');
+    });
   });
 });
