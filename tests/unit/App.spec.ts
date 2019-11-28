@@ -20,7 +20,16 @@ describe('App.vue', () => {
       { name: 'A', image: 'https://gph.is/1YdJDfl' },
       { name: 'R', image: 'https://gph.is/2GcXdhf' },
       { name: 'B', image: 'https://gph.is/1HGEo1e' },
+      { name: 'N', image: 'https://gph.is/1Pv6s9f' },
+      { name: 'E', image: 'https://gph.is/1Pv6s9f' },
+      { name: 'S', image: 'https://gph.is/1Pv6s9f' },
       { name: 'C', image: 'https://gph.is/1Pv6s9f' },
+      { name: 'O', image: 'https://gph.is/1Pv6s9f' },
+      { name: 'U', image: 'https://gph.is/1Pv6s9f' },
+      { name: 'P', image: 'https://gph.is/1Pv6s9f' },
+      { name: 'R', image: 'https://gph.is/1Pv6s9f' },
+      { name: 'T', image: 'https://gph.is/1Pv6s9f' },
+      { name: 'I', image: 'https://gph.is/1Pv6s9f' },
     ]).mockReturnValue([]);
   });
   it('renders not found via routing', async () => {
