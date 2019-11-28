@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
-const API_URL = process.env.VUE_APP_API_URL;
+const API_URL: any = process.env.VUE_APP_API_URL;
 
-const CONFIG = {
+const CONFIG: object = {
   timeout: 5000,
   baseURL: API_URL,
   headers: {
@@ -10,7 +10,7 @@ const CONFIG = {
   },
 };
 
-const requestSuccessHandler = (response: any) => {
+const requestSuccessHandler = (response: any): object => {
   if (response.data.hasOwnProperty('results')) {
     return response.data.results;
   }
@@ -19,8 +19,8 @@ const requestSuccessHandler = (response: any) => {
 };
 
 export default {
-  async get(path: string) {
-    const response = await axios.get(path, CONFIG);
+  async get(path: string): Promise<object> {
+    const response: AxiosResponse<any> = await axios.get(path, CONFIG);
 
     return requestSuccessHandler(response);
   },

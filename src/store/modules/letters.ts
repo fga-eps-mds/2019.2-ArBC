@@ -13,25 +13,24 @@ import {
 export default class LettersModule extends VuexModule {
   private letters: {[index: string]: string} = {};
 
-  public get Letters() {
+  public get Letters(): {[index: string]: string} {
     return this.letters;
   }
 
   @Mutation
-  public setLetters(letters: Letter[]) {
+  public setLetters(letters: Letter[]): void {
     letters.forEach((letter: Letter) => {
-        this.letters[letter.name] = letter.image;
-      },
-    );
+      this.letters[letter.name] = letter.image;
+    });
   }
 
-  @Action({ rawError: true })
-  public async getLetters() {
-    const url = '/Letter';
+  @Action
+  public async getLetters(): Promise<any> {
+    const url: string = '/Letter';
 
-    const letters = await API.get(url);
+    const letters: any = await API.get(url);
 
-    this.setLetters(letters);
+    this.setLetters(letters as Letter[]);
   }
 }
 
