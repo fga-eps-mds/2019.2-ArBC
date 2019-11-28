@@ -33,7 +33,7 @@ import '@/vue_material/components';
 
 @Component({})
 export default class ToolBar extends Vue {
-  private sendBugEmail() {
+  private sendBugEmail(): void {
     window.open('mailto:projetoarbc@gmail.com?subject=Bug');
   }
 }

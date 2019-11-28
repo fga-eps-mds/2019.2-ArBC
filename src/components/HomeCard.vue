@@ -59,7 +59,7 @@ export default class HomeCard extends Vue {
 
   private openCameraConfirmed: boolean = false;
 
-  private canRoute(path: string) {
+  private canRoute(path: string): Promise<void> {
     return new Promise((resolve: any, reject: any) => {
       const showHowToUseDialog = localStorage.getItem('showHowToUseDialog');
 
@@ -74,7 +74,7 @@ export default class HomeCard extends Vue {
   }
 
   @Watch('openCameraConfirmed')
-  private route() {
+  private route(): void {
     const { path, targetBlank } = this.$data;
 
     this.canRoute(path).then(() => {

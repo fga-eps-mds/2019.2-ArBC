@@ -48,22 +48,22 @@ export default class Home extends Vue {
   private opened: boolean = false;
   private hideDialog: boolean = false;
 
-  public open() {
+  public open(): void {
     this.opened = true;
   }
 
-  public get showDialog() {
+  public get showDialog(): boolean {
     const showDialog = localStorage.getItem('showHowToUseDialog');
 
     return !(showDialog === 'false');
   }
 
   @Watch('hideDialog')
-  private saveHideDialogOption() {
+  private saveHideDialogOption(): void {
     localStorage.setItem('showHowToUseDialog', `${!this.hideDialog}`);
   }
 
-  private openCamera() {
+  private openCamera(): void {
     this.$emit('onConfirmed');
   }
 }

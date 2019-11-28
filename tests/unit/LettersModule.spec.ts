@@ -32,7 +32,7 @@ describe('LettersModule.ts', () => {
     expect(lettersModule.Letters).toMatchObject({});
   });
 
-  test('Letters are being changed in \'mutation\'', async () => {
+  test('Letters are being changed in \'mutation\'', () => {
     const letters: Letter[] = [
       { name: 'G', image: 'https://gph.is/g/E3ywAdZ' },
       { name: 'I', image: 'https://gph.is/g/4gBWYDq' },
@@ -41,7 +41,7 @@ describe('LettersModule.ts', () => {
       { name: 'Y', image: 'https://gph.is/g/4DLzMv6' },
     ];
 
-    await lettersModule.setLetters(letters);
+    lettersModule.setLetters(letters);
 
     expect(lettersModule.Letters).toMatchObject({
       G: 'https://gph.is/g/E3ywAdZ',
