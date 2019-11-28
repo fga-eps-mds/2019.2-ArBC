@@ -1,10 +1,7 @@
+import { AMarker } from './types';
 import { Marker } from '@/store/models';
 
-export const randomNum = (integer: boolean = false): number => {
-  const realNumber = Math.random() * 10;
-
-  return integer ? (Math.round(realNumber)) : (realNumber);
-};
+export const randomNum = (): number => Math.random() * 10;
 
 export const fakeLetter = (): string => {
   const max: number = 'A'.charCodeAt(0);
@@ -36,4 +33,29 @@ export const fakeMarkers = (numberOfMarkers: number, orderedByX: boolean = false
   }
 
   return markers;
+};
+
+export const fakeAMarkers = (numberOfMarkers: number): AMarker[] => {
+  const amarkers: AMarker[] = [];
+  let i: number;
+
+  for (i = 0; i < numberOfMarkers; i++) {
+    const amarker: AMarker = {
+      key: fakeLetter(),
+      object3D: {
+        quaternion: {
+          x: randomNum(),
+          y: randomNum(),
+          z: randomNum(),
+          w: randomNum(),
+        },
+        scale: { x: randomNum(), y: randomNum(), z: randomNum() },
+        position: { x: randomNum(), y: randomNum(), z: randomNum() },
+      },
+    };
+
+    amarkers.push(amarker);
+  }
+
+  return amarkers;
 };

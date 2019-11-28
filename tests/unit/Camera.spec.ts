@@ -12,7 +12,7 @@ import AEntity from './__mocks__/Entity.vue';
 import AMarker from './__mocks__/AMarker.vue';
 import { getModule } from 'vuex-module-decorators';
 import API from '@/services/api';
-import { randomNum, fakeMarkers } from './helpers/generateFakeData';
+import { randomNum, fakeMarkers, fakeAMarkers } from './helpers/generateFakeData';
 
 let camera: any;
 let cameraWrapper: Wrapper<Camera>;
@@ -29,7 +29,7 @@ beforeEach(async () => {
     { name: 'R', image: 'https://gph.is/2GcXdhf' },
     { name: 'B', image: 'https://gph.is/1HGEo1e' },
     { name: 'C', image: 'https://gph.is/1Pv6s9f' },
-  ]).mockReturnValueOnce([]);
+  ]).mockReturnValue([]);
 
   wordsModule = getModule(WordsModule, store);
   lettersModule = getModule(LettersModule, store);
@@ -258,7 +258,7 @@ describe('Camera.vue', () => {
     });
   });
 
-  describe('Attaching and dettaching word and letters entities', () => {
+  describe('Attaching and detaching word and letters entities', () => {
     test('attach Letters gifs', async () => {
       const letters = camera.$refs.letterGif;
       camera.atachLettersGifs();
@@ -346,6 +346,67 @@ describe('Camera.vue', () => {
     });
   });
 
+  describe('Letters being processed', () => {
+    beforeEach(() => {
+      wordsModule.getWord = jest.fn().mockResolvedValue({
+        url: '',
+        isValid: true,
+      });
+    });
+
+    test('\'processLetters\' works in his common use', () => {
+      const markersSet = camera.$data.markers;
+
+      const markersStatsClearValuesSpy =
+        jest.spyOn(camera.markersStats, 'clearValues');
+
+      markersSet.add(fakeAMarkers(1)[0]);
+      markersSet.add(fakeAMarkers(1)[0]);
+      markersSet.add(fakeAMarkers(1)[0]);
+
+      camera.processLetters();
+
+      expect(markersStatsClearValuesSpy).toBeCalled();
+    });
+
+    test('\'processLetters\' when the set is empty', () => {
+      const markersStatsClearValuesSpy =
+        jest.spyOn(camera.markersStats, 'clearValues');
+
+      camera.processLetters();
+
+      expect(markersStatsClearValuesSpy).toBeCalled();
+    });
+  });
+
+  describe('Add processed letters', () => {
+    test('when the letters is bad positioned', () => {
+      const markers: Marker[] = [];
+      const markersSet = camera.$data.markers;
+
+      markersSet.add(fakeAMarkers(1)[0]);
+      markersSet.add(fakeAMarkers(1)[0]);
+      markersSet.add(fakeAMarkers(1)[0]);
+
+      camera.addProcessedLetters(500, markers);
+
+      expect(markers.length).toBe(0);
+    });
+
+    test('when the letters is perfect positioned', () => {
+      const markers: Marker[] = [];
+      const markersSet = camera.$data.markers;
+
+      markersSet.add(fakeAMarkers(1)[0]);
+      markersSet.add(fakeAMarkers(1)[0]);
+      markersSet.add(fakeAMarkers(1)[0]);
+
+      camera.addProcessedLetters(0.0000001, markers);
+
+      expect(markers.length).toBe(3);
+    });
+  });
+
   describe('setWord', () => {
     describe('When there is no markers', () => {
       const expectedWord: string = '';
@@ -365,7 +426,7 @@ describe('Camera.vue', () => {
 
     describe('When there is more than one marker', () => {
       let expectedWord: string = '';
-      const wordLength: number = randomNum(true);
+      const wordLength: number = Math.ceil(randomNum());
       const processedLetters: Marker[] = fakeMarkers(wordLength, true);
 
       processedLetters.forEach((marker: Marker) => {
@@ -429,7 +490,7 @@ describe('Camera.vue', () => {
 
   describe('wordGifValidation', () => {
     describe('word gif is valid', () => {
-      const processedLetters: Marker[] = fakeMarkers(randomNum(true), true);
+      const processedLetters: Marker[] = fakeMarkers(randomNum(), true);
       const image: Image = {
         url: 'https://gph.is/YZCZdD',
         isValid: true,
@@ -448,7 +509,7 @@ describe('Camera.vue', () => {
     });
 
     describe('word gif isn\'t valid', () => {
-      const processedLetters: Marker[] = fakeMarkers(randomNum(true), true);
+      const processedLetters: Marker[] = fakeMarkers(randomNum(), true);
       const image: Image = {
         url: 'https://gph.is/g/4AvxqV7',
         isValid: false,
