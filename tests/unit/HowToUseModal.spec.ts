@@ -30,4 +30,16 @@ describe('HowToUseModal.vue', () => {
       expect(HowToUseModal.$emit).toBeCalledWith('onConfirmed');
     });
   });
+
+  describe('Save hide dialog option', () => {
+    it('Saves the option on navigator storage', () => {
+      const spyOnStorageSetItem: any = jest.spyOn(Storage.prototype, 'setItem');
+
+      HowToUseModal.saveHideDialogOption();
+
+      expect(spyOnStorageSetItem).toBeCalledTimes(1);
+      expect(spyOnStorageSetItem)
+        .toBeCalledWith('showHowToUseDialog', `${!HowToUseModal.hideDialog}`);
+    });
+  });
 });
