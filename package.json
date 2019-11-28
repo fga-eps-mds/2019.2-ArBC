@@ -45,6 +45,7 @@
     "jest-transform-stub": "^2.0.0",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "three": "^0.110.0",
     "ts-jest": "^24.1.0",
     "typescript": "^3.4.3",
     "vue-jest": "^3.0.5",
@@ -53,6 +54,8 @@
   "jest": {
     "collectCoverageFrom": [
       "**/src/**/*.{js,ts,vue}",
+      "!**/src/main.ts",
+      "!**/src/registerServiceWorker.ts",
       "!**/node_modules/**",
       "!**/dist/**"
     ],
@@ -81,6 +84,10 @@
     "testPathIgnorePatterns": [
       "<rootDir>/tests/e2e"
     ],
+    "testEnvironmentOptions": {
+      "resources": "usable",
+      "runScripts": "dangerously"
+    },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "testURL": "http://localhost/"
   }
