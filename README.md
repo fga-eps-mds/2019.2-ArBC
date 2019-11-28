@@ -20,6 +20,15 @@
 -  Reconhecimento de palavras utilizando estas mesmas letras.
 -  Visualização de imagens em cima da pattern ou palavra       reconhecida em tempo real.
 
+## Acessar o ArBC
+
+*Por qrcode*
+
+![](./src/assets/qrcodeCamera-master.png)
+
+*Por link*
+[ArBC](https://arbc.netlify.com/) 
+
 ## Clonar repositório 
 
 ```
