@@ -20,6 +20,10 @@
 -  Reconhecimento de palavras utilizando estas mesmas letras.
 -  Visualização de imagens em cima da pattern ou palavra       reconhecida em tempo real.
 
+## Acessar o ArBC
+
+![](./src/assets/qrcodeCamera-master.png)
+
 ## Clonar repositório 
 
 ```
