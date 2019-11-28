@@ -241,7 +241,7 @@ export default class Camera extends Vue {
 
     this.addProcessedLetters(deviation, processedLetters);
 
-    if (processedLetters.length > 0 && !this.wordLockFlag) {
+    if (processedLetters.length >= 2 && !this.wordLockFlag) {
       this.getGifWord(this.setWord(processedLetters))
         .then((response: Image) => {
           this.wordGifValidation(processedLetters, response);
