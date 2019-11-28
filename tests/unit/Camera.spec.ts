@@ -186,7 +186,7 @@ describe('Camera.vue', () => {
 
     test('Markers being rendered after request', () => {
       expect(cameraWrapper.findAll('a-marker').length)
-        .toBe(Object.keys(lettersModule.Letters).length+13);
+        .toBe(Object.keys(lettersModule.Letters).length + 13);
     });
   });
 

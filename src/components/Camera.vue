@@ -54,7 +54,7 @@ export default class App extends Vue {
   private markers = new Set();
   private processHandler: any;
   private patternsLetters: string[] = [
-    'A1', 'A2', 'E1', 'I1', 'O1', 'O2','T1',
+    'A1', 'A2', 'E1', 'I1', 'O1', 'O2', 'T1',
     'R1', 'S1', 'N1', 'P1', 'C1', 'U1',
   ];
   private isReading: boolean = false;
@@ -73,7 +73,7 @@ export default class App extends Vue {
     this.patternsLetters = this.patternsLetters.concat(alphabet);
 
     this.isCreated = true;
-  };
+  }
 
   public destroyed(): void {
     clearInterval(this.processHandler);
