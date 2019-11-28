@@ -14,5 +14,5 @@ Vue.component('not-found', NotFound);
     NotFound,
   },
 })
-export default class CameraView extends Vue {}
+export default class NotFoundView extends Vue {}
 </script>
