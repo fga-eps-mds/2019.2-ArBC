@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.65b271305141eaeaa5be512380adace1.js"
+  "/precache-manifest.4d09f96a27203b1e61da72e2dd9a4eb3.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "2019.2-arbc"});

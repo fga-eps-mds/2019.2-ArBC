@@ -3,6 +3,7 @@
 |Data|Versão|Alteração|Autor|
 |:-:|:-:|:-:|:-:|
 | 17/09/2019 |   1.0.0  | Criação do Roadmap do Devops | Luciano dos Santos|
+| 24/11/2019 |   2.0.0  | Atualização do Roadmap do Devops | Luciano dos Santos |
 
 # Release 1
 
@@ -28,3 +29,19 @@
 
 
 # Release 02
+
+### Integração contínua
+
+* Viabilizar integração contínua
+* Definir estrátegias para monitoramento de integração contínua.
+
+### Deploy contínuo
+
+* Viabilizar o deploy contínuo.
+* Definir estratégias para monitoramento do deploy contínuo
+
+### Qualidade
+
+* Definir métricas para gerênciamento de qualidade do produto
+* Definir estratégias para monitoramento de qualidade do produto
+

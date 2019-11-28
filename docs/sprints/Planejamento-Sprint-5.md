@@ -8,6 +8,7 @@
 * Configurar Deploy Contínuo
 * Correções Documento de Visão
 * Correções dos Diagramas do Documento de Arquitetura
+* Correção Leitura da Letra
 
 ## 2. Papéis
 
